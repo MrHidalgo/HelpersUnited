@@ -1,0 +1,21 @@
+// SECTION clients :: START
+
+-
+  var clientsArr = [
+    'img-clients-0',
+    'img-clients-1',
+    'img-clients-2',
+    'img-clients-3',
+    'img-clients-4',
+    'img-clients-5',
+  ];
+
+section#clients.clients
+  .c-grid
+    .clients__wrapper
+
+      each val, idx in clientsArr
+        a.clients__btn(href="#" class="" title="")
+          img(src="./img/" + val + ".png" srcset="./img/" + val + "@2x.png 2x" alt="" title="")
+
+// SECTION clients :: END
