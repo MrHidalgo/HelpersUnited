@@ -1,0 +1,25 @@
+// SECTION mission :: START
+
+.mission {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+
+    &-left,
+    &-right {
+      width: 50%;
+    }
+
+    &-left {
+      img {
+        @extend %imageResMaxWidth;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+// SECTION mission :: END
