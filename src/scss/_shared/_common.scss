@@ -1,3 +1,23 @@
 // COMMON :: START
+.h {
+  &-title {
+    padding-bottom: 20px;
+    color: #555555;
+    font-size: 22px;
+    font-weight: 600;
+  }
 
+  &-line {
+    width: 80px;
+    height: 2px;
+    margin-bottom: 19px;
+    border-radius: 1px;
+    background-color: #295DD9;
+  }
+
+  &-desc {
+    color: #9B9B9B;
+    line-height: line-height-convert(22.4, 14);
+  }
+}
 // COMMON :: END

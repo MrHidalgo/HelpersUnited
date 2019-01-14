@@ -12,4 +12,11 @@ include ./_mixin/_modal
 include ./_mixin/_nav
 include ./_mixin/_form
 
+
+mixin homepageTitleDesc(classTitleMod, classLineMod, classDescMod, titleVal, descVal)
+  h1.h-title(class!= classTitleMod)!= titleVal
+  .h-line(class!= classLineMod)
+  p.h-desc(class!= classDescMod)!= descVal
+
+
 //- MIXIN :: END

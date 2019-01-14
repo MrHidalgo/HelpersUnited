@@ -1,0 +1,54 @@
+// SECTION we :: START
+
+.we {
+  position: relative;
+  opacity: 0.86;
+  background: #FCFCFC;
+  background-image: linear-gradient(-141deg, rgba(252,252,252,0.50) 7%, #FCFCFC 100%);
+
+  &__wrapper {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  &__desc {
+    padding-bottom: 50px;
+    width: 100%;
+    max-width: 542px;
+  }
+
+  &__block {
+    position: relative;
+    padding-top: 30px;
+    width: 100%;
+    max-width: calc(100% / 3);
+
+    &-wrapper {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    > span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: rgba(#295DD9, 0.07);
+      line-height: 1;
+      font-size: 58px;
+      font-weight: 600;
+    }
+
+    .we {
+      &__subtitle {
+        position: relative;
+        font-size: 18px;
+      }
+
+      &__subdesc {
+        padding-right: 40px;
+      }
+    }
+  }
+}
+
+// SECTION we :: END
