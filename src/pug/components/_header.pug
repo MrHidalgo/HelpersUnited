@@ -1,7 +1,15 @@
 // HEADER :: START
 
 header#header.header
-  .c-grid
-    .header__wrapper
+  .header__wrapper
+
+    .header__wrapper-left
+      +logotypeText('header', '', 'Helpers United')
+
+    .header__wrapper-right
+
+      .header__btn-wrapper
+        a.header__btn.header__btn--login(href="#" class="" title="")!= "Log in"
+        +btn('bg header__btn header__btn--signup', '', 'Sign up')
 
 // HEADER :: END

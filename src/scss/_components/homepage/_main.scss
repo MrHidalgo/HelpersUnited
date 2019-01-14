@@ -1,0 +1,52 @@
+// SECTION main :: START
+
+.main {
+  position: relative;
+  background-image: url('../img/img-main-bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 670px;
+  }
+
+  &__box {
+    color: #fff;
+    text-align: center;
+
+    &-title {
+      padding-bottom: 15px;
+      font-size: 32px;
+      font-weight: 600;
+      text-shadow: 0 2px 4px rgba($c-black, 0.23);
+    }
+
+    &-line {
+      width: 80px;
+      height: 2px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 10px;
+      background-color: $c-white;
+    }
+
+    &-desc {
+      width: 100%;
+      max-width: 500px;
+      padding-bottom: 32px;
+      font-size: 18px;
+    }
+
+    &-btn {
+      max-width: 232px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+// SECTION main :: END

@@ -1,5 +1,48 @@
 // HEADER :: START
 
-.header {}
+.header {
+  position: relative;
+  background-color: #fff;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  &__btn {
+    &--login {
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      padding-left: 30px;
+      padding-right: 30px;
+      border-left: 1px solid #EBEBEB;
+      border-right: 1px solid #EBEBEB;
+      @include transition(border-color);
+
+      &:hover {
+        border-color: #295DD9;
+        @include transition(border-color);
+      }
+    }
+
+    &--signup {
+      max-width: 100px;
+      margin-left: 30px;
+    }
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      height: 70px;
+    }
+  }
+}
 
 // HEADER :: END
