@@ -7,6 +7,25 @@
  */
 const initSwiper = () => {
 
+  const swiperReviews = new Swiper('.swiper-container--reviews', {
+    // Optional parameters
+    loop: true,
+    watchOverflow: true,
+    normalizeSlideIndex: true,
+    grabCursor: true,
+    freeMode: false,
+    autoplay: {
+      delay: 5000,
+    },
+    speed: 750,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    }
+  });
+
   const mySwiper = new Swiper('.swiper-container', {
     // Optional parameters
     wrapperClass: "swiper-wrapper",

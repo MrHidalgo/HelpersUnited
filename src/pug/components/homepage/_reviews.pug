@@ -1,0 +1,23 @@
+// SECTION reviews :: START
+
+section#reviews.reviews
+  .reviews__wrapper
+    .reviews__wrapper-left
+
+      mixin swiperContent()
+        each val, idx in [1,2,3,4]
+          .swiper-slide
+            .reviews__block
+              .reviews__block-img
+                img(src="./img/img-slide-reviews.png" srcset="./img/img-slide-reviews@2x.png 2x" alt="" title="")
+
+              p.reviews__block-name!= "Jessica Nobel"
+              span.reviews__block-pos!= "Lorem Ipsum is simply dummy"
+              .reviews__block-line
+              p.reviews__block-desc!= "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen"
+
+      +swiper('swiper-container--reviews', 'swiperContent', true, false, false)
+
+    .reviews__wrapper-right
+
+// SECTION reviews :: END
