@@ -1,7 +1,80 @@
 // FOOTER :: START
 
+-
+  var footerNav1 = [
+    {
+      href: "#",
+      name: 'About us'
+    },
+    {
+      href: "#",
+      name: 'Our Mission'
+    },
+    {
+      href: "#",
+      name: 'Testimonials'
+    },
+  ];
+  var footerNav2 = [
+    {
+    href: "#",
+    name: 'Terms of Service'
+    },
+    {
+    href: "#",
+    name: 'Privacy Policy'
+    },
+    {
+    href: "#",
+    name: 'Security'
+    },
+  ];
+  var footerNav3 = [
+    {
+    href: "#",
+    name: 'Twitter'
+    },
+    {
+    href: "#",
+    name: 'Facebook'
+    },
+    {
+    href: "#",
+    name: 'Linkedin'
+    },
+  ];
+
 footer#footer.footer
   .c-grid
-    .footer__wrapper
+    .footer__wrapper.footer__wrapper-0
+      .footer__wrapper-col.footer__wrapper-col-0
+        +logotypeText('header', '', 'Helpers United')
+
+      .footer__wrapper-col.footer__wrapper-col-1
+        p.footer__title!= "Explore"
+
+        +nav('footer', footerNav1)
+
+      .footer__wrapper-col.footer__wrapper-col-2
+        p.footer__title!= "About"
+
+        +nav('footer', footerNav2)
+
+      .footer__wrapper-col.footer__wrapper-col-3
+        p.footer__title!= "Contact"
+
+        +nav('footer', footerNav3)
+
+      .footer__wrapper-col.footer__wrapper-col-4
+        p.footer__title!= "Address"
+
+        .address
+          a.address__email(href="mailto:office@helpersunited.com" class="" title="")!= "office@helpersunited.com"
+          p.address__info!= "303 Rosenbaum Underpass Suite 205"
+          a.address__phone(href="tel:522-192-7557" class="" title="")!= "522-192-7557"
+
+    .footer__wrapper.footer__wrapper-1
+      .copyright
+        p!= '© Helpers United. All rights reserved.'
 
 // FOOTER :: END

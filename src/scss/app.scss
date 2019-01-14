@@ -34,7 +34,7 @@
 /// MACROS
 /// ===============
 @import "_macros/logotype";
-//@import "_macros/nav";
+@import "_macros/nav";
 //@import "_macros/title";
 //@import "_macros/subtitle";
 @import "_macros/btn";
@@ -44,7 +44,7 @@
 /// COMPONENTS
 /// ===============
 @import "_components/header";
-//@import "_components/footer";
+@import "_components/footer";
 
 @import "_components/homepage/main";
 @import "_components/homepage/clients";

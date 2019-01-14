@@ -20,4 +20,38 @@
     line-height: line-height-convert(22.4, 14);
   }
 }
+
+// address
+.address {
+  display: flex;
+  flex-direction: column;
+
+  &__email,
+  &__info,
+  &__phone {
+    padding-bottom: 10px;
+    color: #555555;
+    line-height: line-height-convert(32, 14);
+  }
+
+  &__email,
+  &__phone {
+    @include transition(opacity);
+
+    &:hover {
+      opacity: 0.75;
+      @include transition(opacity);
+    }
+  }
+}
+// address :: end
+
+// copyright
+.copyright {
+  p {
+    color: #9B9B9B;
+  }
+}
+// copyright :: end
+
 // COMMON :: END

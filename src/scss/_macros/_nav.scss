@@ -1,5 +1,22 @@
 // NAV :: START
 
-.nav {}
+.nav {
+  &--footer {
+    .nav {
+      &__link {
+        display: flex;
+        padding-bottom: 10px;
+        color: #555555;
+        line-height: line-height-convert(32, 14);
+        @include transition(opacity);
+
+        &:hover {
+          opacity: 0.75;
+          @include transition(opacity);
+        }
+      }
+    }
+  }
+}
 
 // NAV :: END
