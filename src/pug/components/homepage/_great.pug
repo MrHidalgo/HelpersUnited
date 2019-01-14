@@ -1,5 +1,33 @@
 // SECTION great :: START
 
+-
+  var greatDataArr = [
+    {
+      numVal: '23',
+      textVal: 'Lorem ipsum dolor'
+    },
+    {
+      numVal: '23',
+      textVal: 'Lorem ipsum dolor'
+    },
+    {
+      numVal: '23',
+      textVal: 'Lorem ipsum dolor'
+    },
+    {
+      numVal: '23',
+      textVal: 'Happy Clients'
+    },
+    {
+      numVal: '23',
+      textVal: 'Lorem ipsum dolor'
+    },
+    {
+      numVal: '23',
+      textVal: 'Hours of hard work'
+    }
+  ];
+
 section#great.great
   .c-grid
     .great__wrapper
@@ -7,29 +35,9 @@ section#great.great
       +homepageTitleDesc('great__title', 'great__line', 'great__desc', 'Are we great or what? Yes, we are!', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
 
       .great__block-wrapper
-        .great__block.great__block-0
-          p!= "23"
-          span!= "Lorem ipsum dolor"
-
-        .great__block.great__block-1
-          p!= "23"
-          span!= "Lorem ipsum dolor"
-
-        .great__block.great__block-2
-          p!= "23"
-          span!= "Lorem ipsum dolor"
-
-        .great__block.great__block-3
-          p!= "23"
-          span!= "Happy Clients"
-
-        .great__block.great__block-4
-          p!= "23"
-          span!= "Lorem ipsum dolor"
-
-        .great__block.great__block-5
-          p!= "23"
-          span!= "Hours of hard work"
-
+        each val, idx in greatDataArr
+          .great__block(class!= "great__block-" + idx)
+            p!= greatDataArr[idx].numVal
+            span!= greatDataArr[idx].textVal
 
 // SECTION great :: END
