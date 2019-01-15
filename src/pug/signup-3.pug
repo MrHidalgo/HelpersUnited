@@ -29,5 +29,17 @@ block content
               != "or "
               a(href="#" class="" title="")!= "log"
               != " in to your account"
-            
+
+            form.c-form(action='' method='' autocomplete='off')
+              p.sign__form-subtitle!= "Set up a Pin"
+
+              +formInput(dataFormObj.inputPin)
+              +formInput(dataFormObj.inputPinConfirm)
+
+              p.sign__form-subtitle!= "Set up a Security Question"
+
+              +formInput(dataFormObj.inputQuestion)
+              +formInput(dataFormObj.inputAnswer)
+              +formBtn('', 'c-btn c-btn--bg c-btn__form', "Let's beginning interview")
+
 block footer
