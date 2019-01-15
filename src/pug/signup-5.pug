@@ -29,5 +29,27 @@ block content
               != "or "
               a(href="#" class="" title="")!= "log"
               != " in to your account"
+
+            form.c-form(action='' method='' autocomplete='off')
+              +formInput(dataFormObj.inputPrimaryUsername)
+              +formInput(dataFormObj.inputWebsiteURL)
+              +formInput(dataFormObj.inputStreetAddress)
+
+              .c-form__group.c-form__group--cs.c-form__group--two
+                .c-form__group-col.c-form__group-col-0
+                  +formSelectCustom(dataFormObj.selectCustomCity)
+                .c-form__group-col.c-form__group-col-1
+                  +formSelectCustom(dataFormObj.selectCustomState)
+
+              .c-form__group.c-form__group--zc.c-form__group--two
+                .c-form__group-col.c-form__group-col-0
+                  +formInput(dataFormObj.inputZip)
+                .c-form__group-col.c-form__group-col-1
+                  +formSelectCustom(dataFormObj.selectCustomCountry)
+
+              +formInput(dataFormObj.inputWorkPhone)
+              +formInput(dataFormObj.inputMobilePhone)
+
+              +formBtn('', 'c-btn c-btn--bg c-btn__form', "Create Account")
             
 block footer

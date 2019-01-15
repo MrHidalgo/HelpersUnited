@@ -29,5 +29,15 @@ block content
               != "or "
               a(href="#" class="" title="")!= "log"
               != " in to your account"
-            
+
+            form.c-form(action='' method='' autocomplete='off')
+              +formInput(dataFormObj.inputAgencyName)
+              +formSelectCustom(dataFormObj.selectCustomAgencyType)
+              +formInput(dataFormObj.inputAgencyStatus)
+              +formInput(dataFormObj.inputEmail)
+              +formInput(dataFormObj.inputPassword)
+              +formInput(dataFormObj.inputPasswordConfirm)
+
+              +formBtn('', 'c-btn c-btn--bg c-btn__form', "Next")
+
 block footer
