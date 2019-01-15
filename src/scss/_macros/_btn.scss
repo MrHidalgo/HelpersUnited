@@ -65,9 +65,10 @@ $btn-color--border: rgba(#000, 1);
 
   &__form {
     &--login {
-      max-width: 127px;
       height: 52px;
       margin-left: auto;
+      padding-left: 40px;
+      padding-right: 40px;
       font-size: 16px;
     }
   }
