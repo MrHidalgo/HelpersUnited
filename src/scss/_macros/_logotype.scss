@@ -1,6 +1,19 @@
 // LOGOTYPE :: START
 
 .logo {
+  &--sign {
+    .logo__link {
+      p {
+        padding-left: 0;
+        color: $c-white;
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+
   &__link {
     position: relative;
     display: flex;

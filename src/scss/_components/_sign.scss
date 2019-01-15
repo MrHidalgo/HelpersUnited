@@ -1,0 +1,135 @@
+// SECTION sign :: START
+
+.sign {
+  &--loginMain {
+    .sign__wrapper-left {
+      background-image: url('../img/img-login-bg-main.jpg');
+    }
+  }
+  &--loginAgency {
+    .sign__wrapper-left {
+      background-image: url('../img/img-login-bg-agency.jpg');
+    }
+  }
+  &--loginClient {
+    .sign__wrapper-left {
+      background-image: url('../img/img-login-bg-client.jpg');
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: stretch;
+    height: 100vh;
+
+    &-left,
+    &-right {
+      display: flex;
+      align-items: flex-start;
+      height: 100%;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    &-left {
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      max-width: calc(100% - 500px);
+      padding-left: 163px;
+      padding-right: 15px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    &-right {
+      align-items: center;
+      width: 500px;
+      height: calc(100% - 60px);
+    }
+
+    &-top {
+      padding-bottom: 50px;
+    }
+
+    &-bottom {
+      padding-top: 50px;
+    }
+  }
+
+  &__title {
+    padding-top: 39px;
+    padding-bottom: 20px;
+    color: $c-white;
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  &__desc {
+    width: 100%;
+    max-width: 542px;
+    padding-bottom: 80px;
+    color: $c-white;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  &__form {
+    width: 100%;
+    max-width: 396px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    .c-form__field--radio {
+      margin-bottom: 9px;
+    }
+
+    &-title {
+      padding-bottom: 8px;
+      color: #555555;
+      font-size: 32px;
+      font-weight: 600;
+    }
+
+    &-link {
+      padding-bottom: 32px;
+      color: #9B9B9B;
+      font-size: 16px;
+
+      a {
+        color: #295DD9;
+      }
+    }
+
+    &-text {
+      padding-bottom: 30px;
+      color: #9B9B9B;
+      line-height: line-height-convert(22.4, 14);
+    }
+
+    &-info {
+      padding-top: 30px;
+      text-align: center;
+
+      a {
+        position: relative;
+        color: #555;
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background-color: #295DD9;
+        }
+      }
+    }
+  }
+}
+
+// SECTION sign :: END

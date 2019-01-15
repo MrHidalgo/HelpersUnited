@@ -62,6 +62,14 @@ $btn-color--border: rgba(#000, 1);
   &__icon {
     &-wrap {}
   }
+
+  &__form {
+    &--login {
+      max-width: 127px;
+      height: 52px;
+      margin-left: auto;
+    }
+  }
 }
 
 // BUTTON :: END

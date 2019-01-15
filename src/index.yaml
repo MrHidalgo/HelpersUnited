@@ -3,20 +3,20 @@ ProjectTitle: HelpersUnited
 PageList:
 - file: index.html
   titleName: Home
-  ready: 65
+  ready: 55
 
 - file:
   titleName: LOGIN
   ready: 0
 
 - file: login-1.html
-  titleName: Logi In 1
+  titleName: Logi In
   ready: 01
 - file: login-2.html
-  titleName: Logi In 2
+  titleName: Logi In Agecny
   ready: 01
 - file: login-3.html
-  titleName: Logi In 3
+  titleName: Logi In Client
   ready: 01
 
 - file:

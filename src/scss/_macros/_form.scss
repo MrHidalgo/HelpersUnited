@@ -5,7 +5,7 @@
 // ==================================================
 
 // form
-$form-width: 600px;
+$form-width: 100%;
 
 // group
 $form-field-group-two-margin: 15px;
@@ -40,18 +40,18 @@ $form-input-placeholder-font-weight: normal;
 
 // radio
 $form-radio-icon-wrapper-width: 30px;
-$form-radio-icon-width: 20px;
+$form-radio-icon-width: 18px;
 $form-radio-icon-height: $form-radio-icon-width;
 $form-radio-icon-border-radius: 100%;
 $form-radio-icon-border-width: 1px;
-$form-radio-icon-border-color-inactive: rgba(#000, 0.5);
-$form-radio-icon-border-color-active: rgba(#000, 1);
-$form-radio-font-size: 16px;
-$form-radio-font-weight: normal;
-$form-radio-icon-inner-width: $form-radio-icon-width / 2;
-$form-radio-icon-inner-height: $form-radio-icon-height / 2;
+$form-radio-icon-border-color-inactive: rgba(#EBEBEB, 1);
+$form-radio-icon-border-color-active: rgba(#295DD9, 1);
+$form-radio-font-size: 18px;
+$form-radio-font-weight: 600;
+$form-radio-icon-inner-width: 8px;
+$form-radio-icon-inner-height: 8px;
 $form-radio-icon-inner-border-radius: 100%;
-$form-radio-icon-inner-background-color: rgba(#000, 1);
+$form-radio-icon-inner-background-color: rgba(#295DD9, 1);
 
 // checkbox
 $form-checkbox-icon-wrapper-width: 30px;
@@ -339,6 +339,10 @@ $form-notify-font-weight: bold;
       .c-form__label {
         cursor: default;
       }
+    }
+
+    &--btn {
+      margin-bottom: 0;
     }
   }
 
