@@ -29,4 +29,23 @@ block content
               != "or "
               a(href="#" class="" title="")!= "create an account"
 
+            form.c-form(action='' method='' autocomplete='off')
+              +formInput(dataFormObj.inputLoginName)
+              +formInput(dataFormObj.inputLoginMiddleName)
+              +formInput(dataFormObj.inputLoginLastName)
+
+              .c-form__group.c-form__group--db.c-form__group--three
+                .c-form__group-col.c-form__group-col-0
+                  +formSelectCustom(dataFormObj.selectFieldCustomDBDay)
+
+                .c-form__group-col.c-form__group-col-1
+                  +formSelectCustom(dataFormObj.selectFieldCustomDBMonth)
+
+                .c-form__group-col.c-form__group-col-2
+                  +formSelectCustom(dataFormObj.selectFieldCustomDBYear)
+
+              +formInput(dataFormObj.inputLoginSsn)
+              +formInput(dataFormObj.inputLoginPin)
+              +formBtn('', 'c-btn c-btn--bg c-btn__form c-btn__form--login', 'Log in')
+
 block footer

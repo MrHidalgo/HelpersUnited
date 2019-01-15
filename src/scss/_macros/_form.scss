@@ -22,20 +22,21 @@ $form-field-textarea-height: 150px;
 // label
 $form-label-height: auto;
 $form-label-margin-bottom: 10px;
-$form-label-font-size: 16px;
+$form-label-color: #9B9B9B;
+$form-label-font-size: 14px;
 $form-label-font-weight: normal;
 
 // input
-$form-input-border-radius: 5px;
+$form-input-border-radius: 4px;
 $form-input-border-width: 1px;
-$form-input-border-color: gray;
+$form-input-border-color: #EBEBEB;
 $form-input-box-shadow: none;
 $form-input-padding: 0 20px;
 $form-input-color: #000;
 $form-input-font-size: 16px;
 $form-input-font-weight: normal;
-$form-input-placeholder-color: #666;
-$form-input-placeholder-font-size: 16px;
+$form-input-placeholder-color: #9B9B9B;
+$form-input-placeholder-font-size: 14px;
 $form-input-placeholder-font-weight: normal;
 
 // radio
@@ -69,9 +70,9 @@ $form-checkbox-icon-inner-border-color: rgba(#000, 1);
 $form-checkbox-icon-inner-border-width: 1px;
 
 // select
-$form-select-border-radius: 5px;
+$form-select-border-radius: 4px;
 $form-select-border-width: 1px;
-$form-select-border-color: gray;
+$form-select-border-color: #EBEBEB;
 $form-select-box-shadow: none;
 $form-select-icon-width: 50px;
 $form-select-value-padding-left: 20px;
@@ -352,9 +353,19 @@ $form-notify-font-weight: bold;
     align-items: center;
     height: $form-label-height;
     margin-bottom: $form-label-margin-bottom;
+    color: $form-label-color;
     font-size: $form-label-font-size;
     font-weight: $form-label-font-weight;
     @include transition(color);
+
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+    padding-left: 20px;
   }
 
   &__input,
@@ -446,14 +457,20 @@ $form-notify-font-weight: bold;
       height: 100%;
 
       i {
-        padding: 3px;
-        border: solid #000;
-        border-width: 0 2px 2px 0;
-        transform: rotate(45deg);
+        //padding: 3px;
+        //border: solid #000;
+        //border-width: 0 2px 2px 0;
+        //transform: rotate(45deg);
+        width: 0;
+        height: 0;
+        margin-top: 7.5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #9B9B9B transparent transparent transparent;
         @include transition(transform, border-color);
 
         .is-focus & {
-          transform: rotate(225deg);
+          //transform: rotate(225deg);
           @include transition(transform);
         }
       }
