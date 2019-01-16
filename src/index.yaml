@@ -11,13 +11,13 @@ PageList:
 
 - file: login-1.html
   titleName: Logi In
-  ready: 01
+  ready: 55
 - file: login-2.html
   titleName: Logi In as Agecny
-  ready: 01
+  ready: 55
 - file: login-3.html
   titleName: Logi In as Client
-  ready: 01
+  ready: 55
 
 - file:
   titleName: SIGNUP
@@ -25,22 +25,22 @@ PageList:
 
 - file: signup-1.html
   titleName: Sign Up
-  ready: 01
+  ready: 55
 - file: signup-2.html
   titleName: Sign up as Client 1
-  ready: 01
+  ready: 55
 - file: signup-3.html
   titleName: Sign up as Client 2
-  ready: 01
+  ready: 55
 - file: signup-4.html
   titleName: Sign up as Agency 1
-  ready: 01
+  ready: 55
 - file: signup-5.html
   titleName: Sign up as Agency 2
-  ready: 01
+  ready: 55
 - file: signup-6.html
   titleName: Sign up as Agency 3
-  ready: 01
+  ready: 55
 
 - file:
   titleName: CLIENT INTERVIEW
