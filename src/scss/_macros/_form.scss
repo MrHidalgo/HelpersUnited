@@ -74,7 +74,7 @@ $form-select-border-radius: 4px;
 $form-select-border-width: 1px;
 $form-select-border-color: #EBEBEB;
 $form-select-box-shadow: none;
-$form-select-icon-width: 50px;
+$form-select-icon-width: 38px;
 $form-select-value-padding-left: 20px;
 $form-select-value-color: #000;
 $form-select-value-font-size: $form-input-font-size;
@@ -127,6 +127,32 @@ $form-notify-font-weight: bold;
     &--three {
       .c-form__group-col {
         width: calc((100% - #{$form-field-group-three-margin}) / 3);
+      }
+    }
+
+    &--dob {
+      .c-form__group-col {
+        &-0 {
+          width: 87px;
+        }
+        &-1 {
+          width: 134px;
+        }
+        &-2 {
+          width: 89px;
+        }
+      }
+    }
+
+    &--cs,
+    &--zc {
+      .c-form__group-col {
+        &-0 {
+          width: 190px;
+        }
+        &-1 {
+          width: 140px;
+        }
       }
     }
 
