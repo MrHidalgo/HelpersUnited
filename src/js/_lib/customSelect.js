@@ -30,13 +30,13 @@ const customSelect = {
 		}
 	},
 	chooseVal (elem) {
-		elem.closest('.c-form__select-wrapper').classList.add('is-choose');
+		elem.closest('.c-form__field').classList.add('is-choose');
 	},
 	focusElem (elem) {
-		elem.closest('.c-form__select-wrapper').classList.add('is-focus');
+		elem.closest('.c-form__field').classList.add('is-focus');
 	},
 	blurElem (elem) {
-		elem.closest('.c-form__select-wrapper').classList.remove('is-focus');
+		elem.closest('.c-form__field').classList.remove('is-focus');
 	}
 };
 

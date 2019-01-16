@@ -143,16 +143,26 @@ $form-notify-font-weight: bold;
     flex-direction: column;
     margin-bottom: $form-field-margin;
 
-    &.is-focus {
+
+    &.is-focus,
+    &.is-choose {
       .c-form {
         &__label {
-          transform-origin: center;
-          transform: translateX(-40px) translateY(-15px) scale(0.75);
+          transform-origin: left;
+          transform: translate(6px, -15px) scale(0.75);
           @include transition(transform, font-size)
         }
+
         &__input {
           border-color: #295DD9;
           @include transition(border-color);
+        }
+
+        &__select {
+          &-wrapper {
+            border-color: #295DD9;
+            @include transition(border-color);
+          }
         }
       }
     }
@@ -378,7 +388,8 @@ $form-notify-font-weight: bold;
     height: 100%;
     margin-bottom: 0;
     padding-left: 20px;
-    @include transition(transform, font-size);
+    transform-origin: left;
+    @include transition(transform);
   }
 
   &__input,
