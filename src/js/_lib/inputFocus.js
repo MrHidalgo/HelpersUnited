@@ -11,21 +11,21 @@ const initInputFocus = () => {
 	/**
 	 * @description
 	 */
-	inputElem.on("focus", (e) => {
-		let curElem = $(e.target);
+	inputElem.on("focus", (ev) => {
+		let curElem = $(ev.currentTarget);
 
-		curElem.closest(".form__field").addClass("is-focus");
+		curElem.closest(".c-form__field").addClass("is-focus");
 	});
 
 	/**
 	 * @description
 	 */
-	inputElem.on("blur", (e) => {
-		let curElem = $(e.target),
+	inputElem.on("blur", (ev) => {
+		let curElem = $(ev.currentTarget),
 			curElemVal = curElem.val().trim();
 
 		if(curElemVal === "") {
-			curElem.closest(".form__field").removeClass("is-focus");
+			curElem.closest(".c-form__field").removeClass("is-focus");
 		}
 	});
 };

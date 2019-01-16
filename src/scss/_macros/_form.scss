@@ -32,8 +32,8 @@ $form-input-border-width: 1px;
 $form-input-border-color: #EBEBEB;
 $form-input-box-shadow: none;
 $form-input-padding: 0 20px;
-$form-input-color: #000;
-$form-input-font-size: 16px;
+$form-input-color: #555555;
+$form-input-font-size: 14px;
 $form-input-font-weight: normal;
 $form-input-placeholder-color: #9B9B9B;
 $form-input-placeholder-font-size: 14px;
@@ -107,8 +107,6 @@ $form-notify-font-weight: bold;
   margin-left: auto;
   margin-right: auto;
 
-  &.is-focus {}
-
   &__wrapper {}
 
   &__group {
@@ -144,6 +142,20 @@ $form-notify-font-weight: bold;
     display: flex;
     flex-direction: column;
     margin-bottom: $form-field-margin;
+
+    &.is-focus {
+      .c-form {
+        &__label {
+          transform-origin: center;
+          transform: translateX(-40px) translateY(-15px) scale(0.75);
+          @include transition(transform, font-size)
+        }
+        &__input {
+          border-color: #295DD9;
+          @include transition(border-color);
+        }
+      }
+    }
 
     &.is-error,
     &.is-invalid,
@@ -359,13 +371,14 @@ $form-notify-font-weight: bold;
     @include transition(color);
 
     position: absolute;
-    z-index: 10;
+    z-index: -1;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     margin-bottom: 0;
     padding-left: 20px;
+    @include transition(transform, font-size);
   }
 
   &__input,
@@ -386,7 +399,9 @@ $form-notify-font-weight: bold;
     left: 0;
     width: 100%;
     height: 100%;
+    background-color: transparent;
     color: $form-input-color;
+    @include transition(border-color);
     @include inputPlaceholder {
       color: $form-input-placeholder-color;
       font-size: $form-input-placeholder-font-size;
