@@ -45,41 +45,42 @@ PageList:
 - file:
   titleName: CLIENT INTERVIEW
   ready: 0
+
 - file: client-interview-1.html
-  titleName: Client Interview 1
-  ready: 0
+  titleName: CI - Biography
+  ready: 01
 - file: client-interview-2.html
-  titleName: Client Interview 2
+  titleName: CI - 2
   ready: 0
 - file: client-interview-3.html
-  titleName: Client Interview 3
+  titleName: CI - 3
   ready: 0
 - file: client-interview-4.html
-  titleName: Client Interview 4
+  titleName: CI - 4
   ready: 0
 - file: client-interview-5.html
-  titleName: Client Interview 5
+  titleName: CI - 5
   ready: 0
 - file: client-interview-6.html
-  titleName: Client Interview 6
+  titleName: CI - 6
   ready: 0
 - file: client-interview-7.html
-  titleName: Client Interview 7
+  titleName: CI - 7
   ready: 0
 - file: client-interview-8.html
-  titleName: Client Interview 8
+  titleName: CI - 8
   ready: 0
 - file: client-interview-9.html
-  titleName: Client Interview 9
+  titleName: CI - 9
   ready: 0
 - file: client-interview-10.html
-  titleName: Client Interview 10
+  titleName: CI - 10
   ready: 0
 - file: client-interview-11.html
-  titleName: Client Interview 11
+  titleName: CI - 11
   ready: 0
 - file: client-interview-12.html
-  titleName: Client Interview 12
+  titleName: CI - 12
   ready: 0
 
 - file:

@@ -1,0 +1,53 @@
+// SECTION header internal :: START
+
+.header-i {
+  background-color: #fff;
+  box-shadow: 0 1px 0 0 #EBEBEB;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-left,
+    &-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 70px;
+    }
+
+    &-left {
+      width: 272px;
+      border-right: 1px solid #EBEBEB;
+    }
+
+    &-right {
+      width: 87px;
+      border-left: 1px solid #EBEBEB;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+
+    &:hover {
+      .icon-signout {
+        color: $c-royalBlue;
+        @include transition(color);
+      }
+    }
+
+    .icon-signout {
+      color: $c-nobel;
+      font-size: 18px;
+      @include transition(color);
+    }
+  }
+}
+
+// SECTION header internal :: END
