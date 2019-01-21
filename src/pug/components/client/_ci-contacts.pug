@@ -1,14 +1,56 @@
 // SECTION client interview contacts :: START
 
+-
+  var dataFormObj = {
+    inputName1: {
+      classMod: "",
+      uniqueName: "home_phone",
+      labelVal: "Type your answer",
+      inputType: "",
+      inputClassMod: "",
+      placeholderVal: "",
+      val: ""
+    },
+    inputName2: {
+      classMod: "",
+      uniqueName: "cell_phone",
+      labelVal: "Type your answer",
+      inputType: "",
+      inputClassMod: "",
+      placeholderVal: "",
+      val: ""
+    },
+    inputName3: {
+      classMod: "",
+      uniqueName: "email",
+      labelVal: "Type your answer",
+      inputType: "",
+      inputClassMod: "",
+      placeholderVal: "",
+      val: ""
+    }
+  };
+
 #ci.ci.ci--contacts
 
-  p.ci__title!= "What is your home phone number?"
-  hr.ci__divider
-  p.ci__title!= "What is your cell phone number?"
-  hr.ci__divider
-  p.ci__title!= "What is your email?"
-  hr.ci__divider
-  .ci__btn-wrapper
-    a.ci__btn(href="#" class="" title="")!= "Next"
+  form.c-form(action='' method='' autocomplete='off')
+
+    p.ci__title!= "What is your home phone number?"
+
+    +formInput(dataFormObj.inputName1)
+
+    hr.ci__divider
+    p.ci__title!= "What is your cell phone number?"
+
+    +formInput(dataFormObj.inputName2)
+
+    hr.ci__divider
+    p.ci__title!= "What is your email?"
+
+    +formInput(dataFormObj.inputName3)
+
+    hr.ci__divider
+    .ci__btn-wrapper
+      a.ci__btn(href="#" class="" title="")!= "Next"
 
 // SECTION client interview contacts :: END
