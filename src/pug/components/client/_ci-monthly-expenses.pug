@@ -3,6 +3,73 @@
 #ci.ci.ci--monthlyExpenses
 
   p.ci__title!= "Do you pay any of the following?"
+
+  .ci__row.ci__row--flexStart
+    .ci__col-1
+      +clientInterviewCheckboxBtn('ci-pay-following-0', 'ci-pay-following', 'Rent')
+    .ci__col-1
+      .ci__col-box
+        div
+          +clientInterviewCheckboxInputBtn('ci-pay-following-1', 'ci-following', 'Mortgage', 'How much?')
+        div
+          ul
+            li
+              p!= "Additional query"
+            li
+              .ci__row
+                .ci__col-1-2
+                  +clientInterviewRadioBtn('ci-pay-following-yes', 'ci-pay-following', 'Yes')(checked="checked")
+                .ci__col-1-2
+                  +clientInterviewRadioBtn('ci-pay-following-no', 'ci-pay-following', 'No')
+
+          +clientInterviewCheckboxBtn('ci-pay-following-25', 'ci-pay-following', 'Verbage')
+    .ci__col-1
+      +clientInterviewCheckboxBtn('ci-pay-following-2', 'ci-pay-following', 'Food')
+    .ci__col-1
+      +clientInterviewCheckboxBtn('ci-pay-following-3', 'ci-pay-following', 'Cleaning, etc')
+    .ci__col-1
+      +clientInterviewCheckboxInputBtn('ci-pay-following-4', 'ci-following', 'Cable', 'How much?')
+    .ci__col-1
+      +clientInterviewCheckboxBtn('ci-pay-following-5', 'ci-pay-following', 'Electric')
+    .ci__col-1
+      +clientInterviewCheckboxBtn('ci-pay-following-6', 'ci-pay-following', 'Water / Sewer')
+    .ci__col-1
+      +clientInterviewCheckboxBtn('ci-pay-following-7', 'ci-pay-following', 'Home phone')
+    .ci__col-1
+      +clientInterviewCheckboxBtn('ci-pay-following-8', 'ci-pay-following', 'Cell phone')
+    .ci__col-1
+      +clientInterviewCheckboxBtn('ci-pay-following-9', 'ci-pay-following', 'Natural gas')
+    .ci__col-1
+      +clientInterviewCheckboxBtn('ci-pay-following-10', 'ci-pay-following', 'Furniture loan')
+    .ci__col-1
+      +clientInterviewCheckboxBtn('ci-pay-following-11', 'ci-pay-following', 'Electronics loan')
+    .ci__col-1
+      +clientInterviewCheckboxBtn('ci-pay-following-12', 'ci-pay-following', 'Applicane loan')
+    .ci__col-1
+      +clientInterviewCheckboxBtn('ci-pay-following-13', 'ci-pay-following', 'Car')
+    .ci__col-1
+      +clientInterviewCheckboxBtn('ci-pay-following-14', 'ci-pay-following', 'Car Insurance')
+    .ci__col-1
+      +clientInterviewCheckboxBtn('ci-pay-following-15', 'ci-pay-following', 'Gasoline')
+    .ci__col-1
+      +clientInterviewCheckboxBtn('ci-pay-following-16', 'ci-pay-following', 'Child care')
+    .ci__col-1
+      +clientInterviewCheckboxBtn('ci-pay-following-17', 'ci-pay-following', 'Child support')
+    .ci__col-1
+      +clientInterviewCheckboxBtn('ci-pay-following-18', 'ci-pay-following', 'Med insurance')
+    .ci__col-1
+      +clientInterviewCheckboxBtn('ci-pay-following-19', 'ci-pay-following', 'Med loans')
+    .ci__col-1
+      +clientInterviewCheckboxBtn('ci-pay-following-20', 'ci-pay-following', 'Meds, docs, etc')
+    .ci__col-1
+      +clientInterviewCheckboxBtn('ci-pay-following-21', 'ci-pay-following', 'Credit cards')
+    .ci__col-1
+      +clientInterviewCheckboxBtn('ci-pay-following-22', 'ci-pay-following', 'Other loans')
+    .ci__col-1
+      +clientInterviewCheckboxBtn('ci-pay-following-23', 'ci-pay-following', 'Clothing')
+    .ci__col-1
+      +clientInterviewCheckboxBtn('ci-pay-following-24', 'ci-pay-following', 'Misc')
+
   hr.ci__divider
   .ci__btn-wrapper
     a.ci__btn(href="#" class="" title="")!= "Finish"
