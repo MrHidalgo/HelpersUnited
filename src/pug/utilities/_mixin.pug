@@ -43,6 +43,8 @@ mixin navigationItemAgency(classMod, iconName, navName)
         p.navigation__btn-name!= navName
 
 
+//- custom radio btn
+//- ================================
 mixin clientInterviewRadioBtn(id, groupName, radioVal)
   .c-radio
     .c-radio__field
@@ -53,6 +55,21 @@ mixin clientInterviewRadioBtn(id, groupName, radioVal)
         checked!= attributes.checked
       )
       label.c-radio__label(for!= id)
+        span!= radioVal
+
+
+//- custom checkbox btn
+//- ================================
+mixin clientInterviewCheckboxBtn(id, groupName, radioVal)
+  .c-checkbox
+    .c-checkbox__field
+      input.c-checkbox__input(
+        id= id
+        name!= groupName
+        type='checkbox'
+        checked!= attributes.checked
+      )
+      label.c-checkbox__label(for!= id)
         span!= radioVal
 
 //- MIXIN :: END

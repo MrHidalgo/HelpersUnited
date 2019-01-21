@@ -3,8 +3,24 @@
 #ci.ci.ci--medicalInsurance
 
   p.ci__title!= "Do you have medical insurance?"
+
+  .ci__row
+    .ci__col-1-2
+      +clientInterviewRadioBtn('ci-insurance-yes', 'ci-insurance', 'Yes')(checked="checked")
+    .ci__col-1-2
+      +clientInterviewRadioBtn('ci-insurance-no', 'ci-insurance', 'No')
+
   hr.ci__divider
   p.ci__title!= "What kinds of insurance do you have?"
+
+  .ci__row
+    .ci__col-1
+      +clientInterviewCheckboxBtn('ci-insurance-kinds-0', 'ci-insurance-kinds', 'Vision')(checked="checked")
+    .ci__col-1
+      +clientInterviewCheckboxBtn('ci-insurance-kinds-1', 'ci-insurance-kinds', 'Dental')(checked="checked")
+    .ci__col-1
+      +clientInterviewCheckboxBtn('ci-insurance-kinds-2', 'ci-insurance-kinds', 'Prescriptions')
+
   hr.ci__divider
   .ci__btn-wrapper
     a.ci__btn(href="#" class="" title="")!= "Next"

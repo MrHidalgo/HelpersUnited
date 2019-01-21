@@ -80,7 +80,8 @@
 // title :: end
 
 // custom radio
-.c-radio {
+.c-radio,
+.c-checkbox {
   &__field {
     position: relative;
     display: flex;
@@ -115,7 +116,7 @@
     &:hover {
       span {
         background-color: #EBEBEB;
-        @include transition(background-color);
+        @include transition(border-color, background-color);
       }
     }
 

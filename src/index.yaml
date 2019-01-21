@@ -51,7 +51,7 @@ PageList:
   ready: 55
 - file: client-interview-2.html
   titleName: CI - Medical Insurance
-  ready: 01
+  ready: 55
 - file: client-interview-3.html
   titleName: CI - Driver’s license
   ready: 01
