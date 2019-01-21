@@ -72,6 +72,14 @@
         margin-bottom: 0;
       }
     }
+
+    &--flexStart {
+      label {
+        span {
+          justify-content: flex-start;
+        }
+      }
+    }
   }
 
   &__col {

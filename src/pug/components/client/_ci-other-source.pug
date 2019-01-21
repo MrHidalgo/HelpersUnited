@@ -1,16 +1,87 @@
 // SECTION client interview other source :: START
 
+-
+  var dataFormObj = {
+    inputName1: {
+      classMod: "",
+      uniqueName: "first_name",
+      labelVal: "First Name",
+      inputType: "",
+      inputClassMod: "",
+      placeholderVal: "",
+      val: ""
+    },
+  };
+
 #ci.ci.ci--otherSource
 
-  p.ci__title!= "Do you recive any of the following?"
-  hr.ci__divider
-  p.ci__title!= "How many outside people ontribute to the income of the household ?"
-  hr.ci__divider
-  p.ci__title!= "What is the total amount of their combined assistance ?"
-  hr.ci__divider
-  p.ci__title!= "Do you expect to keep receiving this support ?"
-  hr.ci__divider
-  .ci__btn-wrapper
-    a.ci__btn(href="#" class="" title="")!= "Next"
+  form.c-form(action='' method='' autocomplete='off')
+
+    p.ci__title!= "Do you recive any of the following?"
+
+    .ci__row.ci__row--flexStart
+      .ci__col-1
+        +clientInterviewCheckboxBtn('ci-following-0', 'ci-following', 'Child support')
+      .ci__col-1
+        +clientInterviewCheckboxInputBtn('ci-following-1', 'ci-following', 'Unemployment benefits', 'How much?')
+      .ci__col-1
+        +clientInterviewCheckboxBtn('ci-following-2', 'ci-following', 'Disability benefits')
+      .ci__col-1
+        +clientInterviewCheckboxBtn('ci-following-3', 'ci-following', 'Social security benefits')
+      .ci__col-1
+        +clientInterviewCheckboxInputBtn('ci-following-4', 'ci-following', 'Food stamps', 'How much?')
+      .ci__col-1
+        +clientInterviewCheckboxBtn('ci-following-5', 'ci-following', 'Veterans benefits')
+      .ci__col-1
+        +clientInterviewCheckboxBtn('ci-following-6', 'ci-following', 'Pension')
+      .ci__col-1
+        +clientInterviewCheckboxBtn('ci-following-7', 'ci-following', 'Educational financial aid')
+      .ci__col-1
+        +clientInterviewCheckboxBtn('ci-following-8', 'ci-following', 'State or federal child care vouchers')
+      .ci__col-1
+        +clientInterviewCheckboxBtn('ci-following-9', 'ci-following', 'Housing subsidy')
+
+    hr.ci__divider
+    p.ci__title!= "How many outside people ontribute to the income of the household ?"
+
+    .ci__row
+      .ci__col-1-3
+        +clientInterviewRadioBtn('ci-income-household-1', 'ci-income-household', '1')(checked="checked")
+      .ci__col-1-3
+        +clientInterviewRadioBtn('ci-income-household-2', 'ci-income-household', '2')
+      .ci__col-1-3
+        +clientInterviewRadioBtn('ci-income-household-3', 'ci-income-household', '3')
+      .ci__col-1-3
+        +clientInterviewRadioBtn('ci-income-household-4', 'ci-income-household', '4')
+      .ci__col-1-3
+        +clientInterviewRadioBtn('ci-income-household-5', 'ci-income-household', '5')
+      .ci__col-1-3
+        +clientInterviewRadioBtn('ci-income-household-6', 'ci-income-household', '6')
+      .ci__col-1-3
+        +clientInterviewRadioBtn('ci-income-household-7', 'ci-income-household', '7')
+      .ci__col-1-3
+        +clientInterviewRadioBtn('ci-income-household-8', 'ci-income-household', '8')
+      .ci__col-1-3
+        +clientInterviewRadioBtn('ci-income-household-9', 'ci-income-household', '9')
+      .ci__col-1-3.ci__col-1-3--center
+        +clientInterviewRadioBtn('ci-income-household-10', 'ci-income-household', '10')
+
+    hr.ci__divider
+    p.ci__title!= "What is the total amount of their combined assistance ?"
+
+    +formInput(dataFormObj.inputName1)
+
+    hr.ci__divider
+    p.ci__title!= "Do you expect to keep receiving this support ?"
+
+    .ci__row
+      .ci__col-1-2
+        +clientInterviewRadioBtn('ci-support-yes', 'ci-support', 'Yes')(checked="checked")
+      .ci__col-1-2
+        +clientInterviewRadioBtn('ci-support-no', 'ci-support', 'No')
+
+    hr.ci__divider
+    .ci__btn-wrapper
+      a.ci__btn(href="#" class="" title="")!= "Next"
 
 // SECTION client interview other source :: END

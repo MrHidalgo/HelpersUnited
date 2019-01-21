@@ -71,5 +71,18 @@ mixin clientInterviewCheckboxBtn(id, groupName, radioVal)
       )
       label.c-checkbox__label(for!= id)
         span!= radioVal
+mixin clientInterviewCheckboxInputBtn(id, groupName, radioVal, placeholderVal)
+  .c-checkbox.c-checkbox--input
+    .c-checkbox__field
+      input.c-checkbox__input(
+        id= id
+        name!= groupName
+        type='checkbox'
+        checked!= attributes.checked
+      )
+      label.c-checkbox__label(for!= id)
+        span!= radioVal
+        .c-form__input-wrapper
+          input.c-form__input(type="text" placeholder= placeholderVal)
 
 //- MIXIN :: END
