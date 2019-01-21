@@ -1,16 +1,175 @@
 // SECTION client interview children :: START
 
+-
+  var dataFormObj = {
+    inputName1: {
+      classMod: "",
+      uniqueName: "first_name",
+      labelVal: "First Name",
+      inputType: "",
+      inputClassMod: "",
+      placeholderVal: "",
+      val: ""
+    },
+    inputName2: {
+      classMod: "",
+      uniqueName: "middle_name",
+      labelVal: "Middle Name",
+      inputType: "",
+      inputClassMod: "",
+      placeholderVal: "",
+      val: ""
+    },
+    inputName3: {
+      classMod: "",
+      uniqueName: "last_name",
+      labelVal: "Last Name",
+      inputType: "",
+      inputClassMod: "",
+      placeholderVal: "",
+      val: ""
+    },
+    inputName4: {
+      classMod: "",
+      uniqueName: "ssn",
+      labelVal: "SSN",
+      inputType: "",
+      inputClassMod: "",
+      placeholderVal: "",
+      val: ""
+    },
+    inputName5: {
+      classMod: "",
+      uniqueName: "Your_version",
+      labelVal: "Your version",
+      inputType: "",
+      inputClassMod: "",
+      placeholderVal: "",
+      val: ""
+    },
+    selectFieldCustomDBDay: {
+    classMod: "",
+    uniqueName: "select_date_day",
+    labelVal: "Day",
+    selectClassMod: "",
+    selectOption: [
+    'Some option 1',
+    'Some option 2',
+    'Some option 3'
+    ],
+    placeholderVal: ""
+    },
+    selectFieldCustomDBMonth: {
+    classMod: "",
+    uniqueName: "select_date_month",
+    labelVal: "Month",
+    selectClassMod: "",
+    selectOption: [
+    'Some option 1',
+    'Some option 2',
+    'Some option 3'
+    ],
+    placeholderVal: ""
+    },
+    selectFieldCustomDBYear: {
+    classMod: "",
+    uniqueName: "select_date_year",
+    labelVal: "Year",
+    selectClassMod: "",
+    selectOption: [
+    'Some option 1',
+    'Some option 2',
+    'Some option 3'
+    ],
+    placeholderVal: ""
+    }
+  };
+
+
 #ci.ci.ci--children
 
-  p.ci__title!= "How many adults, aged 17 over, live in the home with you?"
+  p.ci__title!= "How many children, 16 years and younger, reside in the home?"
+
+  .ci__row
+    .ci__col-1-3
+      +clientInterviewRadioBtn('ci-children-home-1', 'ci-children-home', '1')(checked="checked")
+    .ci__col-1-3
+      +clientInterviewRadioBtn('ci-children-home-2', 'ci-children-home', '2')
+    .ci__col-1-3
+      +clientInterviewRadioBtn('ci-children-home-3', 'ci-children-home', '3')
+    .ci__col-1-3
+      +clientInterviewRadioBtn('ci-children-home-4', 'ci-children-home', '4')
+    .ci__col-1-3
+      +clientInterviewRadioBtn('ci-children-home-5', 'ci-children-home', '5')
+    .ci__col-1-3
+      +clientInterviewRadioBtn('ci-children-home-6', 'ci-children-home', '6')
+    .ci__col-1-3
+      +clientInterviewRadioBtn('ci-children-home-7', 'ci-children-home', '7')
+    .ci__col-1-3
+      +clientInterviewRadioBtn('ci-children-home-8', 'ci-children-home', '8')
+    .ci__col-1-3
+      +clientInterviewRadioBtn('ci-children-home-9', 'ci-children-home', '9')
+    .ci__col-1-3.ci__col-1-3--center
+      +clientInterviewRadioBtn('ci-children-home-10', 'ci-children-home', '10')
+
   hr.ci__divider
   p.ci__title!= "Collect following information"
+
+  +formInput(dataFormObj.inputName1)
+  +formInput(dataFormObj.inputName2)
+  +formInput(dataFormObj.inputName3)
+
+  .ci__row
+    .ci__col-1-3
+      +formSelectCustom(dataFormObj.selectFieldCustomDBDay)
+    .ci__col-1-3
+      +formSelectCustom(dataFormObj.selectFieldCustomDBMonth)
+    .ci__col-1-3
+      +formSelectCustom(dataFormObj.selectFieldCustomDBYear)
+
+  +formInput(dataFormObj.inputName4)
+
   hr.ci__divider
-  p.ci__title!= "What is the $name$ gender?"
+  p.ci__title!= "What is the child gender?"
+
+  .ci__row
+    .ci__col-1-2
+      +clientInterviewRadioBtn('ci-gender-male', 'ci-gender', 'Male')(checked="checked")
+    .ci__col-1-2
+      +clientInterviewRadioBtn('ci-gender-female', 'ci-gender', 'Female')
+
   hr.ci__divider
   p.ci__title!= "What is your race?"
+
+  .ci__row
+    .ci__col-1
+      +clientInterviewRadioBtn('ci-race-0', 'ci-race', 'American Indian or Alaska Native')(checked="checked")
+    .ci__col-1
+      +clientInterviewRadioBtn('ci-race-1', 'ci-race', 'Asian')
+    .ci__col-1
+      +clientInterviewRadioBtn('ci-race-2', 'ci-race', 'Black or African American')
+    .ci__col-1
+      +clientInterviewRadioBtn('ci-race-3', 'ci-race', 'Native Hawaiian or Other Pacific Islander')
+    .ci__col-1
+      +clientInterviewRadioBtn('ci-race-4', 'ci-race', 'White')
+
   hr.ci__divider
   p.ci__title!= "Relationship"
+
+  .ci__row
+    .ci__col-1-2
+      +clientInterviewRadioBtn('ci-Relationship-0', 'ci-Relationship', 'Brother')(checked="checked")
+    .ci__col-1-2
+      +clientInterviewRadioBtn('ci-Relationship-1', 'ci-Relationship', 'Sister')
+    .ci__col-1-2
+      +clientInterviewRadioBtn('ci-Relationship-2', 'ci-Relationship', 'Roommate')
+    .ci__col-1-2
+      +clientInterviewRadioBtn('ci-Relationship-3', 'ci-Relationship', 'Friend')
+
+  .ci__row.ci__row--padding-top
+    .ci__col-1
+      +formInput(dataFormObj.inputName5)
+
   hr.ci__divider
   .ci__btn-wrapper
     a.ci__btn(href="#" class="" title="")!= "Next"
