@@ -69,7 +69,7 @@ PageList:
   ready: 55
 - file: client-interview-8.html
   titleName: CI - Adults
-  ready: 01
+  ready: 55
 - file: client-interview-9.html
   titleName: CI - Children
   ready: 01

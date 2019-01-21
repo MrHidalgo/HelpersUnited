@@ -168,6 +168,7 @@ $form-notify-font-weight: bold;
     display: flex;
     flex-direction: column;
     margin-bottom: $form-field-margin;
+    background-color: #fff;
 
 
     &.is-focus,
@@ -407,7 +408,7 @@ $form-notify-font-weight: bold;
     @include transition(color);
 
     position: absolute;
-    z-index: -1;
+    z-index: 0;
     top: 0;
     left: 0;
     width: 100%;
