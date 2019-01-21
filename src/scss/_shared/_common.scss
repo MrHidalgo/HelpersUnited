@@ -1,4 +1,61 @@
 // COMMON :: START
+
+// section
+.section {
+  &--client {
+    .section__wrapper-left {
+      width: 423px;
+      box-shadow: 0.5px 0 0 0 #EBEBEB;
+    }
+
+    .section__wrapper-right {
+      width: 100%;
+      max-width: calc(100% - 423px);
+    }
+  }
+
+  &--agency {
+    .section__wrapper-left {
+      width: 271px;
+      box-shadow: 1px 0 0 0 #EBEBEB;
+    }
+
+    .section__wrapper-right {
+      width: 100%;
+      max-width: calc(100% - 271px);
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    min-height: calc(100vh - 70px);
+
+    &-left {
+      z-index: 2;
+      position: relative;
+      background: #FFFFFF;
+
+    }
+
+    &-right {
+      z-index: 1;
+      position: relative;
+
+      background-color: #FCFCFC;
+    }
+
+    &-box {
+      width: 100%;
+      max-width: 554px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 60px 15px;
+    }
+  }
+}
+// section :: end
+
+// title
 .h {
   &-title {
     padding-bottom: 20px;
@@ -20,6 +77,67 @@
     line-height: line-height-convert(22.4, 14);
   }
 }
+// title :: end
+
+// custom radio
+.c-radio {
+  &__field {
+    position: relative;
+    display: flex;
+  }
+
+  &__input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+
+    &:checked {
+      &+label {
+        span {
+          border-color: $c-royalBlue;
+          background-color: $c-royalBlue;
+          color: #ffffff;
+          @include transition(border-color, background-color, color);
+        }
+      }
+    }
+  }
+
+  &__label {
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    &:hover {
+      span {
+        background-color: #EBEBEB;
+        @include transition(background-color);
+      }
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 100%;
+      height: 52px;
+      border-radius: 4px;
+      background-color: #fff;
+      border: 1px solid #EBEBEB;
+      color: #9B9B9B;
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+      @include transition(border-color, background-color, color);
+    }
+  }
+}
+// custom radio :: end
 
 // address
 .address {

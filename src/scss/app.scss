@@ -46,7 +46,7 @@
 @import "_components/header";
 @import "_components/header-internal";
 @import "_components/footer";
-@import "_components/sign";
+@import "_components/navigation";
 
 @import "_components/homepage/main";
 @import "_components/homepage/clients";
@@ -55,3 +55,7 @@
 @import "_components/homepage/great";
 @import "_components/homepage/reviews";
 @import "_components/homepage/work";
+
+@import "_components/_sign/sign";
+
+@import "_components/_client/client-interviews";

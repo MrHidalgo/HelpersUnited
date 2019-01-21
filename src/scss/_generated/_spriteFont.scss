@@ -27,8 +27,29 @@
 @function icon-char($filename) {
 	$char: "";
 
-	@if $filename == signout {
+	@if $filename == nav-documentLibraries {
 		$char: "\E001";
+	}
+	@if $filename == nav-interviews {
+		$char: "\E002";
+	}
+	@if $filename == nav-meetingSchedule {
+		$char: "\E003";
+	}
+	@if $filename == nav-pushCloud {
+		$char: "\E004";
+	}
+	@if $filename == nav-qa {
+		$char: "\E005";
+	}
+	@if $filename == nav-staff {
+		$char: "\E006";
+	}
+	@if $filename == nav-videoTutorials {
+		$char: "\E007";
+	}
+	@if $filename == signout {
+		$char: "\E008";
 	}
 
 	@return $char;
@@ -45,6 +66,34 @@
 	}
 }
 
+.icon-nav-documentLibraries {
+	@include icon(nav-documentLibraries);
+
+}
+.icon-nav-interviews {
+	@include icon(nav-interviews);
+
+}
+.icon-nav-meetingSchedule {
+	@include icon(nav-meetingSchedule);
+
+}
+.icon-nav-pushCloud {
+	@include icon(nav-pushCloud);
+
+}
+.icon-nav-qa {
+	@include icon(nav-qa);
+
+}
+.icon-nav-staff {
+	@include icon(nav-staff);
+
+}
+.icon-nav-videoTutorials {
+	@include icon(nav-videoTutorials);
+
+}
 .icon-signout {
 	@include icon(signout);
 

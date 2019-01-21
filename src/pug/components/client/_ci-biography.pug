@@ -1,0 +1,64 @@
+// SECTION client interview biography :: START
+
+#ci.ci.ci--biography
+  form.c-form(action='' method='' autocomplete='off')
+
+    p.ci__title!= "What is your gender?"
+
+    .ci__row
+      .ci__col-1-2
+        +clientInterviewRadioBtn('ci-gender-male', 'ci-gender', 'Male')(checked="checked")
+      .ci__col-1-2
+        +clientInterviewRadioBtn('ci-gender-female', 'ci-gender', 'Female')
+
+    hr.ci__divider
+    p.ci__title!= "What is your marital status?"
+
+    .ci__row
+      .ci__col-1-2
+        +clientInterviewRadioBtn('ci-marital-divorced', 'ci-marital', 'Divorced')(checked="checked")
+      .ci__col-1-2
+        +clientInterviewRadioBtn('ci-marital-married', 'ci-marital', 'Married')
+      .ci__col-1-2
+        +clientInterviewRadioBtn('ci-marital-single', 'ci-marital', 'Single')
+      .ci__col-1-2
+        +clientInterviewRadioBtn('ci-marital-widowed', 'ci-marital', 'Widowed')
+
+    hr.ci__divider
+    p.ci__title!= "What is your race?"
+
+    .ci__row
+      .ci__col-1
+        +clientInterviewRadioBtn('ci-race-0', 'ci-race', 'American Indian or Alaska Native')(checked="checked")
+      .ci__col-1
+        +clientInterviewRadioBtn('ci-race-1', 'ci-race', 'Asian')
+      .ci__col-1
+        +clientInterviewRadioBtn('ci-race-2', 'ci-race', 'Black or African American')
+      .ci__col-1
+        +clientInterviewRadioBtn('ci-race-3', 'ci-race', 'Native Hawaiian or Other Pacific Islander')
+      .ci__col-1
+        +clientInterviewRadioBtn('ci-race-4', 'ci-race', 'White')
+
+    hr.ci__divider
+    p.ci__title!= "Are you a veteran?"
+
+    .ci__row
+      .ci__col-1-2
+        +clientInterviewRadioBtn('ci-veteran-yes', 'ci-veteran', 'Yes')(checked="checked")
+      .ci__col-1-2
+        +clientInterviewRadioBtn('ci-veteran-no', 'ci-veteran', 'No')
+
+    hr.ci__divider
+    p.ci__title!= "Can you walk without assistance?"
+
+    .ci__row
+      .ci__col-1-2
+        +clientInterviewRadioBtn('ci-walk-yes', 'ci-walk', 'Yes')(checked="checked")
+      .ci__col-1-2
+        +clientInterviewRadioBtn('ci-walk-no', 'ci-walk', 'No')
+
+    hr.ci__divider
+    .ci__btn-wrapper
+      a.ci__btn(href="#" class="" title="")!= "Next"
+
+// SECTION client interview biography :: END

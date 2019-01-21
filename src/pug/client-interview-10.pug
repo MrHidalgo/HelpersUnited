@@ -1,0 +1,44 @@
+---
+title: HelpersUnited - Client interview - Other sources of income
+
+pageClassName: p-clien-interview
+pageClassNameNum: p-clien-interview-10
+---
+extends shared/_layout
+
+block header
+  include ./components/_header-internal
+
+block footer
+
+block content
+  div.body.body--start(class!= pageClassName)
+
+    section#section.section.section--client
+      .section__wrapper
+        .section__wrapper-left
+
+          section#navigation.navigation--client
+            .navigation__wrapper
+
+              ul.navigation__list
+                +navigationItem('title is-done', '1', 'Biography')
+                +navigationItem('title is-done', '2', 'Personal data')
+                +navigationItem('subtitle is-done', '', 'Medical Insurance')
+                +navigationItem('subtitle is-done', '', 'Driver’s license')
+                +navigationItem('subtitle is-done', '', 'Place of residence')
+                +navigationItem('subtitle is-done', '', 'Contacts')
+                +navigationItem('title is-done', '3', 'Employment information')
+                +navigationItem('subtitle is-done', '', 'Type of work')
+                +navigationItem('subtitle is-done', '', 'Income')
+                +navigationItem('title is-done', '4', 'Household member')
+                +navigationItem('subtitle is-done', '', 'Adults')
+                +navigationItem('subtitle is-done', '', 'Children')
+                +navigationItem('title is-active', '5', 'Other sources of income')
+                +navigationItem('title', '6', 'Monthly expenses')
+
+        .section__wrapper-right
+
+          .section__wrapper-box
+
+            include ./components/client/_ci-other-source

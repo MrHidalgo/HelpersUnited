@@ -12,11 +12,47 @@ include ./_mixin/_modal
 include ./_mixin/_nav
 include ./_mixin/_form
 
-
+//- homepage lading title
+//- ================================
 mixin homepageTitleDesc(classTitleMod, classLineMod, classDescMod, titleVal, descVal)
   h1.h-title(class!= classTitleMod)!= titleVal
   .h-line(class!= classLineMod)
   p.h-desc(class!= classDescMod)!= descVal
 
+
+//- navigation item for client interviews
+//- ================================
+mixin navigationItem(classMod, navNum, navName)
+  li.navigation__list-item(class!= "navigation__list-item--" + classMod)
+    a.navigation__btn(href="#" class="" title="")
+      div.navigation__btn-left
+        p.navigation__btn-num
+          span!= navNum
+      div.navigation__btn-right
+        p.navigation__btn-name!= navName
+
+
+//- navigation item for agency part
+//- ================================
+mixin navigationItemAgency(classMod, iconName, navName)
+  li.navigation__list-item(class!= "navigation__list-item--" + classMod)
+    a.navigation__btn(href="#" class="" title="")
+      div.navigation__btn-left
+        i.icon-font(class!= 'icon-nav-' + iconName)
+      div.navigation__btn-right
+        p.navigation__btn-name!= navName
+
+
+mixin clientInterviewRadioBtn(id, groupName, radioVal)
+  .c-radio
+    .c-radio__field
+      input.c-radio__input(
+        id= id
+        name!= groupName
+        type='radio'
+        checked!= attributes.checked
+      )
+      label.c-radio__label(for!= id)
+        span!= radioVal
 
 //- MIXIN :: END

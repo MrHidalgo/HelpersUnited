@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>nav-meetingSchedule</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Navigation-/-Interview" transform="translate(-30.000000, -236.000000)" fill="#9B9B9B" fill-rule="nonzero">
+            <g id="Nav-tab-Copy-7" transform="translate(0.000000, 209.000000)">
+                <g id="Icons-/-Arrow-/-Up-/-Active" transform="translate(30.000000, 27.000000)">
+                    <path d="M10.5,5.5 L10.5,0.5 L12.18,0.5 L12.18,2.18 L15.5,2.18 L15.5,3.82 L12.18,3.82 L12.18,5.5 L10.5,5.5 Z M15.5,8.82 L7.18,8.82 L7.18,7.18 L15.5,7.18 L15.5,8.82 Z M3.82,5.5 L5.5,5.5 L5.5,10.5 L3.82,10.5 L3.82,8.82 L0.5,8.82 L0.5,7.18 L3.82,7.18 L3.82,5.5 Z M8.82,15.5 L7.18,15.5 L7.18,10.5 L8.82,10.5 L8.82,12.18 L15.5,12.18 L15.5,13.82 L8.82,13.82 L8.82,15.5 Z M0.5,2.18 L8.82,2.18 L8.82,3.82 L0.5,3.82 L0.5,2.18 Z M0.5,12.18 L5.5,12.18 L5.5,13.82 L0.5,13.82 L0.5,12.18 Z" id="nav-meetingSchedule"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

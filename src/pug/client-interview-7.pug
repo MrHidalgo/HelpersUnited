@@ -1,8 +1,8 @@
 ---
-title: HelpersUnited - Client interview - Biography
+title: HelpersUnited - Client interview - Income
 
 pageClassName: p-clien-interview
-pageClassNameNum: p-clien-interview-1
+pageClassNameNum: p-clien-interview-8
 ---
 extends shared/_layout
 
@@ -22,15 +22,15 @@ block content
             .navigation__wrapper
 
               ul.navigation__list
-                +navigationItem('title is-active', '1', 'Biography')
-                +navigationItem('title', '2', 'Personal data')
-                +navigationItem('subtitle', '', 'Medical Insurance')
-                +navigationItem('subtitle', '', 'Driver’s license')
-                +navigationItem('subtitle', '', 'Place of residence')
-                +navigationItem('subtitle', '', 'Contacts')
-                +navigationItem('title', '3', 'Employment information')
-                +navigationItem('subtitle', '', 'Type of work')
-                +navigationItem('subtitle', '', 'Income')
+                +navigationItem('title is-done', '1', 'Biography')
+                +navigationItem('title is-done', '2', 'Personal data')
+                +navigationItem('subtitle is-done', '', 'Medical Insurance')
+                +navigationItem('subtitle is-done', '', 'Driver’s license')
+                +navigationItem('subtitle is-done', '', 'Place of residence')
+                +navigationItem('subtitle is-done', '', 'Contacts')
+                +navigationItem('title is-active', '3', 'Employment information')
+                +navigationItem('subtitle is-done', '', 'Type of work')
+                +navigationItem('subtitle is-active', '', 'Income')
                 +navigationItem('title', '4', 'Household member')
                 +navigationItem('subtitle', '', 'Adults')
                 +navigationItem('subtitle', '', 'Children')
@@ -41,4 +41,4 @@ block content
 
           .section__wrapper-box
 
-            include ./components/client/_ci-biography
+            include ./components/client/_ci-income

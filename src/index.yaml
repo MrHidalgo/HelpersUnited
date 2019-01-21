@@ -48,50 +48,50 @@ PageList:
 
 - file: client-interview-1.html
   titleName: CI - Biography
-  ready: 01
+  ready: 55
 - file: client-interview-2.html
-  titleName: CI - 2
-  ready: 0
+  titleName: CI - Medical Insurance
+  ready: 01
 - file: client-interview-3.html
-  titleName: CI - 3
-  ready: 0
+  titleName: CI - Driver’s license
+  ready: 01
 - file: client-interview-4.html
-  titleName: CI - 4
-  ready: 0
+  titleName: CI - Place of residence
+  ready: 01
 - file: client-interview-5.html
-  titleName: CI - 5
-  ready: 0
+  titleName: CI - Contacts
+  ready: 01
 - file: client-interview-6.html
-  titleName: CI - 6
-  ready: 0
+  titleName: CI - Type of work
+  ready: 01
 - file: client-interview-7.html
-  titleName: CI - 7
-  ready: 0
+  titleName: CI - Income
+  ready: 01
 - file: client-interview-8.html
-  titleName: CI - 8
-  ready: 0
+  titleName: CI - Adults
+  ready: 01
 - file: client-interview-9.html
-  titleName: CI - 9
-  ready: 0
+  titleName: CI - Children
+  ready: 01
 - file: client-interview-10.html
-  titleName: CI - 10
-  ready: 0
+  titleName: CI - Other sources of income
+  ready: 01
 - file: client-interview-11.html
-  titleName: CI - 11
-  ready: 0
+  titleName: CI - Monthly expenses
+  ready: 01
 - file: client-interview-12.html
-  titleName: CI - 12
-  ready: 0
+  titleName: CI - Congratulations
+  ready: 55
 
 - file:
   titleName: AGENCY INTERVIEWS
   ready: 0
 - file: agency-interviews-1.html
-  titleName: Agency Interviews 1
-  ready: 0
+  titleName: AI - Current Interviews
+  ready: 01
 - file: agency-interviews-2.html
-  titleName: Agency Interviews 2
-  ready: 0
+  titleName: AI - Post Interviews
+  ready: 01
 
 - file:
   titleName: AGENCY STAFF

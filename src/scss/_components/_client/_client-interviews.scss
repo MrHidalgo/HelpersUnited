@@ -1,0 +1,90 @@
+// SECTION client interviews :: START
+
+.ci {
+  &--congratulations {
+    .ci__btn-wrapper {
+      justify-content: center;
+    }
+  }
+
+  &__header,
+  &__desc {
+    text-align: center;
+  }
+
+  &__header {
+    padding-bottom: 17px;
+    font-size: 33px;
+    font-weight: 600;
+  }
+
+  &__desc {
+    padding-bottom: 33px;
+    font-size: 18px;
+  }
+
+  &__title {
+    padding-bottom: 24px;
+    color: #555;
+    line-height: line-height-convert(30.8, 18);
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  &__divider {
+    height: 1px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: none;
+    background-color: #EBEBEB;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 255px;
+    height: 52px;
+    border-radius: 4px;
+    background: #295DD9;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+
+    &-wrapper {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__col {
+    &-1 {
+      width: 100%;
+      max-width: 100%;
+
+      &:nth-of-type(n + 2) {
+        padding-top: 14px;
+      }
+    }
+
+    &-1-2 {
+      width: 100%;
+      max-width: calc((100% - 14px) / 2);
+
+      &:nth-of-type(n + 3) {
+        padding-top: 14px;
+      }
+    }
+  }
+}
+
+// SECTION client interviews :: END

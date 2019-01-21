@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>nav-videoTutorials</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Navigation-/-Interview" transform="translate(-29.000000, -811.000000)" fill="#9B9B9B" fill-rule="nonzero">
+            <g id="Nav-tab-Copy-2" transform="translate(0.000000, 785.000000)">
+                <g id="Icons-/-Arrow-/-Up-/-Active" transform="translate(29.000000, 26.000000)">
+                    <path d="M9,11.06 L14,7.32 L9,3.56 L9,11.06 Z M15.68,0.68 C16.1333356,0.68 16.5199984,0.8399984 16.84,1.16 C17.1600016,1.4800016 17.32,1.8666644 17.32,2.32 L17.32,12.32 C17.32,12.7733356 17.1600016,13.166665 16.84,13.5 C16.5199984,13.833335 16.1333356,14 15.68,14 L5.68,14 C5.2266644,14 4.833335,13.833335 4.5,13.5 C4.166665,13.166665 4,12.7733356 4,12.32 L4,2.32 C4,1.8666644 4.166665,1.4800016 4.5,1.16 C4.833335,0.8399984 5.2266644,0.68 5.68,0.68 L15.68,0.68 Z M2.32,4 L2.32,15.68 L14,15.68 L14,17.32 L2.32,17.32 C1.8666644,17.32 1.4800016,17.1600016 1.16,16.84 C0.8399984,16.5199984 0.68,16.1333356 0.68,15.68 L0.68,4 L2.32,4 Z" id="nav-videoTutorials"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

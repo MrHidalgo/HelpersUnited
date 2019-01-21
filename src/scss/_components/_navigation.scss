@@ -1,0 +1,215 @@
+// SECTION client navigation :: START
+
+.navigation {
+  // client
+  &--client {
+    .navigation {
+      &__list {
+        &-item {
+          &--title {
+            .navigation__btn-name {
+              font-size: 18px;
+            }
+          }
+
+          &--subtitle {
+            .navigation__btn-name {
+              font-size: 16px;
+            }
+          }
+
+          &.is-active,
+          &.is-done {
+            .navigation__btn-num,
+            .navigation__btn-name {
+              color: #555;
+            }
+          }
+
+          &.is-active {
+            .navigation__btn-num,
+            .navigation__btn-name {
+              color: #555;
+            }
+          }
+
+          &.is-done {
+            .navigation__btn-num {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 20px;
+              height: 20px;
+              border-radius: 100%;
+              background-color: $c-royalBlue;
+
+              &:before {
+                content: '';
+                transform: translate(1px, -1px) rotate(45deg);
+                width: 5px;
+                height: 10px;
+                border: solid $c-white;
+                border-width: 0 1px 1px 0;
+                background-color: transparent;
+              }
+
+              span {
+                display: none;
+              }
+            }
+            .navigation__btn-name {
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+
+      &__btn {
+        display: flex;
+        min-height: 70px;
+        border-bottom: 1px solid #EBEBEB;
+
+        &-left {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 70px;
+          border-right: 1px solid #EBEBEB;
+        }
+
+        &-right {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          max-width: calc(100% - 70px);
+          padding-left: 34px;
+          padding-right: 15px;
+        }
+
+        &-num,
+        &-name {
+          color: $c-nobel;
+          font-weight: 600;
+        }
+
+        &-num {
+          font-size: 18px;
+        }
+
+        &-name {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  // client :: end
+
+  // agency
+  &--agency {
+    .navigation {
+      &__list {
+        &-item {
+          &--4 {
+            padding-bottom: 366px;
+          }
+
+          &--5 {
+            a {
+              border-top: 1px solid #EBEBEB;
+            }
+          }
+
+          &--6 {
+            margin-bottom: 94px;
+          }
+
+          &.is-active {
+            a {
+              background-image: linear-gradient(-270deg, #FFFFFF 0%, #F7F7F7 100%);
+
+              &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 3px;
+                height: 100%;
+                background-color: $c-royalBlue;
+              }
+            }
+
+            .icon-font {
+              color: $c-royalBlue;
+            }
+          }
+        }
+      }
+      &__btn {
+        position: relative;
+        display: flex;
+        min-height: 70px;
+        border-bottom: 1px solid #EBEBEB;
+        @include transition(background-color);
+
+        &:hover {
+          background-color: #F7F7F7;
+          @include transition(background-color);
+        }
+
+        &-left {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 70px;
+        }
+
+        &-right {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          max-width: calc(100% - 70px);
+          padding-right: 15px;
+        }
+
+        .icon-font,
+        &-name {
+          color: $c-nobel;
+        }
+
+        &-name {
+          font-size: 14px;
+          font-weight: 600;
+        }
+
+        .icon-font {
+          &.icon-nav {
+            &-interviews,
+            &-documentLibraries,
+            &-qa,
+            &-videoTutorials {
+              font-size: 17px;
+            }
+            &-staff {
+              font-size: 12px;
+            }
+            &-pushCloud {
+              font-size: 13px;
+            }
+            &-meetingSchedule {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+  // agency :: end
+
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+// SECTION client navigation :: END
