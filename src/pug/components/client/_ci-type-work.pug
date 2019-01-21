@@ -1,20 +1,81 @@
 // SECTION client interview type work :: START
 
+-
+  var dataFormObj = {
+    inputName1: {
+      classMod: "",
+      uniqueName: "long_self_employed",
+      labelVal: "Type your answer",
+      inputType: "",
+      inputClassMod: "",
+      placeholderVal: "",
+      val: ""
+    },
+    textareaName1: {
+      classMod: "",
+      uniqueName: "what_you_do",
+      labelVal: "",
+      textareaClassMod: "",
+      placeholderVal: "Type your answer",
+      val: ""
+    },
+    textareaName2: {
+      classMod: "",
+      uniqueName: "income_lessened",
+      labelVal: "",
+      textareaClassMod: "",
+      placeholderVal: "Type your answer",
+      val: ""
+    }
+  };
+
 #ci.ci.ci--typeWork
 
-  p.ci__title!= "Are you employed?"
-  hr.ci__divider
-  p.ci__title!= "Are your self-employed?"
-  hr.ci__divider
-  p.ci__title!= "Describe what you do"
-  hr.ci__divider
-  p.ci__title!= "How long have you been self employed ?"
-  hr.ci__divider
-  p.ci__title!= "Has your income lessened in the past 3 months?"
-  hr.ci__divider
-  p.ci__title!= "Why is your income lessened?"
-  hr.ci__divider
-  .ci__btn-wrapper
-    a.ci__btn(href="#" class="" title="")!= "Next"
+  form.c-form(action='' method='' autocomplete='off')
+
+    p.ci__title!= "Are you employed?"
+
+    .ci__row
+      .ci__col-1-2
+        +clientInterviewRadioBtn('ci-employed-yes', 'ci-employed', 'Yes')(checked="checked")
+      .ci__col-1-2
+        +clientInterviewRadioBtn('ci-employed-no', 'ci-employed', 'No')
+
+    hr.ci__divider
+    p.ci__title!= "Are your self-employed?"
+
+    .ci__row
+      .ci__col-1-2
+        +clientInterviewRadioBtn('ci-self-employed-yes', 'ci-self-employed', 'Yes')(checked="checked")
+      .ci__col-1-2
+        +clientInterviewRadioBtn('ci-self-employed-no', 'ci-self-employed', 'No')
+
+    hr.ci__divider
+    p.ci__title!= "Describe what you do"
+
+    +formTextarea(dataFormObj.textareaName1)
+
+    hr.ci__divider
+    p.ci__title!= "How long have you been self employed?"
+
+    +formInput(dataFormObj.inputName1)
+
+    hr.ci__divider
+    p.ci__title!= "Has your income lessened in the past 3 months?"
+
+    .ci__row
+      .ci__col-1-2
+        +clientInterviewRadioBtn('ci-lessened-yes', 'ci-lessened', 'Yes')(checked="checked")
+      .ci__col-1-2
+        +clientInterviewRadioBtn('ci-lessened-no', 'ci-lessened', 'No')
+
+    hr.ci__divider
+    p.ci__title!= "Why is your income lessened?"
+
+    +formTextarea(dataFormObj.textareaName2)
+
+    hr.ci__divider
+    .ci__btn-wrapper
+      a.ci__btn(href="#" class="" title="")!= "Next"
 
 // SECTION client interview type work :: END
