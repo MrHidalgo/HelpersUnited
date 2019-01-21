@@ -1,14 +1,51 @@
 // SECTION client interview drivers licence :: START
 
+-
+  var dataFormObj = {
+    inputName1: {
+      classMod: "",
+      uniqueName: "state_issued",
+      labelVal: "Type your answer",
+      inputType: "",
+      inputClassMod: "",
+      placeholderVal: "",
+      val: ""
+    },
+    inputName2: {
+      classMod: "",
+      uniqueName: "license_number",
+      labelVal: "Type your answer",
+      inputType: "",
+      inputClassMod: "",
+      placeholderVal: "",
+      val: ""
+    }
+  };
+
 #ci.ci.ci--driversLicence
 
-  p.ci__title!= "Do you have a driver's license?"
-  hr.ci__divider
-  p.ci__title!= "What state is issued the license?"
-  hr.ci__divider
-  p.ci__title!= "What is your license number?"
-  hr.ci__divider
-  .ci__btn-wrapper
-    a.ci__btn(href="#" class="" title="")!= "Next"
+  form.c-form(action='' method='' autocomplete='off')
+
+    p.ci__title!= "Do you have a driver's license?"
+
+    .ci__row
+      .ci__col-1-2
+        +clientInterviewRadioBtn('ci-license-yes', 'ci-license', 'Yes')(checked="checked")
+      .ci__col-1-2
+        +clientInterviewRadioBtn('ci-license-no', 'ci-license', 'No')
+
+    hr.ci__divider
+    p.ci__title!= "What state is issued the license?"
+
+    +formInput(dataFormObj.inputName1)
+
+    hr.ci__divider
+    p.ci__title!= "What is your license number?"
+
+    +formInput(dataFormObj.inputName2)
+
+    hr.ci__divider
+    .ci__btn-wrapper
+      a.ci__btn(href="#" class="" title="")!= "Next"
 
 // SECTION client interview drivers licence :: END

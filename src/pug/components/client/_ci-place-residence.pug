@@ -1,12 +1,80 @@
 // SECTION client interview place residence :: START
 
+-
+  var dataFormObj = {
+    inputName1: {
+      classMod: "",
+      uniqueName: "street_address",
+      labelVal: "Street",
+      inputType: "",
+      inputClassMod: "",
+      placeholderVal: "",
+      val: ""
+    },
+    inputName2: {
+      classMod: "",
+      uniqueName: "city_address",
+      labelVal: "City",
+      inputType: "",
+      inputClassMod: "",
+      placeholderVal: "",
+      val: ""
+    },
+    inputName3: {
+      classMod: "",
+      uniqueName: "state_address",
+      labelVal: "State",
+      inputType: "",
+      inputClassMod: "",
+      placeholderVal: "",
+      val: ""
+    },
+    inputName4: {
+      classMod: "",
+      uniqueName: "zip_address",
+      labelVal: "Zip",
+      inputType: "",
+      inputClassMod: "",
+      placeholderVal: "",
+      val: ""
+    },
+    inputName5: {
+      classMod: "",
+      uniqueName: "country_address",
+      labelVal: "Country",
+      inputType: "",
+      inputClassMod: "",
+      placeholderVal: "",
+      val: ""
+    },
+  };
+
 #ci.ci.ci--placeResidence
 
-  p.ci__title!= "Are you homeless?"
-  hr.ci__divider
-  p.ci__title!= "What is your residence address ?"
-  hr.ci__divider
-  .ci__btn-wrapper
-    a.ci__btn(href="#" class="" title="")!= "Next"
+  form.c-form(action='' method='' autocomplete='off')
+
+    p.ci__title!= "Are you homeless?"
+
+    .ci__row
+      .ci__col-1-2
+        +clientInterviewRadioBtn('ci-homeless-yes', 'ci-homeless', 'Yes')(checked="checked")
+      .ci__col-1-2
+        +clientInterviewRadioBtn('ci-homeless-no', 'ci-homeless', 'No')
+
+    hr.ci__divider
+    p.ci__title!= "What is your residence address ?"
+
+    +formInput(dataFormObj.inputName1)
+    +formInput(dataFormObj.inputName2)
+    .ci__row
+      .ci__col-1-70
+        +formInput(dataFormObj.inputName3)
+      .ci__col-1-30
+        +formInput(dataFormObj.inputName4)
+    +formInput(dataFormObj.inputName5)
+
+    hr.ci__divider
+    .ci__btn-wrapper
+      a.ci__btn(href="#" class="" title="")!= "Next"
 
 // SECTION client interview place residence :: END

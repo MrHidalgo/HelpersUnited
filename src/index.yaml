@@ -54,10 +54,10 @@ PageList:
   ready: 55
 - file: client-interview-3.html
   titleName: CI - Driver’s license
-  ready: 01
+  ready: 55
 - file: client-interview-4.html
   titleName: CI - Place of residence
-  ready: 01
+  ready: 55
 - file: client-interview-5.html
   titleName: CI - Contacts
   ready: 01

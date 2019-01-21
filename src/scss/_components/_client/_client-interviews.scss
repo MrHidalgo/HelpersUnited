@@ -76,6 +76,15 @@
       }
     }
 
+    &-1-70 {
+      width: 100%;
+      max-width: calc((100% - 7px) - 30%);
+    }
+    &-1-30 {
+      width: 100%;
+      max-width: calc((100% - 7px) - 70%);
+    }
+
     &-1-2 {
       width: 100%;
       max-width: calc((100% - 14px) / 2);
