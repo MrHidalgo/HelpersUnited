@@ -62,7 +62,8 @@ section#staff.staff
               input(type="text" class='staff__table-input' value="952-716-6400" readonly)
           .staff__table-td.staff__table-td--expand
             if(pageClassNameNum === "p-agency-staff-2" && idx === 1)
-              input(type="text" class='staff__table-input' value="Employee")
+              .c-form
+                +formSelectCustom(dataFormObj.selectFieldCustom)
             else
               input(type="text" class='staff__table-input' value="Employee" readonly)
           .staff__table-td.staff__table-td--auto
