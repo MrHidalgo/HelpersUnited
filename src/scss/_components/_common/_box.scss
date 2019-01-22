@@ -1,0 +1,57 @@
+// SECTION box :: START
+
+.box {
+  display: flex;
+  width: 100%;
+  max-width: 204px;
+  margin-right: 20px;
+  background: $c-whiteSmoke;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &__cover {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__wrapper {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 187px;
+    border-radius: 4px;
+    border: 1px solid $c-whisper;
+
+    &-top {
+      flex: 1;
+      min-height: 1px;
+    }
+
+    &-bottom {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 48px;
+      padding: 5px;
+      background-color: $c-white;
+    }
+  }
+
+  &__title {
+    color: $c-matterhorn;
+    line-height: line-height-convert(22.4, 12);
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  &__subtitle {
+    color: $c-nobel;
+    font-size: 10px;
+    font-weight: 600;
+  }
+}
+
+// SECTION box :: END
