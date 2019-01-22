@@ -48,8 +48,11 @@
 	@if $filename == nav-videoTutorials {
 		$char: "\E007";
 	}
-	@if $filename == signout {
+	@if $filename == search {
 		$char: "\E008";
+	}
+	@if $filename == signout {
+		$char: "\E009";
 	}
 
 	@return $char;
@@ -92,6 +95,10 @@
 }
 .icon-nav-videoTutorials {
 	@include icon(nav-videoTutorials);
+
+}
+.icon-search {
+	@include icon(search);
 
 }
 .icon-signout {

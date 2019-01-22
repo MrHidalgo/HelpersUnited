@@ -1,0 +1,34 @@
+// SECTION tabs :: START
+
+-
+  var tabsAgencyInterviewArr = ['Current interviews', 'Past interviews'];
+
+
+mixin tabsBtn(num, arr)
+  each val, idx in arr
+    li.tabs__list-item
+      a.tabs__list-btn(href="#" class= (num === idx) ? 'is-active':'' title="")!= val
+
+mixin tabsSearchBtn()
+  a.tabs__search(href="#" class="" title="")
+    i.icon-font.icon-search
+
+
+section#tabs.tabs.tabs--search
+  .tabs__wrapper
+    .tabs__wrapper-right
+
+      ul.tabs__list
+
+        if(pageClassNameNum === 'p-agency-interviews-1')
+          +tabsBtn(0, tabsAgencyInterviewArr)
+
+        else if(pageClassNameNum === 'p-agency-interviews-2')
+          +tabsBtn(1, tabsAgencyInterviewArr)
+
+    .tabs__wrapper-left
+      if(pageClassNameNum === 'p-agency-interviews-1' || pageClassNameNum === 'p-agency-interviews-2')
+        +tabsSearchBtn()
+
+
+// SECTION tabs :: END
