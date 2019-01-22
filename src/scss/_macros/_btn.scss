@@ -53,6 +53,17 @@ $btn-color--border: rgba(#000, 1);
       background-color: #4A4A4A;
       @include transition(background-color, border-color);
     }
+
+    &-dark {
+      border-color: #4A4A4A;
+      background-color: #4A4A4A;
+
+      &:hover {
+        border-color: $bth-background-color;
+        background-color: $bth-background-color;
+        @include transition(background-color, border-color);
+      }
+    }
   }
 
   &__text {

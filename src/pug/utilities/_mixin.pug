@@ -87,7 +87,7 @@ mixin clientInterviewCheckboxInputBtn(id, groupName, radioVal, placeholderVal)
 
 
 mixin sectionBox(classMod, title, subtitle, badgeVal)
-  .box(class!= "box--" + classMod)
+  a.box(href='#' class!= "box--" + classMod)
     .box__wrapper
       .box__wrapper-top
         if(badgeVal)

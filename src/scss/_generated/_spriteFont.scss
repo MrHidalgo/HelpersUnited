@@ -27,32 +27,35 @@
 @function icon-char($filename) {
 	$char: "";
 
-	@if $filename == nav-documentLibraries {
+	@if $filename == close {
 		$char: "\E001";
 	}
-	@if $filename == nav-interviews {
+	@if $filename == nav-documentLibraries {
 		$char: "\E002";
 	}
-	@if $filename == nav-meetingSchedule {
+	@if $filename == nav-interviews {
 		$char: "\E003";
 	}
-	@if $filename == nav-pushCloud {
+	@if $filename == nav-meetingSchedule {
 		$char: "\E004";
 	}
-	@if $filename == nav-qa {
+	@if $filename == nav-pushCloud {
 		$char: "\E005";
 	}
-	@if $filename == nav-staff {
+	@if $filename == nav-qa {
 		$char: "\E006";
 	}
-	@if $filename == nav-videoTutorials {
+	@if $filename == nav-staff {
 		$char: "\E007";
 	}
-	@if $filename == search {
+	@if $filename == nav-videoTutorials {
 		$char: "\E008";
 	}
-	@if $filename == signout {
+	@if $filename == search {
 		$char: "\E009";
+	}
+	@if $filename == signout {
+		$char: "\E00A";
 	}
 
 	@return $char;
@@ -69,6 +72,10 @@
 	}
 }
 
+.icon-close {
+	@include icon(close);
+
+}
 .icon-nav-documentLibraries {
 	@include icon(nav-documentLibraries);
 

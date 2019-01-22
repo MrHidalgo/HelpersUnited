@@ -4,12 +4,12 @@ include ../utilities/_dataForm
 include ../utilities/_data
 
 doctype html
-html(lang="en")
+html(lang="en" class!= (documentLock === true) ? 'is-hideScroll':'')
 
   head
     include _head
 
-  body
+  body(class!= (documentLock === true) ? 'is-hideScroll':'')
 
     block header
       include ../components/_header
@@ -22,6 +22,9 @@ html(lang="en")
 
     block footer
       include ../components/_footer
+
+
+    block modal
 
 
   block script

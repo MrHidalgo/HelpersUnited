@@ -1,0 +1,36 @@
+// SECTION push to cloud modal :: START
+
+#c-modal.c-modal.c-modal--pc
+  .c-modal__wrapper
+    .c-modal__content
+      .c-modal__header
+        div
+          p.c-modal__title!= 'Applicant name'
+          p.c-modal__subtitle!= 'Request date: 10.10.18'
+
+        a.c-modal__close(href="#" class="" title="")
+          i.icon-font.icon-close
+
+      .c-modal__body
+        p.c-modal__name!= "Request name"
+        p.c-modal__desc!= "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
+
+        ul.c-modal__list
+          li.c-modal__list-item
+            div
+              span!= "Limit"
+            div
+            div
+              span!= "$300"
+          li.c-modal__list-item
+            div
+              span!= "Requested"
+            div
+            div
+              span!= "$600"
+
+      .c-modal__footer
+        a.c-modal__btn.c-btn.c-btn--bg.c-btn--bg-dark(href="#" class="" title="")!= "Reject"
+        a.c-modal__btn.c-btn.c-btn--bg(href="#" class="" title="")!= "Accept"
+
+// SECTION push to cloud modal :: END
