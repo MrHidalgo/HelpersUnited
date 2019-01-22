@@ -1,5 +1,21 @@
 // SECTION staff :: START
 
+-
+  var dataFormObj = {
+    selectFieldCustom: {
+      classMod: "staff__table-select",
+      uniqueName: "select_status",
+      labelVal: "",
+      selectClassMod: "",
+      selectOption: [
+      'Some option 1',
+      'Some option 2',
+      'Some option 3'
+      ],
+      placeholderVal: "Employee"
+    }
+  };
+
 section#staff.staff
 
   .staff__table
@@ -30,28 +46,60 @@ section#staff.staff
       each val, idx in [1,2,3]
         .staff__table-tr
           .staff__table-td.staff__table-td--expand
-            span!= "Jack Simon"
+            if(pageClassNameNum === "p-agency-staff-2" && idx === 1)
+              input(type="text" class='staff__table-input staff__table-input--edit' value="Jack Simon")
+            else
+              input(type="text" class='staff__table-input' value="Jack Simon" readonly)
           .staff__table-td.staff__table-td--expand
-            span!= "name.kozey@gmail.com"
+            if(pageClassNameNum === "p-agency-staff-2" && idx === 1)
+              input(type="text" class='staff__table-input staff__table-input--edit' value="name.kozey@gmail.com")
+            else
+              input(type="text" class='staff__table-input' value="name.kozey@gmail.com" readonly)
           .staff__table-td.staff__table-td--expand
-            span!= "952-716-6400"
+            if(pageClassNameNum === "p-agency-staff-2" && idx === 1)
+              input(type="text" class='staff__table-input staff__table-input--edit' value="952-716-6400")
+            else
+              input(type="text" class='staff__table-input' value="952-716-6400" readonly)
           .staff__table-td.staff__table-td--expand
-            span!= "Employee"
+            if(pageClassNameNum === "p-agency-staff-2" && idx === 1)
+              input(type="text" class='staff__table-input' value="Employee")
+            else
+              input(type="text" class='staff__table-input' value="Employee" readonly)
           .staff__table-td.staff__table-td--auto
-            .c-dropdown
-              a.c-dropdown__btn(href="#" class="" title="" dropdown-js)
-                i.icon-font.icon-more
-              div.c-dropdown__content
-                ul
-                  li
-                    a.c-dropdown__link(href="#" class="" title="")
-                      p
-                        i.icon-font.icon-edit
-                      span!= "Edit"
-                  li
-                    a.c-dropdown__link(href="#" class="" title="")
-                      p
-                        i.icon-font.icon-delete
-                      span!= "Delete"
+            if(pageClassNameNum === "p-agency-staff-2" && idx === 1)
+              a(href="#" class="" title="")
+                i.icon-font.icon-check
+            else
+              .c-dropdown
+                a.c-dropdown__btn(href="#" class="" title="" dropdown-js)
+                  i.icon-font.icon-more
+                div.c-dropdown__content
+                  ul
+                    li
+                      a.c-dropdown__link(href="#" class="" title="")
+                        p
+                          i.icon-font.icon-edit
+                        span!= "Edit"
+                    li
+                      a.c-dropdown__link(href="#" class="" title="")
+                        p
+                          i.icon-font.icon-delete
+                        span!= "Delete"
+
+      if(pageClassNameNum === "p-agency-staff-2")
+        .staff__table-tr.staff__table-tr--add
+          .staff__table-td.staff__table-td--expand
+            input(type="text" class='staff__table-input' placeholder="Jack Simon")
+          .staff__table-td.staff__table-td--expand
+            input(type="text" class='staff__table-input' placeholder="name.kozey@gmail.com")
+          .staff__table-td.staff__table-td--expand
+            input(type="text" class='staff__table-input' placeholder="952-716-6400")
+          .staff__table-td.staff__table-td--expand
+            .c-form
+              +formSelectCustom(dataFormObj.selectFieldCustom)
+          .staff__table-td.staff__table-td--auto
+            a(href="#" class="" title="")
+              i.icon-font.icon-close
+
 
 // SECTION staff :: END
