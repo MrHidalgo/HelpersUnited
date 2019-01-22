@@ -2,6 +2,7 @@
 
 -
   var tabsAgencyInterviewArr = ['Current interviews', 'Past interviews'];
+  var tabsAgencyPushCloudArr = ['Active Requests', 'Requests History'];
 
 
 mixin tabsBtn(num, arr)
@@ -26,8 +27,16 @@ section#tabs.tabs.tabs--search
         else if(pageClassNameNum === 'p-agency-interviews-2')
           +tabsBtn(1, tabsAgencyInterviewArr)
 
+        else if (pageClassNameNum === 'p-agency-push-cloud-1' || pageClassNameNum === 'p-agency-push-cloud-2')
+          +tabsBtn(0, tabsAgencyPushCloudArr)
+
+        else if (pageClassNameNum === 'p-agency-push-cloud-3' || pageClassNameNum === 'p-agency-push-cloud-4')
+          +tabsBtn(1, tabsAgencyPushCloudArr)
+
     .tabs__wrapper-left
-      if(pageClassNameNum === 'p-agency-interviews-1' || pageClassNameNum === 'p-agency-interviews-2')
+      if(pageClassName === 'p-agency-interviews')
+        +tabsSearchBtn()
+      else if (pageClassName === 'p-agency-push-cloud')
         +tabsSearchBtn()
 
 

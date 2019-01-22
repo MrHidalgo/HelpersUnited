@@ -1,8 +1,8 @@
 ---
-title: HelpersUnited - Agency interview - Post Interviews
+title: HelpersUnited - Agency interview - Active Requests
 
-pageClassName: p-agency-interviews
-pageClassNameNum: p-agency-interviews-2
+pageClassName: p-agency-push-cloud
+pageClassNameNum: p-agency-push-cloud-1
 ---
 extends shared/_layout
 
@@ -22,9 +22,9 @@ block content
             .navigation__wrapper
 
               ul.navigation__list
-                +navigationItemAgency('0 is-active', 'interviews', 'Interviews')
+                +navigationItemAgency('0', 'interviews', 'Interviews')
                 +navigationItemAgency('1', 'staff', 'Staff')
-                +navigationItemAgency('2', 'pushCloud', 'Push-to-cloud')
+                +navigationItemAgency('2 is-active', 'pushCloud', 'Push-to-cloud')
                 +navigationItemAgency('3', 'meetingSchedule', 'Meeting Schedule')
                 +navigationItemAgency('4', 'documentLibraries', 'Document libraries')
                 +navigationItemAgency('5', 'qa', 'Q&A')
@@ -34,11 +34,11 @@ block content
 
           include components/common/_tabs
 
-          section#agency-interviews.agency-interviews
+          section#push-cloud.push-cloud
 
             .box__cover
-              +sectionBox('ai', 'Interviewer name', '16.08.19', '')
-              +sectionBox('ai', 'Interviewer name', '16.08.19', '')
-              +sectionBox('ai', 'Interviewer name', '16.08.19', '')
-              +sectionBox('ai', 'Interviewer name', '16.08.19', '')
-              +sectionBox('ai', 'Interviewer name', '16.08.19', '')
+              +sectionBox('pc', 'Request name', 'Aplplicant name', 'new')
+              +sectionBox('pc', 'Request name', 'Aplplicant name', 'new')
+              +sectionBox('pc', 'Request name', 'Aplplicant name', '')
+              +sectionBox('pc', 'Request name', 'Aplplicant name', '')
+              +sectionBox('pc', 'Request name', 'Aplplicant name', '')

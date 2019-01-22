@@ -26,6 +26,7 @@
     border: 1px solid $c-whisper;
 
     &-top {
+      position: relative;
       flex: 1;
       min-height: 1px;
     }
@@ -35,7 +36,7 @@
       flex-direction: column;
       justify-content: center;
       height: 48px;
-      padding: 5px;
+      padding: 5px 10px;
       background-color: $c-white;
     }
   }
@@ -51,6 +52,47 @@
     color: $c-nobel;
     font-size: 10px;
     font-weight: 600;
+  }
+
+  &__badge {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: 10px;
+    bottom: 10px;
+    color: $c-nobel;
+    font-size: 10px;
+    font-weight: 600;
+    min-height: 17px;
+    border-radius: 8px;
+    border-width: 1px;
+    border-style: solid;
+
+    &--new {
+      background-color: $c-white;
+      border-color: $c-whisper;
+    }
+
+    &--rejected {
+      color: $c-white;
+      border-color: #D0021B;
+      background-color: #D0021B;
+    }
+
+    &--approved {
+      color: $c-white;
+      border-color: #04CA67;
+      background-color: #04CA67;
+    }
+
+    span {
+      position: relative;
+      top: -1px;
+      padding-left: 7px;
+      padding-right: 7px;
+      line-height: 1;
+      text-transform: capitalize;
+    }
   }
 }
 

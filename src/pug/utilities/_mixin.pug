@@ -86,10 +86,13 @@ mixin clientInterviewCheckboxInputBtn(id, groupName, radioVal, placeholderVal)
           input.c-form__input(type="text" placeholder= placeholderVal)
 
 
-mixin sectionBox(classMod, title, subtitle)
+mixin sectionBox(classMod, title, subtitle, badgeVal)
   .box(class!= "box--" + classMod)
     .box__wrapper
       .box__wrapper-top
+        if(badgeVal)
+          .box__badge(class!= 'box__badge--' + badgeVal.toLowerCase())
+            span!= badgeVal
       .box__wrapper-bottom
         p.box__title!= title
         p.box__subtitle!= subtitle
