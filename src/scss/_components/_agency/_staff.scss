@@ -1,0 +1,96 @@
+// SECTION staff :: START
+
+.staff {
+  &__table {
+    background-color: $c-white;
+
+    &-head {}
+    &-body {}
+
+    &-tr {
+      display: flex;
+      min-height: 70px;
+      border-bottom: 1px solid $c-whisper;
+    }
+
+    &-th,
+    &-td {
+      display: flex;
+      align-items: center;
+      border-right: 1px solid $c-whisper;
+
+      &--expand {
+        flex: 1;
+        min-width: 1px;
+        padding: 5px 30px;
+      }
+
+      &--auto {
+        width: 86px;
+        border-right: none;
+      }
+    }
+
+    &-th {
+      justify-content: space-between;
+
+      &--auto {
+        > a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+
+          .icon-add {
+            color: $c-nobel;
+            font-size: 17px;
+          }
+        }
+      }
+
+      span {
+        color: $c-nobel;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      .icon-table-triangle {
+        color: #D0021B;
+      }
+    }
+
+    &-td {
+      &--auto {
+        justify-content: center;
+
+        .c-dropdown {
+          width: 100%;
+          height: 100%;
+
+          &__btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+
+            .icon-more {
+              color: $c-nobel;
+              font-size: 4px;
+            }
+          }
+        }
+      }
+
+      span {
+        color: $c-matterhorn;
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+// SECTION staff :: END

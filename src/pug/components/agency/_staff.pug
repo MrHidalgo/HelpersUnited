@@ -1,0 +1,57 @@
+// SECTION staff :: START
+
+section#staff.staff
+
+  .staff__table
+
+    .staff__table-head
+      .staff__table-tr
+        .staff__table-th.staff__table-th--expand
+          span!= "Name"
+          a(href="#" class="" title="")
+            i.icon-font.icon-table-triangle
+        .staff__table-th.staff__table-th--expand
+          span!= "Email"
+          a(href="#" class="" title="")
+            i.icon-font.icon-table-triangle
+        .staff__table-th.staff__table-th--expand
+          span!= "Phone"
+          a(href="#" class="" title="")
+            i.icon-font.icon-table-triangle
+        .staff__table-th.staff__table-th--expand
+          span!= "Status"
+          a(href="#" class="" title="")
+            i.icon-font.icon-table-triangle
+        .staff__table-th.staff__table-th--auto
+          a(href="#" class="" title="")
+            i.icon-font.icon-add
+
+    .staff__table-body
+      each val, idx in [1,2,3]
+        .staff__table-tr
+          .staff__table-td.staff__table-td--expand
+            span!= "Jack Simon"
+          .staff__table-td.staff__table-td--expand
+            span!= "name.kozey@gmail.com"
+          .staff__table-td.staff__table-td--expand
+            span!= "952-716-6400"
+          .staff__table-td.staff__table-td--expand
+            span!= "Employee"
+          .staff__table-td.staff__table-td--auto
+            .c-dropdown
+              a.c-dropdown__btn(href="#" class="" title="" dropdown-js)
+                i.icon-font.icon-more
+              div.c-dropdown__content
+                ul
+                  li
+                    a.c-dropdown__link(href="#" class="" title="")
+                      p
+                        i.icon-font.icon-edit
+                      span!= "Edit"
+                  li
+                    a.c-dropdown__link(href="#" class="" title="")
+                      p
+                        i.icon-font.icon-delete
+                      span!= "Delete"
+
+// SECTION staff :: END

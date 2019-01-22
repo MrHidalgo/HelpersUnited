@@ -1,0 +1,71 @@
+// SECTION custom dropdown :: START
+
+.c-dropdown {
+  position: relative;
+  display: flex;
+
+  &__btn {}
+
+  &__link {
+    display: flex;
+    align-items: center;
+    min-height: 28px;
+    padding: 8px 6px;
+    @include transition(background-color);
+
+    &:hover {
+      background-color: rgba($c-nobel, 0.1);
+      @include transition(background-color);
+    }
+  }
+
+  &__content {
+    display: none;
+    overflow: hidden;
+    z-index: 100;
+    position: absolute;
+    top: calc(100% - 25px);
+    right: 50%;
+    width: 100%;
+    min-width: 111px;
+    background-color: #fff;
+    border-radius: 4px 0 4px 4px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
+
+    ul {
+      li {
+        white-space: nowrap;
+
+        &:last-of-type {
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      margin-right: 4px;
+    }
+
+    span {
+      color: $c-nobel;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .icon-font {
+      color: $c-nobel;
+
+      &.icon-edit,
+      &.icon-delete {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+// SECTION custom dropdown :: END
