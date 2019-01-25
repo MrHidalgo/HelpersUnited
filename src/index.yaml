@@ -7,8 +7,6 @@ PageList:
 
 - file:
   titleName: LOGIN
-  ready: 0
-
 - file: login-1.html
   titleName: Logi In
   ready: 55
@@ -21,8 +19,6 @@ PageList:
 
 - file:
   titleName: SIGNUP
-  ready: 0
-
 - file: signup-1.html
   titleName: Sign Up
   ready: 55
@@ -44,8 +40,6 @@ PageList:
 
 - file:
   titleName: CLIENT INTERVIEW
-  ready: 0
-
 - file: client-interview-1.html
   titleName: CI - Biography
   ready: 55
@@ -85,7 +79,6 @@ PageList:
 
 - file:
   titleName: AGENCY INTERVIEWS
-  ready: 0
 - file: agency-interviews-1.html
   titleName: AI - Current Interviews
   ready: 55
@@ -95,7 +88,6 @@ PageList:
 
 - file:
   titleName: AGENCY STAFF
-  ready: 0
 - file: agency-staff-1.html
   titleName: Staff
   ready: 55
@@ -105,7 +97,6 @@ PageList:
 
 - file:
   titleName: AGENCY PUSH TO CLOUD
-  ready: 0
 - file: agency-push-cloud-1.html
   titleName: Active Requests
   ready: 55
@@ -121,7 +112,6 @@ PageList:
 
 - file:
   titleName: AGENCY MEETING SCHEDULE
-  ready: 0
 - file: agency-meeting-schedule-1.html
   titleName: Week 1
   ready: 0
@@ -149,7 +139,6 @@ PageList:
 
 - file:
   titleName: AGENCY DOCUMENT LIBRARIES
-  ready: 0
 - file: agency-document-libraries-1.html
   titleName: DL - Section 1
   ready: 55
@@ -168,14 +157,12 @@ PageList:
 
 - file:
   titleName: AGENCY Q&A
-  ready: 0
 - file: agency-qa.html
   titleName: Q&A
-  ready: 0
+  ready: 55
 
 - file:
   titleName: AGENCY VIDEO
-  ready: 0
 - file: agency-video-1.html
   titleName: VT - Section 1
   ready: 55
@@ -185,7 +172,6 @@ PageList:
 
 - file:
   titleName: AGENCY I-QUICK REPORT
-  ready: 0
 - file: agency-quick-report-1.html
   titleName: Quick Report 1
   ready: 0
@@ -201,14 +187,12 @@ PageList:
 
 - file:
   titleName: AGENCY I-SERVICES RENDERED
-  ready: 0
 - file: agency-services-rendered.html
   titleName: Services Rendered
   ready: 0
 
 - file:
   titleName: AGENCY I-OVERALL REPORT
-  ready: 0
 - file: agency-overall-report-1.html
   titleName: Overall Report 1
   ready: 0
@@ -227,7 +211,6 @@ PageList:
 
 - file:
   titleName: AGENCY I-INTERVIEW
-  ready: 0
 - file: agency-i-interview-1.html
   titleName: I-Interview 1
   ready: 0

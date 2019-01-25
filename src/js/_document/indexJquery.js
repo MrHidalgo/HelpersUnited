@@ -40,6 +40,15 @@ $(document).ready((ev) => {
     });
   };
 
+	const initQaCollapse = () => {
+	  $('.qa__block-collapse-header').on('click', (ev) => {
+	    const _head = $(ev.currentTarget),
+        _bodyNode = _head.siblings('.qa__block-collapse-body');
+
+      _bodyNode.slideToggle(300);
+    });
+  };
+
 	/*
 	* CALLBACK :: end
 	* ============================================= */
@@ -66,6 +75,7 @@ $(document).ready((ev) => {
 		// ==========================================
     initBodyClick();
     initDropdown();
+    initQaCollapse();
   };
   initJquery();
 });

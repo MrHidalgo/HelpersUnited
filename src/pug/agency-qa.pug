@@ -1,0 +1,58 @@
+---
+title: HelpersUnited - Agency - Q&A
+
+pageClassName: p-agency-qa
+---
+extends shared/_layout
+
+block header
+  include ./components/_header-internal
+
+block footer
+
+block content
+  div.body.body--start(class!= pageClassName)
+
+    section#section.section.section--agency
+      .section__wrapper
+        .section__wrapper-left
+
+          section#navigation.navigation--agency
+            .navigation__wrapper
+
+              ul.navigation__list
+                +navigationItemAgency('0', 'interviews', 'Interviews')
+                +navigationItemAgency('1', 'staff', 'Staff')
+                +navigationItemAgency('2', 'pushCloud', 'Push-to-cloud')
+                +navigationItemAgency('3', 'meetingSchedule', 'Meeting Schedule')
+                +navigationItemAgency('4', 'documentLibraries', 'Document libraries')
+                +navigationItemAgency('5 is-active', 'qa', 'Q&A')
+                +navigationItemAgency('6', 'videoTutorials', 'Video tutorials')
+
+        .section__wrapper-right
+
+          include components/common/_tabs
+
+          section#qa.qa
+
+            .qa__block-wrapper
+              each val, idx in [1,2,3,4]
+                  div.qa__grid
+                    each vl, id in [1,2,3]
+                      .qa__block
+                        .qa__block-header
+                          p!= "Topic title"
+
+                        .qa__block-body
+
+                          each v,i in [1,2,3]
+                            .qa__block-collapse
+                              a.qa__block-collapse-header(href="#")
+                                p!= "Question"
+                                span
+                                  i.icon-font.icon-triangle-down
+                              .qa__block-collapse-body
+                                p!= "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+
+                        .qa__block-footer
+                          a(href="#" class="" title="")!= "See All"

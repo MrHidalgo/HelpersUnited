@@ -27,7 +27,6 @@
 
     &-item {
       display: flex;
-      flex: 0 1 200px;
     }
 
     &-btn {
@@ -35,9 +34,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 100%;
-      max-width: 200px;
+      width: auto;
       min-height: 70px;
+      padding-left: 30px;
+      padding-right: 30px;
       border-right: 1px solid $c-whisper;
       color: $c-nobel;
       text-align: center;

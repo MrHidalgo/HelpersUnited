@@ -5,6 +5,7 @@
   var tabsAgencyPushCloudArr = ['Active Requests', 'Requests History'];
   var tabsAgencyDocLibArr = ['Section 1', 'Section 2'];
   var tabsAgencyVideoTutorialArr = ['Section 1', 'Section 2'];
+  var tabsAgencyQalArr = ['Section 1', 'Section 2', 'Section 3'];
 
 
 mixin tabsBtn(num, arr)
@@ -45,6 +46,9 @@ section#tabs.tabs.tabs--search
         else if (pageClassName === 'p-agency-vid-t')
           +tabsBtn(0, tabsAgencyVideoTutorialArr)
 
+        else if (pageClassName === 'p-agency-qa')
+          +tabsBtn(0, tabsAgencyQalArr)
+
     .tabs__wrapper-left
       if(pageClassName === 'p-agency-interviews')
         +tabsSearchBtn()
@@ -54,6 +58,8 @@ section#tabs.tabs.tabs--search
         +tabsSearchBtn()
         +tabsUploadBtn()
       else if (pageClassName === 'p-agency-vid-t')
+        +tabsSearchBtn()
+      else if (pageClassName === 'p-agency-qa')
         +tabsSearchBtn()
 
 
