@@ -45,47 +45,59 @@
 	@if $filename == edit {
 		$char: "\E006";
 	}
-	@if $filename == more {
+	@if $filename == minus {
 		$char: "\E007";
 	}
-	@if $filename == nav-documentLibraries {
+	@if $filename == more {
 		$char: "\E008";
 	}
-	@if $filename == nav-interviews {
+	@if $filename == nav-documentLibraries {
 		$char: "\E009";
 	}
-	@if $filename == nav-meetingSchedule {
+	@if $filename == nav-interviews {
 		$char: "\E00A";
 	}
-	@if $filename == nav-pushCloud {
+	@if $filename == nav-meetingSchedule {
 		$char: "\E00B";
 	}
-	@if $filename == nav-qa {
+	@if $filename == nav-pushCloud {
 		$char: "\E00C";
 	}
-	@if $filename == nav-staff {
+	@if $filename == nav-qa {
 		$char: "\E00D";
 	}
-	@if $filename == nav-videoTutorials {
+	@if $filename == nav-staff {
 		$char: "\E00E";
 	}
-	@if $filename == print {
+	@if $filename == nav-videoTutorials {
 		$char: "\E00F";
 	}
-	@if $filename == search {
+	@if $filename == plus {
 		$char: "\E010";
 	}
-	@if $filename == signout {
+	@if $filename == print {
 		$char: "\E011";
 	}
-	@if $filename == table-triangle {
+	@if $filename == search {
 		$char: "\E012";
 	}
-	@if $filename == upload {
+	@if $filename == signout {
 		$char: "\E013";
 	}
-	@if $filename == view {
+	@if $filename == table-triangle {
 		$char: "\E014";
+	}
+	@if $filename == triangle-down {
+		$char: "\E015";
+	}
+	@if $filename == triangle-up {
+		$char: "\E016";
+	}
+	@if $filename == upload {
+		$char: "\E017";
+	}
+	@if $filename == view {
+		$char: "\E018";
 	}
 
 	@return $char;
@@ -126,6 +138,10 @@
 	@include icon(edit);
 
 }
+.icon-minus {
+	@include icon(minus);
+
+}
 .icon-more {
 	@include icon(more);
 
@@ -158,6 +174,10 @@
 	@include icon(nav-videoTutorials);
 
 }
+.icon-plus {
+	@include icon(plus);
+
+}
 .icon-print {
 	@include icon(print);
 
@@ -172,6 +192,14 @@
 }
 .icon-table-triangle {
 	@include icon(table-triangle);
+
+}
+.icon-triangle-down {
+	@include icon(triangle-down);
+
+}
+.icon-triangle-up {
+	@include icon(triangle-up);
 
 }
 .icon-upload {

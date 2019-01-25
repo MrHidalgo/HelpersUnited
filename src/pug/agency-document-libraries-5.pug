@@ -3,6 +3,7 @@ title: HelpersUnited - Agency interview - Document Libraries
 
 pageClassName: p-agency-doc-lib
 pageClassNameNum: p-agency-doc-lib-5
+documentLock: true
 ---
 extends shared/_layout
 
@@ -10,6 +11,9 @@ block header
   include ./components/_header-internal
 
 block footer
+
+block modal
+  include components/modal/_modal-doc-lib
 
 block content
   div.body.body--start(class!= pageClassName)
@@ -37,8 +41,8 @@ block content
           section#doc-lib.doc-lib
 
             .box__cover
-              +sectionBox('ai', 'Interviewer name', '16.08.19', '')
-              +sectionBox('ai', 'Interviewer name', '16.08.19', '')
-              +sectionBox('ai', 'Interviewer name', '16.08.19', '')
-              +sectionBox('ai', 'Interviewer name', '16.08.19', '')
-              +sectionBox('ai', 'Interviewer name', '16.08.19', '')
+              +sectionBox('dl', 'Document name', 'PDF', '', true)
+              +sectionBox('dl', 'Document name', 'PDF', '', true)
+              +sectionBox('dl', 'Document name', 'PDF', '', true)
+              +sectionBox('dl', 'Document name', 'PDF', '', true)
+              +sectionBox('dl', 'Document name', 'PDF', '', true)
