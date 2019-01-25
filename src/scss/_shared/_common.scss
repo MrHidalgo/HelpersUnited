@@ -34,14 +34,27 @@
       z-index: 2;
       position: relative;
       background: #FFFFFF;
-
     }
 
     &-right {
       z-index: 1;
       position: relative;
-
       background-color: #FCFCFC;
+
+      &--two {
+        display: flex;
+      }
+
+      &--left {
+        width: 100%;
+        max-width: calc(100% - 456px);
+      }
+
+      &--right {
+        width: 456px;
+        border-left: 1px solid $c-whisper;
+        background-color: $c-white;
+      }
     }
 
     &-box {

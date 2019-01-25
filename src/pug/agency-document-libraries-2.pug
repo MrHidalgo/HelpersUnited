@@ -30,8 +30,34 @@ block content
                 +navigationItemAgency('5', 'qa', 'Q&A')
                 +navigationItemAgency('6', 'videoTutorials', 'Video tutorials')
 
-        .section__wrapper-right
+        .section__wrapper-right.section__wrapper-right--two
+          .section__wrapper-right--left
 
-          include components/common/_tabs
+            include components/common/_tabs
 
-          section#doc-lib.doc-lib
+            section#doc-lib.doc-lib
+
+              .box__cover
+                +sectionBox('dl', 'Document name', 'PDF', '', true)
+                +sectionBox('dl', 'Document name', 'PDF', '', true)
+                +sectionBox('dl', 'Document name', 'PDF', '', true)
+                +sectionBox('dl', 'Document name', 'PDF', '', true)
+                +sectionBox('dl', 'Document name', 'PDF', '', true)
+
+          .section__wrapper-right--right
+
+            .doc-lib__section
+              .doc-lib__section-header
+                div
+                  p!= "Upload PDF document"
+
+                div
+                  a(href="#" class="" title="")
+                    i.icon-font.icon-close
+
+              .doc-lib__section-body
+
+                a.doc-lib__empty(href="#")
+                  i.icon-font.icon-upload
+                  p!= "Select file to upload"
+                  span!= "Or drag and drop video file"

@@ -87,43 +87,44 @@ mixin clientInterviewCheckboxInputBtn(id, groupName, radioVal, placeholderVal)
 
 
 mixin sectionBox(classMod, title, subtitle, badgeVal, moreBtn)
-  a.box(href='#' class!= "box--" + classMod)
-    .box__wrapper
-      .box__wrapper-top
-        if(badgeVal)
-          .box__badge(class!= 'box__badge--' + badgeVal.toLowerCase())
-            span!= badgeVal
+  div
+    a.box(href='#' class!= "box--" + classMod)
+      .box__wrapper
+        .box__wrapper-top
+          if(badgeVal)
+            .box__badge(class!= 'box__badge--' + badgeVal.toLowerCase())
+              span!= badgeVal
 
-        if(moreBtn)
-          .box__more
-            .c-dropdown
-              .c-dropdown__btn(class="" title="" dropdown-js)
-                i.icon-font.icon-more
-              div.c-dropdown__content
-                ul
-                  li
-                    .c-dropdown__link(class="" title="")
-                      p
-                        i.icon-font.icon-view
-                      span!= "View"
-                  li
-                    .c-dropdown__link(class="" title="")
-                      p
-                        i.icon-font.icon-print
-                      span!= "Print"
-                  li
-                    .c-dropdown__link(class="" title="")
-                      p
-                        i.icon-font.icon-download
-                      span!= "Download"
-                  li
-                    .c-dropdown__link(class="" title="")
-                      p
-                        i.icon-font.icon-delete
-                      span!= "Delete"
+          if(moreBtn)
+            .box__more
+              .c-dropdown
+                .c-dropdown__btn(class="" title="" dropdown-js)
+                  i.icon-font.icon-more
+                div.c-dropdown__content
+                  ul
+                    li
+                      .c-dropdown__link(class="" title="")
+                        p
+                          i.icon-font.icon-view
+                        span!= "View"
+                    li
+                      .c-dropdown__link(class="" title="")
+                        p
+                          i.icon-font.icon-print
+                        span!= "Print"
+                    li
+                      .c-dropdown__link(class="" title="")
+                        p
+                          i.icon-font.icon-download
+                        span!= "Download"
+                    li
+                      .c-dropdown__link(class="" title="")
+                        p
+                          i.icon-font.icon-delete
+                        span!= "Delete"
 
-      .box__wrapper-bottom
-        p.box__title!= title
-        p.box__subtitle!= subtitle
+        .box__wrapper-bottom
+          p.box__title!= title
+          p.box__subtitle!= subtitle
 
 //- MIXIN :: END
