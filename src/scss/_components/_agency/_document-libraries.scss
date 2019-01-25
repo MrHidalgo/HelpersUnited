@@ -97,6 +97,12 @@
         font-size: 12px;
         font-weight: 600;
       }
+
+      &--full {
+        span {
+          width: 100%;
+        }
+      }
     }
 
     &-preview {
@@ -112,10 +118,32 @@
 
     &-form {
       &--one {
-        .c-form__field--btn {
-          .c-form__btn {
-            margin-left: auto;
+        .c-form {
+          &__group {
+            align-items: center;
           }
+
+          &__field--btn {
+            .c-form__btn {
+              margin-left: auto;
+            }
+          }
+        }
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        color: $c-nobel;
+
+        .icon-delete {
+          font-size: 15px;
+        }
+
+        span {
+          padding-left: 15px;
+          line-height: 1;
+          font-size: 14px;
         }
       }
 

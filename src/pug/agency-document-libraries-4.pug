@@ -55,4 +55,37 @@ block content
                   a(href="#" class="" title="")
                     i.icon-font.icon-close
 
-              .doc-lib__section-body
+              .doc-lib__section-body.doc-lib__section-body--start
+
+                .doc-lib__section-content
+
+                  .doc-lib__section-progress.doc-lib__section-progress--full
+                    span
+                    p!= "Uploaded"
+
+                  .doc-lib__section-preview
+
+                  -
+                    var dataFormObj = {
+                    inputName: {
+                    classMod: "",
+                    uniqueName: "document_name",
+                    labelVal: "Document name",
+                    inputType: "",
+                    inputClassMod: "",
+                    placeholderVal: "",
+                    val: ""
+                    }
+                    };
+
+                  .doc-lib__section-form.doc-lib__section-form--one
+                    .c-form
+                      +formInput(dataFormObj.inputName)
+
+                      .c-form__group.c-form__group--two
+                        .c-form__group-col.c-form__group-col-0
+                          a(href="#" class="" title="")
+                            i.icon-font.icon-delete
+                            span!= "Delete"
+                        .c-form__group-col.c-form__group-col-1
+                          +formBtn('', 'c-btn c-btn--bg', 'Add')
