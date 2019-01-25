@@ -3,6 +3,7 @@ title: HelpersUnited - Agency - Video Tutorial
 
 pageClassName: p-agency-vid-t
 pageClassNameNum: p-agency-vid-t-2
+documentLock: true
 ---
 extends shared/_layout
 
@@ -10,6 +11,9 @@ block header
   include ./components/_header-internal
 
 block footer
+
+block modal
+  include components/modal/_modal-video-tutorial
 
 block content
   div.body.body--start(class!= pageClassName)

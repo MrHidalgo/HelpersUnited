@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="24px" viewBox="0 0 20 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>volume</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Video-tutorial---2" transform="translate(-1195.000000, -829.000000)" fill="#295DD9" fill-rule="nonzero">
+            <g id="Group" transform="translate(197.000000, 143.000000)">
+                <g id="Icons-/-Play-/-Active-Copy" transform="translate(998.000000, 686.000000)">
+                    <path d="M0.0228571429,8 L5.71428571,8 L12.88,0.834285714 L12.88,23.7371429 L5.71428571,16.5714286 L0.0228571429,16.5714286 L0.0228571429,8 Z M19.3257143,12.2857143 C19.3257143,13.5428634 18.994289,14.6799949 18.3314286,15.6971429 C17.6685681,16.7142908 16.7885769,17.4971401 15.6914286,18.0457143 L15.6914286,6.52571429 C16.7885769,7.07428846 17.6685681,7.85713777 18.3314286,8.87428571 C18.994289,9.89143366 19.3257143,11.0285651 19.3257143,12.2857143 Z" id="volume"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
