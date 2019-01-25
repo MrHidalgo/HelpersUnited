@@ -3,6 +3,7 @@
 -
   var tabsAgencyInterviewArr = ['Current interviews', 'Past interviews'];
   var tabsAgencyPushCloudArr = ['Active Requests', 'Requests History'];
+  var tabsAgencyDocLibArr = ['Section 1', 'Section 2'];
 
 
 mixin tabsBtn(num, arr)
@@ -13,6 +14,10 @@ mixin tabsBtn(num, arr)
 mixin tabsSearchBtn()
   a.tabs__search(href="#" class="" title="")
     i.icon-font.icon-search
+
+mixin tabsUploadBtn()
+  a.tabs__upload(href="#" class="" title="")
+    i.icon-font.icon-upload
 
 
 section#tabs.tabs.tabs--search
@@ -33,11 +38,17 @@ section#tabs.tabs.tabs--search
         else if (pageClassNameNum === 'p-agency-push-cloud-3' || pageClassNameNum === 'p-agency-push-cloud-4')
           +tabsBtn(1, tabsAgencyPushCloudArr)
 
+        else if (pageClassName === 'p-agency-doc-lib')
+          +tabsBtn(0, tabsAgencyDocLibArr)
+
     .tabs__wrapper-left
       if(pageClassName === 'p-agency-interviews')
         +tabsSearchBtn()
       else if (pageClassName === 'p-agency-push-cloud')
         +tabsSearchBtn()
+      else if (pageClassName === 'p-agency-doc-lib')
+        +tabsSearchBtn()
+        +tabsUploadBtn()
 
 
 // SECTION tabs :: END

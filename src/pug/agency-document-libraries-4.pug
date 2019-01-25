@@ -1,9 +1,8 @@
 ---
-title: HelpersUnited - Agency interview - Active Requests Details
+title: HelpersUnited - Agency interview - Document Libraries
 
-pageClassName: p-agency-push-cloud
-pageClassNameNum: p-agency-push-cloud-2
-documentLock: true
+pageClassName: p-agency-doc-lib
+pageClassNameNum: p-agency-doc-lib-4
 ---
 extends shared/_layout
 
@@ -11,9 +10,6 @@ block header
   include ./components/_header-internal
 
 block footer
-
-block modal
-  include components/modal/_modal-push-cloud
 
 block content
   div.body.body--start(class!= pageClassName)
@@ -28,9 +24,9 @@ block content
               ul.navigation__list
                 +navigationItemAgency('0', 'interviews', 'Interviews')
                 +navigationItemAgency('1', 'staff', 'Staff')
-                +navigationItemAgency('2 is-active', 'pushCloud', 'Push-to-cloud')
+                +navigationItemAgency('2', 'pushCloud', 'Push-to-cloud')
                 +navigationItemAgency('3', 'meetingSchedule', 'Meeting Schedule')
-                +navigationItemAgency('4', 'documentLibraries', 'Document libraries')
+                +navigationItemAgency('4 is-active', 'documentLibraries', 'Document libraries')
                 +navigationItemAgency('5', 'qa', 'Q&A')
                 +navigationItemAgency('6', 'videoTutorials', 'Video tutorials')
 
@@ -38,11 +34,11 @@ block content
 
           include components/common/_tabs
 
-          section#push-cloud.push-cloud
+          section#doc-lib.doc-lib
 
             .box__cover
-              +sectionBox('pc', 'Request name', 'Aplplicant name', 'new', '')
-              +sectionBox('pc', 'Request name', 'Aplplicant name', 'new', '')
-              +sectionBox('pc', 'Request name', 'Aplplicant name', '', '')
-              +sectionBox('pc', 'Request name', 'Aplplicant name', '', '')
-              +sectionBox('pc', 'Request name', 'Aplplicant name', '', '')
+              +sectionBox('ai', 'Interviewer name', '16.08.19', '')
+              +sectionBox('ai', 'Interviewer name', '16.08.19', '')
+              +sectionBox('ai', 'Interviewer name', '16.08.19', '')
+              +sectionBox('ai', 'Interviewer name', '16.08.19', '')
+              +sectionBox('ai', 'Interviewer name', '16.08.19', '')

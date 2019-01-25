@@ -4,7 +4,12 @@
   position: relative;
   display: flex;
 
-  &__btn {}
+  &__btn {
+    .icon-more {
+      color: #9b9b9b;
+      font-size: 4px;
+    }
+  }
 
   &__link {
     display: flex;
@@ -60,6 +65,12 @@
     .icon-font {
       color: $c-nobel;
 
+      &.icon-view {
+        font-size: 12px;
+      }
+
+      &.icon-download,
+      &.icon-print,
       &.icon-edit,
       &.icon-delete {
         font-size: 15px;

@@ -151,20 +151,20 @@ PageList:
   titleName: AGENCY DOCUMENT LIBRARIES
   ready: 0
 - file: agency-document-libraries-1.html
-  titleName: Document Libraries 1
-  ready: 0
+  titleName: DL - 1
+  ready: 55
 - file: agency-document-libraries-2.html
-  titleName: Document Libraries 2
-  ready: 0
+  titleName: DL - 2
+  ready: 01
 - file: agency-document-libraries-3.html
-  titleName: Document Libraries 3
-  ready: 0
+  titleName: DL - 3
+  ready: 01
 - file: agency-document-libraries-4.html
-  titleName: Document Libraries 4
-  ready: 0
+  titleName: DL - 4
+  ready: 01
 - file: agency-document-libraries-5.html
-  titleName: Document Libraries 5
-  ready: 0
+  titleName: DL - 5
+  ready: 01
 
 - file:
   titleName: AGENCY Q&A

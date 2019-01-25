@@ -16,6 +16,7 @@
     }
 
     &-left {
+      display: flex;
       width: auto;
       max-width: 100%;
     }
@@ -83,6 +84,22 @@
     }
   }
   // search :: end
+
+  // upload
+  &__upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 87px;
+    min-height: 70px;
+    border-left: 1px solid $c-whisper;
+
+    .icon-upload {
+      color: $c-nobel;
+      font-size: 14px;
+    }
+  }
+  // upload :: end
 }
 
 // SECTION tabs :: END
