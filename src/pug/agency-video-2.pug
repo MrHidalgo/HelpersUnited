@@ -1,8 +1,8 @@
 ---
-title: HelpersUnited - Agency - Document Libraries
+title: HelpersUnited - Agency - Video Tutorial
 
-pageClassName: p-agency-doc-lib
-pageClassNameNum: p-agency-doc-lib-1
+pageClassName: p-agency-vid-t
+pageClassNameNum: p-agency-vid-t-2
 ---
 extends shared/_layout
 
@@ -26,19 +26,16 @@ block content
                 +navigationItemAgency('1', 'staff', 'Staff')
                 +navigationItemAgency('2', 'pushCloud', 'Push-to-cloud')
                 +navigationItemAgency('3', 'meetingSchedule', 'Meeting Schedule')
-                +navigationItemAgency('4 is-active', 'documentLibraries', 'Document libraries')
+                +navigationItemAgency('4', 'documentLibraries', 'Document libraries')
                 +navigationItemAgency('5', 'qa', 'Q&A')
-                +navigationItemAgency('6', 'videoTutorials', 'Video tutorials')
+                +navigationItemAgency('6 is-active', 'videoTutorials', 'Video tutorials')
 
         .section__wrapper-right
 
           include components/common/_tabs
 
-          section#doc-lib.doc-lib
+          section#vid-t.vid-t
 
             .box__cover
-              +sectionBox('dl', 'Document name', 'PDF', '', true)
-              +sectionBox('dl', 'Document name', 'PDF', '', true)
-              +sectionBox('dl', 'Document name', 'PDF', '', true)
-              +sectionBox('dl', 'Document name', 'PDF', '', true)
-              +sectionBox('dl', 'Document name', 'PDF', '', true)
+              each val, idx in [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+                +sectionBox('vt', 'Video name', '16.08.19', '1:33', '')

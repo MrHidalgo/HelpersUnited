@@ -177,11 +177,11 @@ PageList:
   titleName: AGENCY VIDEO
   ready: 0
 - file: agency-video-1.html
-  titleName: Video Tutorial 1
-  ready: 0
+  titleName: VT - Section 1
+  ready: 55
 - file: agency-video-2.html
-  titleName: Video Tutorial 2
-  ready: 0
+  titleName: VT - Video preview
+  ready: 01
 
 - file:
   titleName: AGENCY I-QUICK REPORT
