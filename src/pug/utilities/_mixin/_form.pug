@@ -311,11 +311,13 @@ mixin formCheckbox(objValue, notifyArr=null)
 
     @example
       +formBtn('', 'c-btn c-btn--bg', 'Submit')
+      +formBtn('', 'c-btn c-btn--bg', 'Submit')(disabled="disabled")
 
 //- ========================
 mixin formBtn(classMod, btnClassMod, btnVal)
   .c-form__field.c-form__field--btn(class!= classMod)
     button.c-form__btn(
+    disabled!= attributes.disabled
     type="submit"
     class!= btnClassMod
     )!= btnVal

@@ -154,13 +154,13 @@ PageList:
   titleName: DL - Section 1
   ready: 55
 - file: agency-document-libraries-2.html
-  titleName: DL - 2
+  titleName: DL - Upload file
   ready: 55
 - file: agency-document-libraries-3.html
-  titleName: DL - 3
-  ready: 01
+  titleName: DL - Upload file progress
+  ready: 55
 - file: agency-document-libraries-4.html
-  titleName: DL - 4
+  titleName: DL - Upload file complete
   ready: 01
 - file: agency-document-libraries-5.html
   titleName: DL - Preview document

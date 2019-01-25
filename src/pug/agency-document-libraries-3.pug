@@ -55,5 +55,33 @@ block content
                   a(href="#" class="" title="")
                     i.icon-font.icon-close
 
-              .doc-lib__section-body
+              .doc-lib__section-body.doc-lib__section-body--start
 
+                .doc-lib__section-content
+
+                  .doc-lib__section-progress
+                    span
+                    p!= "Uploading 36%"
+
+                  .doc-lib__section-preview
+                    .spinner
+                      .spinner__dot.spinner__dot-1
+                      .spinner__dot.spinner__dot-2
+
+                  -
+                    var dataFormObj = {
+                      inputName: {
+                        classMod: "",
+                        uniqueName: "document_name",
+                        labelVal: "Document name",
+                        inputType: "",
+                        inputClassMod: "",
+                        placeholderVal: "",
+                        val: ""
+                      }
+                    };
+
+                  .doc-lib__section-form.doc-lib__section-form--one
+                    .c-form
+                      +formInput(dataFormObj.inputName)
+                      +formBtn('', 'c-btn c-btn--bg', 'Add')(disabled="disabled")
