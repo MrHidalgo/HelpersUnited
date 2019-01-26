@@ -12,6 +12,9 @@ block header
 
 block footer
 
+block modal
+  include components/modal/_modal-doc-lib
+
 block content
   div.body.body--start(class!= pageClassName)
 
@@ -53,3 +56,8 @@ block content
                   var overallReportTabs = true;
 
                 include components/common/_tabs
+
+                .overall-r__content
+                  .box__cover
+                    each val, idx in [1,2,3,4,5,6,7,8,9]
+                      +sectionBox('or', 'Document name', 'PDF', '', true)
