@@ -5,7 +5,9 @@
   var tabsAgencyPushCloudArr = ['Active Requests', 'Requests History'];
   var tabsAgencyDocLibArr = ['Section 1', 'Section 2'];
   var tabsAgencyVideoTutorialArr = ['Section 1', 'Section 2'];
-  var tabsAgencyQalArr = ['Section 1', 'Section 2', 'Section 3'];
+  var tabsAgencyQaArr = ['Section 1', 'Section 2', 'Section 3'];
+  var tabsAgencyServicesRenderedArr = ['Quick Report', 'Interview', 'Services Rendered', 'Overall Report'];
+  var tabsAgencySRSubmenudArr = ['Support Requested', 'Support Received'];
 
 
 mixin tabsBtn(num, arr)
@@ -22,9 +24,11 @@ mixin tabsUploadBtn()
     i.icon-font.icon-upload
 
 
-section#tabs.tabs.tabs--search
+section#tabs.tabs(
+  class!= (pageClassName === 'p-agency-services-rendered') ? 'tabs--info':''
+)
   .tabs__wrapper
-    .tabs__wrapper-right
+    .tabs__wrapper-left
 
       ul.tabs__list
 
@@ -47,20 +51,38 @@ section#tabs.tabs.tabs--search
           +tabsBtn(0, tabsAgencyVideoTutorialArr)
 
         else if (pageClassName === 'p-agency-qa')
-          +tabsBtn(0, tabsAgencyQalArr)
+          +tabsBtn(0, tabsAgencyQaArr)
 
-    .tabs__wrapper-left
+        else if (pageClassNameSubmenu === 'p-agency-sr-submenu-0')
+          +tabsBtn(0, tabsAgencySRSubmenudArr)
+
+        else if (pageClassNameSubmenu === 'p-agency-sr-submenu-1')
+          +tabsBtn(1, tabsAgencySRSubmenudArr)
+
+        else if (pageClassName === 'p-agency-services-rendered')
+          +tabsBtn(2, tabsAgencyServicesRenderedArr)
+
+    .tabs__wrapper-right
       if(pageClassName === 'p-agency-interviews')
         +tabsSearchBtn()
+
       else if (pageClassName === 'p-agency-push-cloud')
         +tabsSearchBtn()
+
       else if (pageClassNameNum === 'p-agency-doc-lib-1' || pageClassNameNum === 'p-agency-doc-lib-5')
         +tabsSearchBtn()
         +tabsUploadBtn()
+
       else if (pageClassName === 'p-agency-vid-t')
         +tabsSearchBtn()
+
       else if (pageClassName === 'p-agency-qa')
         +tabsSearchBtn()
+
+      else if (pageClassNameSubmenu === 'p-agency-sr-submenu-0' || pageClassNameSubmenu === 'p-agency-sr-submenu-1')
+
+      else if (pageClassName === 'p-agency-services-rendered')
+        p.tabs__info!= "Overall score of Alvin Brewer: <span>1.16</span>"
 
 
 // SECTION tabs :: END

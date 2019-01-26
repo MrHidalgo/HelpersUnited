@@ -1,0 +1,27 @@
+// SECTION services rendered table :: START
+
+-
+  var pageClassNameSubmenu = (pageClassNameNum === 'p-agency-services-rendered-1') ? 'p-agency-sr-submenu-0':'p-agency-sr-submenu-1';
+
+.services-r__table
+
+  .services-r__table-tab
+    include ../common/_tabs
+
+  .services-r__table-head
+    .services-r__table-col
+      p!= "Support name"
+    .services-r__table-col
+      p!= "Requested Date"
+    .services-r__table-col
+      p!= "Amount"
+
+  .services-r__table-body
+    .services-r__table-col
+      p!= "Water"
+    .services-r__table-col
+      p!= "12.01.18"
+    .services-r__table-col
+      p!= "$200"
+
+// SECTION services rendered table :: END

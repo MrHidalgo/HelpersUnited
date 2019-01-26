@@ -1,10 +1,9 @@
 // SECTION header internal :: START
 
 .header-i {
-  z-index: 10;
   position: relative;
   background-color: #fff;
-  box-shadow: 0 1px 0 0 #EBEBEB;
+  border-bottom: 1px solid $c-whisper;
 
   &__wrapper {
     display: flex;
