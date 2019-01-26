@@ -32,18 +32,74 @@ block content
 
         .section__wrapper-right
 
-          section#services-r.services-r.section-top
+          section#overall-r.overall-r.section-top
 
-            .services-r__wrapper
+            .overall-r__wrapper
 
-              .services-r__heading.section-top__heading
-                .services-r__heading-left.section-top__heading-left
+              .section-top__heading
+                .section-top__heading-left
                   p!= "Alvin Brewer"
-                .services-r__heading-right.section-top__heading-right
+                .section-top__heading-right
                   a(href="#" class="" title="")
                     span
                      i.icon-font.icon-close
 
-              .services-r__body
+              .overall-r__body
 
                 include components/common/_tabs
+
+                .section__wrapper-right--two
+                  .section__wrapper-right--left
+
+                    -
+                      var overallReportTabsEmpty = true;
+                    include components/common/_tabs
+
+                    .overall-r__content
+
+                      .box__cover
+                        each val, idx in [1,2,3,4,5,6,7,8,9]
+                          +sectionBox('or', 'Document name', 'PDF', '', true)
+
+                  .section__wrapper-right--right
+                    .doc__lib
+                      .doc-lib__section
+                        .doc-lib__section-header
+                          div
+                            p!= "Upload PDF document"
+
+                          div
+                            a(href="#" class="" title="")
+                              i.icon-font.icon-close
+
+                        .doc-lib__section-body.doc-lib__section-body--start
+
+                          .doc-lib__section-content
+
+                            .doc-lib__section-progress
+                              span
+                              p!= "Uploading 36%"
+
+                            .doc-lib__section-preview
+                              .spinner
+                                .spinner__dot.spinner__dot-1
+                                .spinner__dot.spinner__dot-2
+
+                            -
+                              var dataFormObj = {
+                              inputName: {
+                              classMod: "",
+                              uniqueName: "document_name",
+                              labelVal: "Document name",
+                              inputType: "",
+                              inputClassMod: "",
+                              placeholderVal: "",
+                              val: ""
+                              }
+                              };
+
+                            .doc-lib__section-form.doc-lib__section-form--one
+                              .c-form
+                                +formInput(dataFormObj.inputName)
+                                +formBtn('', 'c-btn c-btn--bg', 'Add')(disabled="disabled")
+

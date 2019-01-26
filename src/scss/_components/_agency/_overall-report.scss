@@ -1,8 +1,24 @@
 // SECTION overall report :: START
 
 .overall-r {
+  &__wrapper {
+    height: 100%;
+  }
+
+  &__body {
+    height: calc(100% - 70px);
+  }
+
   &__content {
     padding: 30px;
+  }
+
+  .section__wrapper-right--two {
+    height: calc(100% - 70px);
+
+    .doc__lib {
+      height: 100%;
+    }
   }
 }
 
