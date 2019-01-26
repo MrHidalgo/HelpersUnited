@@ -1,8 +1,8 @@
 ---
-title: HelpersUnited - Agency - Services Rendered
+title: HelpersUnited - Agency - Overall Report
 
-pageClassName: p-agency-services-rendered
-pageClassNameNum: p-agency-services-rendered-2
+pageClassName: p-agency-overall-report
+pageClassNameNum: p-agency-overall-report-1
 ---
 extends shared/_layout
 
@@ -32,23 +32,28 @@ block content
 
         .section__wrapper-right
 
-          section#services-r.services-r.section-top
+          section#overall-r.overall-r.section-top
 
-            .services-r__wrapper
+            .overall-r__wrapper
 
-              .services-r__heading.section-top__heading
-                .services-r__heading-left.section-top__heading-left
+              .section-top__heading
+                .section-top__heading-left
                   p!= "Alvin Brewer"
-                .services-r__heading-right.section-top__heading-right
+                .section-top__heading-right
                   a(href="#" class="" title="")
                     span
-                      i.icon-font.icon-close
+                     i.icon-font.icon-close
 
-              .services-r__body
+              .overall-r__body
 
                 include components/common/_tabs
 
-                .services-r__title
-                  p!= "Alvin Brewer"
+                -
+                  var overallReportTabs = true;
 
-                include components/agency/_services-rendered-table
+                include components/common/_tabs
+
+                .overall-r__content
+                  .box__cover
+                    each val, idx in [1,2,3,4,5,6,7,8,9]
+                      +sectionBox('or', 'Document name', 'PDF', '', true)
