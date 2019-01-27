@@ -85,6 +85,14 @@
     }
   }
 
+  &__title {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 5px 30px;
+    font-weight: 600;
+  }
+
   // common additional btn
   &__info,
   &__search,

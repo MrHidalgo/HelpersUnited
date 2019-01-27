@@ -8,6 +8,31 @@
   &__body {
     height: calc(100% - 70px);
   }
+
+  &__suggestion {
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-head {}
+
+    &-body {
+      padding: 25px 30px;
+      background-color: $c-white;
+      border-bottom: 1px solid $c-whisper;
+
+      p {
+        padding-bottom: 25px;
+        color: $c-nobel;
+        font-size: 14px;
+
+        &:last-of-type {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
 }
 
 // SECTION quick report :: END
