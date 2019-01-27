@@ -3,6 +3,8 @@
 .navigation {
   // client
   &--client {
+    border-right: 1px solid $c-whisper;
+
     .navigation {
       &__list {
         &-item {

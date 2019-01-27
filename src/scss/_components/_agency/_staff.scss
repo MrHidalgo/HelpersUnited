@@ -3,7 +3,6 @@
 .staff {
   &__table {
     background-color: $c-white;
-    border-bottom: 1px solid $c-whisper;
 
     &-head {}
     &-body {}
@@ -11,6 +10,10 @@
     &-tr {
       display: flex;
       min-height: 70px;
+
+      &:last-of-type {
+        border-bottom: 1px solid $c-whisper;
+      }
 
       &--add {
         input {

@@ -1,0 +1,70 @@
+---
+title: HelpersUnited - Agency - Interview interview
+
+pageClassName: p-agency-i-interview
+pageClassNameNum: p-agency-i-interview-6
+---
+extends shared/_layout
+
+block header
+  include ./components/_header-internal
+
+block footer
+
+block content
+  div.body.body--start(class!= pageClassName)
+
+    section#section.section.section--agency
+      .section__wrapper
+        .section__wrapper-left
+
+          section#navigation.navigation--agency
+            .navigation__wrapper
+
+              ul.navigation__list
+                +navigationItemAgency('0 is-active', 'interviews', 'Interviews')
+                +navigationItemAgency('1', 'staff', 'Staff')
+                +navigationItemAgency('2', 'pushCloud', 'Push-to-cloud')
+                +navigationItemAgency('3', 'meetingSchedule', 'Meeting Schedule')
+                +navigationItemAgency('4', 'documentLibraries', 'Document libraries')
+                +navigationItemAgency('5', 'qa', 'Q&A')
+                +navigationItemAgency('6', 'videoTutorials', 'Video tutorials')
+
+        .section__wrapper-right
+
+          section#i-interview.i-interview.section-top
+
+            .i-interview__wrapper
+
+              .section-top__heading
+                .section-top__heading-left
+                  p!= "Alvin Brewer"
+                .section-top__heading-right
+                  a(href="#" class="" title="")
+                    span
+                     i.icon-font.icon-close
+
+              .i-interview__body
+
+                include components/common/_tabs
+
+                .i-interview__content
+                  .i-interview__content-left
+
+                    .i-interview__nav
+                      -
+                        var listItemNavArr = [
+                          'Biography',
+                          'Personal data',
+                          'Employment information',
+                          'Household member',
+                          'Other sources of income',
+                          'Monthly expenses'
+                        ];
+                      ul.i-interview__nav-list
+                        each val, idx in listItemNavArr
+                          li.i-interview__nav-item
+                            a.i-interview__nav-btn(href="#" class=(idx === 5) ? 'is-active':'' title="")
+                              span!= val
+
+                  .i-interview__content-right

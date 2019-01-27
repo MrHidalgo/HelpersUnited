@@ -1,0 +1,54 @@
+// SECTION interview interview :: START
+
+.i-interview {
+  &__wrapper {
+    height: 100%;
+  }
+
+  &__body {
+    height: calc(100% - 70px);
+  }
+
+  &__content {
+    display: flex;
+    height: calc(100% - 70px);
+
+    &-left {
+      width: 270px;
+      background-color: $c-white;
+      border-right: 1px solid $c-whisper;
+    }
+
+    &-right {
+      width: 100%;
+      max-width: calc(100% - 270px);
+    }
+  }
+
+  &__nav {
+    &-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-item {
+
+    }
+
+    &-btn {
+      display: flex;
+      align-items: center;
+      min-height: 70px;
+      padding: 5px 30px;
+      border-bottom: 1px solid $c-whisper;
+      color: $c-nobel;
+      font-weight: 600;
+
+      &.is-active {
+        color: $c-matterhorn;
+      }
+    }
+  }
+}
+
+// SECTION interview interview :: END
