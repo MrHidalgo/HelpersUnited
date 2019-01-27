@@ -177,7 +177,7 @@ PageList:
   ready: 01
 - file: agency-quick-report-2.html
   titleName: QR - Dynamics
-  ready: 01
+  ready: 55
 - file: agency-quick-report-3.html
   titleName: QR - Support history
   ready: 55

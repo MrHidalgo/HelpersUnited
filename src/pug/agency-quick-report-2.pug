@@ -66,3 +66,31 @@ block content
                               span!= val
 
                   .q-report__content-right.section-top__content-right
+
+                    .q-report__graph
+                      .q-report__graph-head
+                        div
+                          a.q-report__graph-btn.q-report__graph-btn--dynamics(href="#" class="" title="")
+                            p!= "Overall dynamics"
+                            span
+                              i.icon-font.icon-triangle-down
+                        div
+                          div.q-report__graph-btn-group
+                            a.q-report__graph-btn.q-report__graph-btn--date(href="#" class="" title="")
+                              p!= "01.01.2019"
+                              span
+                                i.icon-font.icon-triangle-down
+
+                            span.q-report__graph-btn-divider!= "-"
+
+                            a.q-report__graph-btn.q-report__graph-btn--date(href="#" class="" title="")
+                              p!= "02.01.2019"
+                              span
+                                i.icon-font.icon-triangle-down
+
+                          a.q-report__graph-btn.q-report__graph-btn--months(href="#" class="" title="")
+                            p!= "By months"
+                            span
+                              i.icon-font.icon-triangle-down
+
+                      .q-report__graph-body
