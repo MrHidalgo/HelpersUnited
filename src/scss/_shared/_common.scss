@@ -17,11 +17,13 @@
   &--agency {
     .section__wrapper-left {
       width: 271px;
+      //height: calc(100% - 70px);
     }
 
     .section__wrapper-right {
       width: 100%;
       max-width: calc(100% - 271px);
+      //height: calc(100% - 70px);
       border-left: 1px solid $c-whisper;
     }
   }

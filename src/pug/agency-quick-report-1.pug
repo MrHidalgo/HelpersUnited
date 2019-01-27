@@ -66,3 +66,70 @@ block content
                               span!= val
 
                   .q-report__content-right.section-top__content-right
+
+                    .q-report__block-wrapper
+                      .q-report__block.q-report__block-0
+                        .q-report__block-head
+                          p!= "Type of expense"
+
+                        .q-report__block-body
+                          -
+                            var blockRowName = [
+                              'Rent',
+                              'Food',
+                              'Cleaning, etc',
+                              'Cable',
+                              'Electric',
+                              'Water / Sewer',
+                              'Home phone',
+                              'Cell phone',
+                              'Natural gas',
+                              'Furniture loan',
+                              'Electronics loan',
+                              'Applicane loan',
+                              'Car',
+                              'Car Insurance',
+                              'Gasoline',
+                              'Child care',
+                              'Child support',
+                              'Med insurance',
+                              'Med loans',
+                              'Meds, docs, etc',
+                              'Credit cards',
+                              'Other loans',
+                              'Clothing',
+                              'Misc'
+                            ];
+                          each val, idx in blockRowName
+                            .q-report__block-row
+                              p!= val
+
+                      .q-report__block.q-report__block-1
+                        .q-report__block-head
+                          p!= "Client expenses"
+
+                        .q-report__block-body
+                          each val, idx in blockRowName
+                            .q-report__block-row.q-report__block-row--up
+                              .q-report__block-col
+                                p!= "$120"
+                              .q-report__block-col
+                                span!= "+ $20"
+                                span
+                                  i.icon-font.icon-triangle-up
+                                span!= "+5%"
+
+                      .q-report__block.q-report__block-2
+                        .q-report__block-head
+                          p!= "Regional average expenses"
+
+                        .q-report__block-body
+                          each val, idx in blockRowName
+                            .q-report__block-row.q-report__block-row--down
+                              .q-report__block-col
+                                p!= "$120"
+                              .q-report__block-col
+                                span!= "- $20"
+                                span
+                                  i.icon-font.icon-triangle-down
+                                span!= "-2%"
