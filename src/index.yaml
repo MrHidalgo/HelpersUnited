@@ -173,17 +173,17 @@ PageList:
 - file:
   titleName: AGENCY I-QUICK REPORT
 - file: agency-quick-report-1.html
-  titleName: Quick Report 1
-  ready: 0
+  titleName: QR - Regional averages
+  ready: 01
 - file: agency-quick-report-2.html
-  titleName: Quick Report 2
-  ready: 0
+  titleName: QR - Dynamics
+  ready: 01
 - file: agency-quick-report-3.html
-  titleName: Quick Report 3
-  ready: 0
+  titleName: QR - Support history
+  ready: 01
 - file: agency-quick-report-4.html
-  titleName: Quick Report 4
-  ready: 0
+  titleName: QR - Suggestions
+  ready: 01
 
 - file:
   titleName: AGENCY I-SERVICES RENDERED
@@ -228,7 +228,7 @@ PageList:
   ready: 55
 - file: agency-i-interview-5.html
   titleName: II - Other sources of income
-  ready: 01
+  ready: 55
 - file: agency-i-interview-6.html
   titleName: II - Monthly expenses
-  ready: 01
+  ready: 55

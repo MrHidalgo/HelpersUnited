@@ -81,6 +81,21 @@
         }
       }
     }
+
+    &__content {
+      display: flex;
+      height: calc(100% - 70px);
+
+      &-left {
+        width: 270px;
+        background-color: $c-white;
+        border-right: 1px solid $c-whisper;
+      }
+
+      &-right {
+        width: 100%;
+      }
+    }
   }
 
   &__wrapper {

@@ -48,26 +48,26 @@ block content
 
                 include components/common/_tabs
 
-                .i-interview__content
-                  .i-interview__content-left
+                .i-interview__content.section-top__content
+                  .i-interview__content-left.section-top__content-left
 
-                    .i-interview__nav
+                    .menu
                       -
                         var listItemNavArr = [
-                          'Biography',
-                          'Personal data',
-                          'Employment information',
-                          'Household member',
-                          'Other sources of income',
-                          'Monthly expenses'
+                        'Biography',
+                        'Personal data',
+                        'Employment information',
+                        'Household member',
+                        'Other sources of income',
+                        'Monthly expenses'
                         ];
-                      ul.i-interview__nav-list
+                      ul.menu__list
                         each val, idx in listItemNavArr
-                          li.i-interview__nav-item
-                            a.i-interview__nav-btn(href="#" class=(idx === 5) ? 'is-active':'' title="")
+                          li.menu__item
+                            a.menu__btn(href="#" class=(idx === 5) ? 'is-active':'' title="")
                               span!= val
 
-                  .i-interview__content-right
+                  .i-interview__content-right.section-top__content-right
 
                     .i-interview__field-wrapper
                       .i-interview__field-left

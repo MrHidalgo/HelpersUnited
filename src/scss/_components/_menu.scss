@@ -1,0 +1,24 @@
+// SECTION menu :: START
+
+.menu {
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    min-height: 70px;
+    padding: 5px 30px;
+    border-bottom: 1px solid $c-whisper;
+    color: $c-nobel;
+    font-weight: 600;
+
+    &.is-active {
+      color: $c-matterhorn;
+    }
+  }
+}
+
+// SECTION menu :: END
