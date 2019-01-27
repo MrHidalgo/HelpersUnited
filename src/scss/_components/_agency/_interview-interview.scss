@@ -52,6 +52,7 @@
     width: 100%;
     min-height: 70px;
     padding: 5px 30px;
+    background-color: $c-white;
     border-bottom: 1px solid $c-whisper;
 
     &--big {
@@ -68,7 +69,7 @@
     &-right {
       width: 100%;
       max-width: 50%;
-      background-color: $c-white;
+      //background-color: $c-white;
     }
 
     &-right {
