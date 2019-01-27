@@ -55,6 +55,10 @@
     padding: 5px 30px;
     border-bottom: 1px solid $c-whisper;
 
+    &--big {
+      min-height: 140px;
+    }
+
     &-wrapper {
       display: flex;
       flex-wrap: wrap;
@@ -78,8 +82,9 @@
       font-weight: 600;
     }
 
-    &-value {
+    &-title {
       line-height: 1;
+      font-weight: 600;
     }
   }
 }
