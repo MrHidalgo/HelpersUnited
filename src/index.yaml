@@ -216,13 +216,13 @@ PageList:
   titleName: AGENCY I-INTERVIEW
 - file: agency-i-interview-1.html
   titleName: II - Biography
-  ready: 01
+  ready: 55
 - file: agency-i-interview-2.html
   titleName: II - Personal data
-  ready: 01
+  ready: 55
 - file: agency-i-interview-3.html
   titleName: II - Employment information
-  ready: 01
+  ready: 55
 - file: agency-i-interview-4.html
   titleName: II - Household member
   ready: 01
