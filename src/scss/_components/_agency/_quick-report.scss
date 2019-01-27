@@ -33,6 +33,60 @@
       }
     }
   }
+
+  &__table {
+    margin-bottom: 30px;
+    background-color: $c-white;
+
+    &:nth-of-type(n + 2) {
+      .q-report__table-title {
+        border-top: 1px solid $c-whisper;
+      }
+    }
+
+    &-title {
+      display: flex;
+      align-items: center;
+      min-height: 70px;
+      padding: 5px 30px;
+      border-bottom: 1px solid $c-whisper;
+
+      p {
+        font-weight: 600;
+      }
+    }
+
+    &-tr {
+      display: flex;
+      min-height: 70px;
+      border-bottom: 1px solid $c-whisper;
+    }
+
+    &-th,
+    &-td {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      min-width: 1px;
+      max-width: 100%;
+      padding: 5px 30px;
+      border-right: 1px solid $c-whisper;
+
+      &:last-of-type {
+        border-right: none;
+      }
+    }
+
+    &-th {
+      color: $c-nobel;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+
+    &-td {
+      font-weight: 600;
+    }
+  }
 }
 
 // SECTION quick report :: END

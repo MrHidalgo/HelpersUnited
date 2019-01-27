@@ -66,3 +66,66 @@ block content
                               span!= val
 
                   .q-report__content-right.section-top__content-right
+
+                    .q-report__table
+                      .q-report__table-title
+                        p!= "Alvin Brewer"
+
+                      .q-report__table-head
+                        -
+                          var quickReportTableBtnEmpty = true,
+                            quickReportTable1 = true;
+                        include components/common/_tabs
+
+                      .q-report__table-body
+                        .q-report__table-tr
+                          .q-report__table-th
+                            span!= "Support name"
+                          .q-report__table-th
+                            span!= "Requested Date"
+                          .q-report__table-th
+                            span!= "Amount"
+                          .q-report__table-th
+                            span!= "Agency Name"
+
+                        .q-report__table-tr
+                          .q-report__table-td
+                            span!= "Water"
+                          .q-report__table-td
+                            span!= "12.01.18"
+                          .q-report__table-td
+                            span!= "$200"
+                          .q-report__table-td
+                            span!= "Helpers"
+
+                    .q-report__table
+                      .q-report__table-title
+                        p!= "Bruce Wagner · Household member"
+
+                      .q-report__table-head
+                        -
+                          var quickReportTable1 = false,
+                            quickReportTable2 = true;
+                        include components/common/_tabs
+
+                      .q-report__table-body
+                        .q-report__table-tr
+                          .q-report__table-th
+                            span!= "Support name"
+                          .q-report__table-th
+                            span!= "Requested Date"
+                          .q-report__table-th
+                            span!= "Amount"
+                          .q-report__table-th
+                            span!= "Agency Name"
+
+                        .q-report__table-tr
+                          .q-report__table-td
+                            span!= "Water"
+                          .q-report__table-td
+                            span!= "12.01.18"
+                          .q-report__table-td
+                            span!= "$200"
+                          .q-report__table-td
+                            span!= "Helpers"
+
