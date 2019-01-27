@@ -31,10 +31,6 @@
       flex-direction: column;
     }
 
-    &-item {
-
-    }
-
     &-btn {
       display: flex;
       align-items: center;
@@ -47,6 +43,43 @@
       &.is-active {
         color: $c-matterhorn;
       }
+    }
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 70px;
+    padding: 5px 30px;
+    border-bottom: 1px solid $c-whisper;
+
+    &-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: $c-white;
+    }
+
+    &-left,
+    &-right {
+      width: 100%;
+      max-width: 50%;
+    }
+
+    &-right {
+      border-left: 1px solid $c-whisper;
+    }
+
+    &-label {
+      color: $c-nobel;
+      line-height: 1;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    &-value {
+      line-height: 1;
     }
   }
 }
