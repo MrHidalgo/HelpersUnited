@@ -1,0 +1,13 @@
+// SECTION quick report :: START
+
+.q-report {
+  &__wrapper {
+    height: 100%;
+  }
+
+  &__body {
+    height: calc(100% - 70px);
+  }
+}
+
+// SECTION quick report :: END

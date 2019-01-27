@@ -1,0 +1,68 @@
+---
+title: HelpersUnited - Agency - Quick Report
+
+pageClassName: p-agency-q-report
+pageClassNameNum: p-agency-q-report-4
+---
+extends shared/_layout
+
+block header
+  include ./components/_header-internal
+
+block footer
+
+block content
+  div.body.body--start(class!= pageClassName)
+
+    section#section.section.section--agency
+      .section__wrapper
+        .section__wrapper-left
+
+          section#navigation.navigation--agency
+            .navigation__wrapper
+
+              ul.navigation__list
+                +navigationItemAgency('0 is-active', 'interviews', 'Interviews')
+                +navigationItemAgency('1', 'staff', 'Staff')
+                +navigationItemAgency('2', 'pushCloud', 'Push-to-cloud')
+                +navigationItemAgency('3', 'meetingSchedule', 'Meeting Schedule')
+                +navigationItemAgency('4', 'documentLibraries', 'Document libraries')
+                +navigationItemAgency('5', 'qa', 'Q&A')
+                +navigationItemAgency('6', 'videoTutorials', 'Video tutorials')
+
+        .section__wrapper-right
+
+          section#q-report.q-report.section-top
+
+            .q-report__wrapper
+
+              .section-top__heading
+                .section-top__heading-left
+                  p!= "Alvin Brewer"
+                .section-top__heading-right
+                  a(href="#" class="" title="")
+                    span
+                     i.icon-font.icon-close
+
+              .q-report__body
+
+                include components/common/_tabs
+
+                .q-report__content.section-top__content
+                  .q-report__content-left.section-top__content-left
+
+                    .menu
+                      -
+                        var listItemNavArr = [
+                          'Regional averages',
+                          'Dynamics',
+                          'Support history',
+                          'Suggestions'
+                        ];
+                      ul.menu__list
+                        each val, idx in listItemNavArr
+                          li.menu__item
+                            a.menu__btn(href="#" class=(idx === 3) ? 'is-active':'' title="")
+                              span!= val
+
+                  .q-report__content-right.section-top__content-right

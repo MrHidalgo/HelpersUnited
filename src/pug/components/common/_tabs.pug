@@ -10,6 +10,7 @@
   var tabsAgencySRSubmenudArr = ['Support Requested', 'Support Received'];
   var tabsAgencyOverallReportArr = ['Quick Report', 'Interview', 'Services Rendered', 'Overall Report'];
   var tabsAgencyIIArr = ['Quick Report', 'Interview', 'Services Rendered', 'Overall Report'];
+  var tabsAgencyQuickReportArr = ['Quick Report', 'Interview', 'Services Rendered', 'Overall Report'];
 
 
 mixin tabsBtn(num, arr)
@@ -27,7 +28,13 @@ mixin tabsUploadBtn()
 
 
 section#tabs.tabs(
-  class!= (overallReportTabs === true || overallReportTabsEmpty === true) ? '' : (pageClassName === 'p-agency-services-rendered' || pageClassName === 'p-agency-overall-report' || pageClassName === 'p-agency-i-interview') ? 'tabs--info':''
+  class!= (overallReportTabs === true || overallReportTabsEmpty === true) ? '' :
+    (
+      pageClassName === 'p-agency-services-rendered'
+      || pageClassName === 'p-agency-overall-report'
+      || pageClassName === 'p-agency-i-interview'
+      || pageClassName === 'p-agency-q-report'
+    ) ? 'tabs--info':''
 )
   .tabs__wrapper
     .tabs__wrapper-left
@@ -74,6 +81,9 @@ section#tabs.tabs(
         else if (pageClassName === 'p-agency-i-interview')
           +tabsBtn(1, tabsAgencyIIArr)
 
+        else if (pageClassName === 'p-agency-q-report')
+          +tabsBtn(0, tabsAgencyQuickReportArr)
+
     .tabs__wrapper-right
       if(pageClassName === 'p-agency-interviews')
         +tabsSearchBtn()
@@ -106,6 +116,9 @@ section#tabs.tabs(
         p.tabs__info!= "Overall score of Alvin Brewer: <span>1.16</span>"
 
       else if (pageClassName === 'p-agency-i-interview')
+        p.tabs__info!= "Overall score of Alvin Brewer: <span>1.16</span>"
+
+      else if (pageClassName === 'p-agency-q-report')
         p.tabs__info!= "Overall score of Alvin Brewer: <span>1.16</span>"
 
 
