@@ -1,0 +1,101 @@
+// SECTION meeting schedule body :: START
+
+.m-schedule__body
+  .m-schedule__body-top
+    div
+      p!= "GMT -04"
+    div
+      p!= "Monday"
+      span!= "3"
+    div
+      p!= "Tuesday"
+      span!= "4"
+    div
+      p!= "Wednesday"
+      span!= "5"
+    div
+      p!= "Thursday"
+      span!= "6"
+    div.is-active
+      p!= "Friday"
+      span!= "7"
+    div
+      p!= "Saturday"
+      span!= "8"
+    div
+      p!= "Sunday"
+      span!= "9"
+
+  .m-schedule__body-bottom
+    div.m-schedule__body-content
+      each val, idx in ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24']
+        div
+          div
+            p!= val + ':00 PM'
+          div.is-mark
+            if(idx === 3)
+              a.m-schedule__body-title(href="#" class="" title="")
+                p!= "Interview title"
+                span!= "03:00 - 04:00 PM"
+
+              .m-schedule__body-popup(style="left: calc(90% + 20px);")
+                div
+                  p!= "Interview title"
+                  span.m-schedule__body-popup--close
+                    i.icon-font.icon-close
+                div
+                  div
+                    span
+                      i.icon-font.icon-calendar
+                    p!= "Monday 3 Dectember"
+                  div
+                    span
+                      i.icon-font.icon-clock
+                    p!= "03:00 AM - 04:00 AM  "
+                div
+                  a(href="#" class="" title="")
+                    span
+                      i.icon-font.icon-edit
+                    p!= "Edit"
+                  a(href="#" class="" title="")
+                    span
+                      i.icon-font.icon-delete
+                    p!= "Delete"
+          div
+          div
+          div
+          div.is-active.is-mark
+            if(idx === 6)
+              a.m-schedule__body-title.m-schedule__body-title--merge(href="#" class="" title="")
+                p!= "Interview title"
+                span!= "07:00 - 09:00 PM"
+
+              .m-schedule__body-popup(style="display: block; right: calc(100% + 20px);")
+                div
+                  p!= "Interview title"
+                  span.m-schedule__body-popup--close
+                    i.icon-font.icon-close
+                div
+                  div
+                    span
+                      i.icon-font.icon-calendar
+                    p!= "Friday 7 Dectember"
+                  div
+                    span
+                      i.icon-font.icon-clock
+                    p!= "07:00 AM - 09:00 AM  "
+                div
+                  a(href="#" class="" title="")
+                    span
+                      i.icon-font.icon-edit
+                    p!= "Edit"
+                  a(href="#" class="" title="")
+                    span
+                      i.icon-font.icon-delete
+                    p!= "Delete"
+
+          div
+          div
+
+
+// SECTION meeting schedule body :: END

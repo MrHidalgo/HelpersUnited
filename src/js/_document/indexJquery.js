@@ -49,6 +49,22 @@ $(document).ready((ev) => {
     });
   };
 
+	const initWeekPopup = () => {
+	  $('.m-schedule__body-title').on('click', (ev) => {
+	    const _elem = $(ev.currentTarget),
+        _elemPopup = _elem.siblings('.m-schedule__body-popup');
+
+      _elemPopup.slideToggle(300);
+    });
+
+	  $('.m-schedule__body-popup--close').on('click', (ev) => {
+      const _elem = $(ev.currentTarget),
+        _elemPopup = _elem.closest('.m-schedule__body-popup');
+
+      _elemPopup.slideToggle(300);
+    });
+  };
+
 	/*
 	* CALLBACK :: end
 	* ============================================= */
@@ -76,6 +92,7 @@ $(document).ready((ev) => {
     initBodyClick();
     initDropdown();
     initQaCollapse();
+    initWeekPopup();
   };
   initJquery();
 });
