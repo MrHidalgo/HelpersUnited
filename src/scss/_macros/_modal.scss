@@ -20,6 +20,226 @@
     height: 100%;
   }
 
+  &.c-modal--msaim {
+    .c-modal {
+      &__header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        min-height: 28px;
+        padding-right: 98px;
+        margin-bottom: 18px;
+
+        p {
+          color: $c-matterhorn;
+          font-size: 22px;
+          font-weight: 600;
+        }
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          width: 48px;
+          height: 48px;
+
+          .icon-close {
+            color: $c-nobel;
+            font-size: 21px;
+          }
+        }
+      }
+
+      &__col {
+        display: flex;
+
+        &-left {
+          width: 100%;
+          max-width: calc(100% - 403px);
+        }
+
+        &-right {
+          display: flex;
+          flex-direction: column;
+          width: 404px;
+          padding-left: 40px;
+        }
+
+        &-top {
+          display: flex;
+          align-items: center;
+          height: 50px;
+          border-bottom: 1px solid $c-whisper;
+
+          .m-schedule__btn--choose {
+            border: none
+          }
+        }
+
+        &-bottom {
+          overflow-y: auto;
+          height: 100%;
+          max-height: 420px;
+        }
+
+        &-time {
+          display: flex;
+
+          > div {
+            height: 54px;
+
+            &:nth-of-type(1) {
+              width: 100px;
+            }
+
+            &:nth-of-type(2) {
+              position: relative;
+              width: 100%;
+              max-width: calc(100% - 100px);
+              border-bottom: 1px solid $c-whisper;
+
+              &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 100%;
+                height: 1px;
+                background-color: $c-whisper;
+              }
+            }
+
+            > span {
+              color: $c-nobel;
+              font-size: 12px;
+              font-weight: 600;
+            }
+          }
+
+          &-info {
+            position: relative;
+            width: 98%;
+            height: 100%;
+            padding: 8px 11px;
+            border-radius: 2px;
+            background-color: $c-royalBlue;
+
+            span {
+              color: #FFFFFF;
+              font-size: 12px;
+              font-weight: 600;
+            }
+
+            &:before,
+            &:after {
+              content: '';
+              z-index: 0;
+              position: absolute;
+              right: -1px;
+              width: 0;
+              height: 0;
+              border-style: solid;
+              border-width: 5px;
+              border-color: transparent $c-whisper transparent transparent;
+            }
+
+            &:before {
+              top: -1px;
+              transform: rotate(-225deg);
+            }
+
+            &:after {
+              bottom: -1px;
+              transform: rotate(225deg);
+            }
+          }
+        }
+      }
+
+      &__select {
+        position: relative;
+        width: 100%;
+        max-width: 335px;
+      }
+
+      &__input {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        &--top {
+          align-items: flex-start;
+
+          .icon-description {
+            margin-top: 5px;
+          }
+        }
+
+        .c-form__field {
+          margin-bottom: 0;
+        }
+
+        .c-form__textarea-wrapper {
+          height: 260px;
+        }
+
+        &-group {
+          display: flex;
+
+          > div {
+            &:nth-of-type(1) {
+              width: 180px;
+            }
+
+            &:nth-of-type(2) {
+              display: flex;
+              width: 100%;
+              max-width: calc(100% - 180px);
+              padding-left: 20px;
+
+              .c-modal__input {
+                width: 50%;
+              }
+            }
+          }
+        }
+
+        > div {
+          &:nth-of-type(1) {
+            width: 31px;
+          }
+
+          &:nth-of-type(2) {
+            width: 100%;
+            max-width: calc(100% - 31px);
+          }
+        }
+
+        .icon {
+          &-font {
+            color: $c-nobel;
+            font-size: 17px;
+          }
+          &-message {}
+          &-calendar {}
+        }
+      }
+
+      &__btn {
+        &--save {
+          max-width: 116px;
+          height: 52px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
   &.c-modal--mswai {
     .c-modal {
       &__header {
@@ -646,6 +866,11 @@
       max-width: 522px;
       padding: 14px;
       margin-left: 271px;
+    }
+
+    .c-modal--msaim & {
+      max-width: 928px;
+      padding: 25px;
     }
   }
 

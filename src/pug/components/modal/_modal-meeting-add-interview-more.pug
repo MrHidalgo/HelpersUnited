@@ -1,0 +1,163 @@
+// SECTION document libraries modal :: START
+
+-
+  var dataFormObj = {
+    inputName1: {
+      classMod: "",
+      uniqueName: "first_name",
+      labelVal: "Interview title",
+      inputType: "",
+      inputClassMod: "",
+      placeholderVal: "",
+      val: ""
+    },
+    selectFieldCustomDay: {
+      classMod: "",
+      uniqueName: "select_date",
+      labelVal: "Date",
+      selectClassMod: "",
+      selectOption: [
+      'Some option 1',
+      'Some option 2',
+      'Some option 3'
+      ],
+      placeholderVal: ""
+    },
+    selectFieldCustomTimeFrom: {
+      classMod: "",
+      uniqueName: "select_time_from",
+      labelVal: "From",
+      selectClassMod: "",
+      selectOption: [
+      'Some option 1',
+      'Some option 2',
+      'Some option 3'
+      ],
+      placeholderVal: ""
+    },
+    selectFieldCustomTimeTo: {
+      classMod: "",
+      uniqueName: "select_time_to",
+      labelVal: "To",
+      selectClassMod: "",
+      selectOption: [
+      'Some option 1',
+      'Some option 2',
+      'Some option 3'
+      ],
+      placeholderVal: ""
+    },
+    selectFieldCustomRepeat: {
+      classMod: "",
+      uniqueName: "select_repeat",
+      labelVal: "Repeat",
+      selectClassMod: "",
+      selectOption: [
+      'Some option 1',
+      'Some option 2',
+      'Some option 3'
+      ],
+      placeholderVal: ""
+    },
+    textareaName1: {
+      classMod: "",
+      uniqueName: "what_you_do",
+      labelVal: "",
+      textareaClassMod: "",
+      placeholderVal: "Description",
+      val: ""
+    }
+  }
+
+#c-modal.c-modal.c-modal--msaim
+  .c-modal__wrapper
+    .c-modal__content
+      .c-modal__header
+        p!= "Add Interview"
+
+        a(href="#" class="" title="")
+          i.icon-font.icon-close
+
+      .c-modal__body
+        .c-modal__col
+          .c-modal__col-left
+
+            .c-form
+              .c-modal__input
+                div
+                  i.icon-font.icon-message
+                div
+                  +formInput(dataFormObj.inputName1)
+
+              .c-modal__input-group
+                div
+                  .c-modal__input
+                    div
+                      i.icon-font.icon-calendar
+                    div
+                      +formSelectCustom(dataFormObj.selectFieldCustomDay)
+
+                div
+                  .c-modal__input
+                    div
+                      i.icon-font.icon-clock
+                    div
+                      +formSelectCustom(dataFormObj.selectFieldCustomTimeFrom)
+
+                  .c-modal__input
+                    div
+                    div
+                      +formSelectCustom(dataFormObj.selectFieldCustomTimeTo)
+
+              .c-modal__input
+                div
+                  i.icon-font.icon-repeat
+                div
+                  .c-modal__select
+                    +formSelectCustom(dataFormObj.selectFieldCustomRepeat)
+
+
+              .c-modal__input.c-modal__input--top
+                div
+                  i.icon-font.icon-description
+                div
+                  +formTextarea(dataFormObj.textareaName1)
+
+
+          .c-modal__col-right
+            .c-modal__col-top
+              a.m-schedule__btn.m-schedule__btn--arrow(href="#" class="" title="")
+                span
+                  i.icon-font.icon-arrow-left
+
+              a.m-schedule__btn.m-schedule__btn--arrow(href="#" class="" title="")
+                span
+                  i.icon-font.icon-arrow-right
+
+              a.m-schedule__btn.m-schedule__btn--choose(href="#" class="" title="")
+                div
+                  p!= "<span>Friday</span>, Dectember 2018"
+                  span
+                    i.icon-font.icon-triangle-down
+
+            .c-modal__col-bottom
+              div
+                 each val, idx in ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24']
+                   .c-modal__col-time
+                     div
+                       span!= val + ":00 PM"
+                     div
+                      if(idx === 3)
+                        .c-modal__col-time-info
+                          span!= "04:00 PM - 05:00 PM"
+
+      .c-modal__footer
+        a.c-modal__btn.c-modal__btn--more(href="#" class="" title="")
+          span
+            i.icon-font.icon-cog
+          p!= "More details"
+
+        a.c-modal__btn.c-modal__btn--save.c-btn.c-btn--bg(href="#" class="" title="")!= "Save"
+
+
+// SECTION document libraries modal :: END
