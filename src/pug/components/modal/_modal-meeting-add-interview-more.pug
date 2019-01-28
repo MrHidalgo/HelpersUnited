@@ -151,11 +151,12 @@
                         .c-modal__col-time-info
                           span!= "04:00 PM - 05:00 PM"
 
-      .c-modal__footer
-        a.c-modal__btn.c-modal__btn--more(href="#" class="" title="")
-          span
-            i.icon-font.icon-cog
-          p!= "More details"
+      .c-modal__footer(class!= (pageClassNameNum === 'p-agency-m-schedule-6') ? 'c-modal__footer--between':'')
+        if(pageClassNameNum === 'p-agency-m-schedule-6')
+          a.c-modal__btn.c-modal__btn--delete(href="#" class="" title="")
+            span
+              i.icon-font.icon-delete
+            p!= "Delete"
 
         a.c-modal__btn.c-modal__btn--save.c-btn.c-btn--bg(href="#" class="" title="")!= "Save"
 

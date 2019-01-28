@@ -54,6 +54,15 @@
         }
       }
 
+      &__footer {
+        display: flex;
+        align-items: center;
+
+        &--between {
+          justify-content: space-between;
+        }
+      }
+
       &__col {
         display: flex;
 
@@ -231,6 +240,30 @@
       }
 
       &__btn {
+        &--delete {
+          display: flex;
+          align-items: center;
+
+          span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            margin-right: 8px;
+          }
+
+          .icon-font {
+            color: $c-nobel;
+            font-size: 17px;
+          }
+
+          p {
+            color: $c-matterhorn;
+            font-size: 14px;
+            font-weight: 600;
+          }
+        }
         &--save {
           max-width: 116px;
           height: 52px;
