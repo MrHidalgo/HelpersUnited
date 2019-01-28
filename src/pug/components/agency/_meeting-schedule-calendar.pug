@@ -1,0 +1,110 @@
+// SECTION meeting schedule calendar :: START
+
+.m-schedule__calendar
+  .m-schedule__calendar-row.m-schedule__calendar-row--days
+    -
+      var calDays = [
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday',
+      'Sunday',
+      ];
+    each val, idx in [26,27,28,29,30,1,2]
+      .m-schedule__calendar-col
+        p!= calDays[idx]
+        if(idx === 0 || idx === 1 || idx === 2 || idx === 3 || idx === 4)
+          i!= val
+        else
+          span!= val
+
+  .m-schedule__calendar-row
+    each val, idx in [3,4,5,6,7,8,9]
+      .m-schedule__calendar-col(class!= (val === 3 || val ===7) ? 'm-schedule__calendar-col--info':'')
+        span!= val
+
+        if(val === 3)
+          .m-schedule__calendar-info
+            p!= "Interview title"
+            span!= "03:00 PM"
+
+        if(val === 7)
+          .m-schedule__calendar-info
+            p!= "Interview title"
+            span!= "07:00 PM"
+
+  .m-schedule__calendar-row
+    each val, idx in [10,11,12,13,14,15,16]
+      .m-schedule__calendar-col(class!= (val === 11) ? 'm-schedule__calendar-col--info':'')
+        span!= val
+
+        if(val === 11)
+          .m-schedule__calendar-info
+            p!= "Interview title"
+            span!= "03:00 PM"
+          .m-schedule__calendar-info
+            p!= "Interview title"
+            span!= "03:00 PM"
+          .m-schedule__calendar-info
+            span!= "2 more"
+
+          .m-schedule__calendar-hover
+            p!= "Tuesday"
+            span!= "11"
+            .m-schedule__calendar-info
+              p!= "Interview title"
+              span!= "03:00 PM"
+            .m-schedule__calendar-info
+              p!= "Interview title"
+              span!= "03:00 PM"
+            .m-schedule__calendar-info
+              p!= "Interview title"
+              span!= "03:00 PM"
+            .m-schedule__calendar-info
+              p!= "Interview title"
+              span!= "03:00 PM"
+
+  .m-schedule__calendar-row
+    each val, idx in [17,18,19,20,21,22,23]
+      .m-schedule__calendar-col(class!= (val === 21) ? 'm-schedule__calendar-col--info':'')
+        span!= val
+
+        if(val === 21)
+          .m-schedule__calendar-info
+            p!= "Interview title"
+            span!= "03:00 PM"
+          .m-schedule__calendar-info
+            p!= "Interview title"
+            span!= "03:00 PM"
+          .m-schedule__calendar-info
+            span!= "2 more"
+
+          .m-schedule__calendar-hover
+            p!= "Friday"
+            span!= "21"
+            .m-schedule__calendar-info
+              p!= "Interview title"
+              span!= "03:00 PM"
+            .m-schedule__calendar-info
+              p!= "Interview title"
+              span!= "03:00 PM"
+            .m-schedule__calendar-info
+              p!= "Interview title"
+              span!= "03:00 PM"
+            .m-schedule__calendar-info
+              p!= "Interview title"
+              span!= "03:00 PM"
+
+  .m-schedule__calendar-row
+    each val, idx in [24,25,26,27,28,29,30]
+      .m-schedule__calendar-col
+        span!= val
+
+  .m-schedule__calendar-row
+    each val, idx in [31]
+      .m-schedule__calendar-col
+        span!= val
+
+// SECTION meeting schedule calendar :: END

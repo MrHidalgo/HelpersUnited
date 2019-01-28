@@ -589,6 +589,130 @@
     }
   }
   // btn :: end
+
+  // calendar
+  &__calendar {
+    &-row {
+      display: flex;
+
+      &--days {
+        .m-schedule__calendar-col {
+          padding: 22px 10px;
+
+          p {
+            padding-bottom: 5px;
+            color: $c-royalBlue;
+            font-size: 12px;
+            font-weight: 600;
+          }
+
+          span,
+          i {
+            font-size: 18px;
+            font-weight: 600;
+          }
+
+          i {
+            color: $c-nobel;
+            font-style: normal;
+          }
+        }
+      }
+    }
+
+    &-col {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: 100%;
+      max-width: calc(100% / 7);
+      height: 146px;
+      padding: 10px;
+      border-right: 1px solid $c-whisper;
+      border-bottom: 1px solid $c-whisper;
+
+      > span {
+        margin-bottom: 15px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      &--info {
+        position: relative;
+
+        &:hover {
+          .m-schedule__calendar-hover {
+            opacity: 1;
+            transform: translate(-5%, -5%) scale(1);
+            @include transition(opacity, transform);
+          }
+        }
+      }
+    }
+
+    &-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 33px;
+      margin-left: -10px;
+      margin-bottom: 1px;
+      padding: 5px 10px;
+      border-radius: 2px;
+      background-color: $c-royalBlue;
+
+      p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 81px;
+        margin-right: 15px;
+        color: #FFFFFF;
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      span {
+        white-space: nowrap;
+        color: #FFFFFF;
+        font-size: 10px;
+      }
+    }
+
+    &-hover {
+      opacity: 0;
+      z-index: 10;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      top: 0;
+      left: 0;
+      width: 250px;
+      min-height: 230px;
+      transform-origin: center;
+      transform: translate(-5%, -5%) scale(0.75);
+      padding: 10px;
+      background: #FFFFFF;
+      border-radius: 4px;
+      box-shadow: 0 3px 5px 0 rgba(0,0,0,0.15);
+      @include transition(opacity, transform);
+
+      > p {
+        color: #111111;
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      > span {
+        padding-bottom: 15px;
+        color: #111111;
+        font-size: 32px;
+        font-weight: 600;
+      }
+    }
+  }
+  // calendar :: end
 }
 
 // SECTION meeting schedule :: END

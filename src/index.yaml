@@ -120,10 +120,10 @@ PageList:
   ready: 55
 - file: agency-meeting-schedule-3.html
   titleName: Month - Preview
-  ready: 01
+  ready: 55
 - file: agency-meeting-schedule-4.html
   titleName: Month - Add interview
-  ready: 01
+  ready: 55
 - file: agency-meeting-schedule-5.html
   titleName: MS - Add interview more
   ready: 01
