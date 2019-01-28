@@ -134,8 +134,8 @@ PageList:
   titleName: MS - Add interview repeat
   ready: 55
 - file: agency-meeting-schedule-8.html
-  titleName: MS - EDit interview repeat
-  ready: 01
+  titleName: MS - Edit interview repeat
+  ready: 55
 
 - file:
   titleName: AGENCY DOCUMENT LIBRARIES

@@ -95,10 +95,19 @@
             div
               p!= "Occurs every Tuesday, Wednesday and Saturday."
 
-          .c-modal__input.c-modal__input--info
+          .c-modal__input(class!= (pageClassNameNum !== 'p-agency-m-schedule-8') ? 'c-modal__input--info':'c-modal__input--infoSelect')
             div
             div
-              h2!= "Choose an end date"
+              if(pageClassNameNum === 'p-agency-m-schedule-8')
+                div
+                  +formSelectCustom(dataFormObj.selectFieldCustomDay)
+                div
+                  a.c-modal__btn.c-modal__btn--delete(href="#" class="" title="")
+                    span
+                      i.icon-font.icon-delete
+                    p!= "Delete"
+              else
+                h2!= "Choose an end date"
 
       .c-modal__footer
         a.c-modal__btn.c-modal__btn--save.c-btn.c-btn--bg(href="#" class="" title="")!= "Save"
