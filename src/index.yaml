@@ -113,29 +113,29 @@ PageList:
 - file:
   titleName: AGENCY MEETING SCHEDULE
 - file: agency-meeting-schedule-1.html
-  titleName: Week 1
-  ready: 0
+  titleName: Week - Preview
+  ready: 01
 - file: agency-meeting-schedule-2.html
-  titleName: Week 2
-  ready: 0
+  titleName: Week - Add interview
+  ready: 01
 - file: agency-meeting-schedule-3.html
-  titleName: Month 1
-  ready: 0
+  titleName: Month - Preview
+  ready: 01
 - file: agency-meeting-schedule-4.html
-  titleName: Month 2
-  ready: 0
+  titleName: Month - Add interview
+  ready: 01
 - file: agency-meeting-schedule-5.html
-  titleName:
-  ready: 0
+  titleName: MS - Add interview more
+  ready: 01
 - file: agency-meeting-schedule-6.html
-  titleName:
-  ready: 0
+  titleName: MS - Edit interview
+  ready: 01
 - file: agency-meeting-schedule-7.html
-  titleName: Repeat 1
-  ready: 0
+  titleName: MS - Add interview repeat
+  ready: 01
 - file: agency-meeting-schedule-8.html
-  titleName: Repeat 2
-  ready: 0
+  titleName: MS - EDit interview repeat
+  ready: 01
 
 - file:
   titleName: AGENCY DOCUMENT LIBRARIES
@@ -174,7 +174,7 @@ PageList:
   titleName: AGENCY I-QUICK REPORT
 - file: agency-quick-report-1.html
   titleName: QR - Regional averages
-  ready: 01
+  ready: 55
 - file: agency-quick-report-2.html
   titleName: QR - Dynamics
   ready: 55

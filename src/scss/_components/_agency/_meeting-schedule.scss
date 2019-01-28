@@ -1,0 +1,343 @@
+// SECTION meeting schedule :: START
+
+.m-schedule {
+  background-color: $c-white;
+
+  // head
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70px;
+    border-bottom: 1px solid $c-whisper;
+
+    > div {
+      display: flex;
+      min-height: 69px;
+    }
+  }
+  // head :: end
+
+  // btn
+  &__btn {
+    display: flex;
+    align-items: center;
+
+    &--today {
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+      color: $c-nobel;
+
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+
+      p {
+        padding-left: 5px;
+        padding-right: 24px;
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .icon {
+        &-calendar-today {
+          font-size: 17px;
+        }
+      }
+    }
+
+    &--arrow {
+      display: flex;
+      align-items: center;
+      color: $c-nobel;
+
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+
+      .icon {
+        &-arrow-left,
+        &-arrow-right {
+          font-size: 14px;
+        }
+      }
+    }
+
+    &--choose  {
+      display: flex;
+      align-items: center;
+      padding-left: 30px;
+      padding-right: 30px;
+      border-right: 1px solid $c-whisper;
+      color: $c-nobel;
+
+      > div {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        &:hover {
+          > div {
+            opacity: 1;
+            visibility: visible;
+            @include transition(opacity, visibility);
+          }
+
+          > p {
+            color: $c-matterhorn;
+          }
+        }
+
+        > p {
+          z-index: 2;
+          position: relative;
+        }
+
+        > p {
+          padding-right: 5px;
+          font-size: 16px;
+          font-weight: 600;
+        }
+
+        > span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 28px;
+          height: 28px;
+          margin-left: 5px;
+          margin-right: 5px;
+        }
+
+        > div {
+          opacity: 0;
+          visibility: hidden;
+          z-index: 0;
+          position: absolute;
+          top: -9px;
+          left: -15px;
+          width: 100%;
+          min-width: 308px;
+          height: 278px;
+          padding: 14px;
+          background-color: $c-white;
+          box-shadow: 0 3px 5px 0 rgba(0,0,0,0.15);
+          border-top-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+          border-bottom-right-radius: 4px;
+          @include transition(opacity, visibility);
+
+          > div {
+            &:nth-of-type(1) {
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
+              height: 34px;
+              padding-bottom: 12px;
+
+              p {
+                margin-left: 10px;
+                margin-right: 10px;
+              }
+            }
+
+            &:nth-of-type(2) {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              height: 46px;
+              padding-bottom: 10px;
+
+              span {
+                width: 100%;
+                max-width: calc(100% / 7);
+                color: $c-nobel;
+                text-align: center;
+              }
+            }
+
+            &:nth-of-type(3) {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              flex-wrap: wrap;
+              height: calc(100% - (46px + 34px));
+
+              i,
+              span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                max-width: calc(100% / 7);
+                height: 26px;
+                text-align: center;
+                font-style: normal;
+                font-weight: 600;
+              }
+
+              span {
+                position: relative;
+                color: $c-matterhorn;
+
+                &:before {
+                  content: '';
+                  z-index: -1;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  width: 28px;
+                  height: 100%;
+                  margin-left: auto;
+                  margin-right: auto;
+                  border-radius: 100%;
+                  background-color: transparent;
+                }
+
+                &.is-active {
+                  color: $c-white;
+
+                  &:before {
+                    background-color: $c-royalBlue;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .icon {
+        &-triangle-down {
+          font-size: 6px;
+        }
+      }
+    }
+
+    &--add,
+    &--search {
+      justify-content: center;
+      width: 87px;
+      border-left: 1px solid $c-whisper;
+
+      .icon-font {
+        color: $c-nobel;
+      }
+    }
+
+    &--add {
+      .icon-font {
+        font-size: 19px;
+      }
+    }
+
+    &--search {
+      .icon-font {
+        font-size: 22px;
+      }
+    }
+
+    &--view {
+      padding-left: 33px;
+      padding-right: 25px;
+      border-left: 1px solid $c-whisper;
+      color: $c-nobel;
+
+      > div {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        &:hover {
+          div {
+            opacity: 1;
+            visibility: visible;
+            @include transition(opacity, visibility);
+          }
+
+          .icon-font {
+            &.icon-triangle-down {
+              transform: rotate(-180deg);
+              color: #295DD9;
+              @include transition(transform, color);
+            }
+          }
+        }
+
+        div {
+          opacity: 0;
+          visibility: hidden;
+          white-space: nowrap;
+          z-index: 0;
+          position: absolute;
+          top: -9px;
+          left: -5px;
+          width: 100%;
+          min-width: 90px;
+          min-height: 90px;
+          padding: 51px 28px 10px 10px;
+          background-color: $c-white;
+          box-shadow: 0 3px 5px 0 rgba(0,0,0,0.15);
+          border-top-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+          border-bottom-right-radius: 4px;
+          @include transition(opacity, visibility);
+
+          p {
+            min-height: 24px;
+            margin: 0;
+          }
+        }
+      }
+
+      span,
+      p {
+        z-index: 2;
+        position: relative;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+      }
+
+      p {
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .icon {
+        &-calendar {
+          font-size: 17px;
+        }
+        &-triangle-down {
+          transform-origin: center;
+          font-size: 6px;
+          @include transition(transform, color);
+        }
+      }
+    }
+  }
+  // btn :: end
+}
+
+// SECTION meeting schedule :: END

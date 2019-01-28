@@ -30,83 +30,95 @@
 	@if $filename == add {
 		$char: "\E001";
 	}
-	@if $filename == check {
+	@if $filename == arrow-left {
 		$char: "\E002";
 	}
-	@if $filename == close {
+	@if $filename == arrow-right {
 		$char: "\E003";
 	}
-	@if $filename == delete {
+	@if $filename == calendar-today {
 		$char: "\E004";
 	}
-	@if $filename == download {
+	@if $filename == calendar {
 		$char: "\E005";
 	}
-	@if $filename == edit {
+	@if $filename == check {
 		$char: "\E006";
 	}
-	@if $filename == fullscreen {
+	@if $filename == close {
 		$char: "\E007";
 	}
-	@if $filename == minus {
+	@if $filename == delete {
 		$char: "\E008";
 	}
-	@if $filename == more {
+	@if $filename == download {
 		$char: "\E009";
 	}
-	@if $filename == nav-documentLibraries {
+	@if $filename == edit {
 		$char: "\E00A";
 	}
-	@if $filename == nav-interviews {
+	@if $filename == fullscreen {
 		$char: "\E00B";
 	}
-	@if $filename == nav-meetingSchedule {
+	@if $filename == minus {
 		$char: "\E00C";
 	}
-	@if $filename == nav-pushCloud {
+	@if $filename == more {
 		$char: "\E00D";
 	}
-	@if $filename == nav-qa {
+	@if $filename == nav-documentLibraries {
 		$char: "\E00E";
 	}
-	@if $filename == nav-staff {
+	@if $filename == nav-interviews {
 		$char: "\E00F";
 	}
-	@if $filename == nav-videoTutorials {
+	@if $filename == nav-meetingSchedule {
 		$char: "\E010";
 	}
-	@if $filename == play {
+	@if $filename == nav-pushCloud {
 		$char: "\E011";
 	}
-	@if $filename == plus {
+	@if $filename == nav-qa {
 		$char: "\E012";
 	}
-	@if $filename == print {
+	@if $filename == nav-staff {
 		$char: "\E013";
 	}
-	@if $filename == search {
+	@if $filename == nav-videoTutorials {
 		$char: "\E014";
 	}
-	@if $filename == signout {
+	@if $filename == play {
 		$char: "\E015";
 	}
-	@if $filename == table-triangle {
+	@if $filename == plus {
 		$char: "\E016";
 	}
-	@if $filename == triangle-down {
+	@if $filename == print {
 		$char: "\E017";
 	}
-	@if $filename == triangle-up {
+	@if $filename == search {
 		$char: "\E018";
 	}
-	@if $filename == upload {
+	@if $filename == signout {
 		$char: "\E019";
 	}
-	@if $filename == view {
+	@if $filename == table-triangle {
 		$char: "\E01A";
 	}
-	@if $filename == volume {
+	@if $filename == triangle-down {
 		$char: "\E01B";
+	}
+	@if $filename == triangle-up {
+		$char: "\E01C";
+	}
+	@if $filename == upload {
+		$char: "\E01D";
+	}
+	@if $filename == view {
+		$char: "\E01E";
+	}
+	@if $filename == volume {
+		$char: "\E01F";
 	}
 
 	@return $char;
@@ -125,6 +137,22 @@
 
 .icon-add {
 	@include icon(add);
+
+}
+.icon-arrow-left {
+	@include icon(arrow-left);
+
+}
+.icon-arrow-right {
+	@include icon(arrow-right);
+
+}
+.icon-calendar-today {
+	@include icon(calendar-today);
+
+}
+.icon-calendar {
+	@include icon(calendar);
 
 }
 .icon-check {
