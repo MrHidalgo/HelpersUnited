@@ -1,0 +1,107 @@
+// SECTION document libraries modal :: START
+
+-
+  var dataFormObj = {
+    selectFieldCustomDay: {
+      classMod: "",
+      uniqueName: "select_date",
+      labelVal: "Start date",
+      selectClassMod: "",
+      selectOption: [
+      'Some option 1',
+      'Some option 2',
+      'Some option 3'
+      ],
+      placeholderVal: ""
+    },
+    selectFieldCustomTimeTo: {
+      classMod: "",
+      uniqueName: "select_week",
+      labelVal: "Week",
+      selectClassMod: "",
+      selectOption: [
+      'Some option 1',
+      'Some option 2',
+      'Some option 3'
+      ],
+      placeholderVal: ""
+    },
+    selectFieldCustomRepeat: {
+      classMod: "",
+      uniqueName: "select_repeat",
+      labelVal: "Repeat every 1",
+      selectClassMod: "",
+      selectOption: [
+      'Some option 1',
+      'Some option 2',
+      'Some option 3'
+      ],
+      placeholderVal: ""
+    }
+  }
+
+#c-modal.c-modal.c-modal--msair
+  .c-modal__wrapper
+    .c-modal__content
+      .c-modal__header
+        p!= "Repeat"
+
+        a(href="#" class="" title="")
+          i.icon-font.icon-close
+
+      .c-modal__body
+
+        .c-form
+          .c-modal__input
+            div
+              i.icon-font.icon-calendar
+            div
+              +formSelectCustom(dataFormObj.selectFieldCustomDay)
+
+          .c-modal__input-group
+            div
+              .c-modal__input
+                div
+                  i.icon-font.icon-repeat
+                div
+                  .c-modal__select
+                    +formSelectCustom(dataFormObj.selectFieldCustomRepeat)
+            div
+              .c-modal__input.c-modal__input--full
+                div
+                div
+                  +formSelectCustom(dataFormObj.selectFieldCustomTimeTo)
+
+          .c-modal__input.c-modal__input--btn
+            div
+            div
+              a.c-modal__input-btn(href="#" class="" title="")
+                span!= "M"
+              a.c-modal__input-btn.is-active(href="#" class="" title="")
+                span!= "T"
+              a.c-modal__input-btn(href="#" class="" title="")
+                span!= "W"
+              a.c-modal__input-btn.is-active(href="#" class="" title="")
+                span!= "T"
+              a.c-modal__input-btn.is-active(href="#" class="" title="")
+                span!= "F"
+              a.c-modal__input-btn(href="#" class="" title="")
+                span!= "S"
+              a.c-modal__input-btn(href="#" class="" title="")
+                span!= "S"
+
+          .c-modal__input.c-modal__input--info
+            div
+            div
+              p!= "Occurs every Tuesday, Wednesday and Saturday."
+
+          .c-modal__input.c-modal__input--info
+            div
+            div
+              h2!= "Choose an end date"
+
+      .c-modal__footer
+        a.c-modal__btn.c-modal__btn--save.c-btn.c-btn--bg(href="#" class="" title="")!= "Save"
+
+
+// SECTION document libraries modal :: END

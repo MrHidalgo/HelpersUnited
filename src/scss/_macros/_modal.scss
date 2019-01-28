@@ -20,6 +20,183 @@
     height: 100%;
   }
 
+  &.c-modal--msair {
+    background-color: transparent;
+
+    .c-modal {
+      &__header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        min-height: 28px;
+        padding-right: 98px;
+        margin-bottom: 18px;
+
+        p {
+          color: $c-matterhorn;
+          font-size: 22px;
+          font-weight: 600;
+        }
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          width: 48px;
+          height: 48px;
+
+          .icon-close {
+            color: $c-nobel;
+            font-size: 21px;
+          }
+        }
+      }
+
+      &__footer {
+        display: flex;
+        align-items: center;
+      }
+
+      &__input {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        &--top {
+          align-items: flex-start;
+
+          .icon-description {
+            margin-top: 5px;
+          }
+        }
+
+        &--btn {
+          margin-bottom: 10px;
+
+          div {
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        &--info {
+          margin-bottom: 10px;
+
+          p {
+            padding-left: 10px;
+            color: $c-matterhorn;
+            font-size: 14px;
+          }
+
+          h2 {
+            padding-left: 10px;
+            color: $c-matterhorn;
+            font-size: 16px;
+          }
+        }
+
+        .c-form__field {
+          margin-bottom: 0;
+        }
+
+        .c-form__textarea-wrapper {
+          height: 260px;
+        }
+
+        &-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 30px;
+          width: 30px;
+          margin-left: 10px;
+          margin-right: 10px;
+          border-radius: 100%;
+          background-color: $c-whisper;
+          @include transition(background-color);
+
+          &.is-active {
+            background-color: $c-royalBlue;
+            @include transition(background-color);
+
+            span {
+              color: $c-white;
+              @include transition(color);
+            }
+          }
+
+          span {
+            color: $c-matterhorn;
+            font-size: 16px;
+            font-weight: 600;
+            @include transition(color);
+          }
+        }
+
+        &-group {
+          display: flex;
+
+          .c-form__select-wrapper {
+            border: none;
+          }
+
+          > div {
+            &:nth-of-type(1) {
+              width: 180px;
+            }
+
+            &:nth-of-type(2) {
+              display: flex;
+              width: 100%;
+              max-width: calc(100% - 180px);
+              padding-left: 20px;
+
+              .c-modal__input {
+                width: 50%;
+
+                &--full {
+                  width: 75%;
+                }
+              }
+            }
+          }
+        }
+
+        > div {
+          &:nth-of-type(1) {
+            width: 31px;
+          }
+
+          &:nth-of-type(2) {
+            width: 100%;
+            max-width: calc(100% - 31px);
+          }
+        }
+
+        .icon {
+          &-font {
+            color: $c-nobel;
+            font-size: 17px;
+          }
+          &-message {}
+          &-calendar {}
+        }
+      }
+
+      &__btn {
+        &--save {
+          max-width: 116px;
+          height: 52px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
   &.c-modal--msaim {
     .c-modal {
       &__header {
@@ -903,6 +1080,11 @@
 
     .c-modal--msaim & {
       max-width: 928px;
+      padding: 25px;
+    }
+
+    .c-modal--msair & {
+      max-width: 438px;
       padding: 25px;
     }
   }
