@@ -20,6 +20,130 @@
     height: 100%;
   }
 
+  &.c-modal--mswai {
+    .c-modal {
+      &__header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        min-height: 28px;
+        padding-right: 42px;
+        margin-bottom: 18px;
+
+        p {
+          color: $c-matterhorn;
+          font-size: 16px;
+          font-weight: 600;
+        }
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          width: 28px;
+          height: 28px;
+
+          .icon-close {
+            color: $c-nobel;
+            font-size: 12px;
+          }
+        }
+      }
+
+      &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      &__input {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        .c-form__field {
+          margin-bottom: 0;
+        }
+
+        &-group {
+          display: flex;
+
+          > div {
+            &:nth-of-type(1) {
+              width: 180px;
+            }
+
+            &:nth-of-type(2) {
+              display: flex;
+              width: 100%;
+              max-width: calc(100% - 180px);
+              padding-left: 20px;
+
+              .c-modal__input {
+                width: 50%;
+              }
+            }
+          }
+        }
+
+        > div {
+          &:nth-of-type(1) {
+            width: 31px;
+          }
+
+          &:nth-of-type(2) {
+            width: 100%;
+            max-width: calc(100% - 31px);
+          }
+        }
+
+        .icon {
+          &-font {
+            color: $c-nobel;
+            font-size: 17px;
+          }
+          &-message {}
+          &-calendar {}
+        }
+      }
+
+      &__btn {
+        &--more {
+          display: flex;
+          align-items: center;
+
+          span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            margin-right: 8px;
+          }
+
+          .icon-font {
+            color: $c-nobel;
+            font-size: 17px;
+          }
+
+          p {
+            color: $c-matterhorn;
+            font-size: 14px;
+            font-weight: 600;
+          }
+        }
+
+        &--save {
+          max-width: 64px;
+        }
+      }
+    }
+  }
+
   &.c-modal--vt {
     .c-modal {
       &__content {
@@ -516,6 +640,12 @@
     .c-modal--vt & {
       max-width: 1047px;
       padding: 0;
+    }
+
+    .c-modal--mswai & {
+      max-width: 522px;
+      padding: 14px;
+      margin-left: 271px;
     }
   }
 

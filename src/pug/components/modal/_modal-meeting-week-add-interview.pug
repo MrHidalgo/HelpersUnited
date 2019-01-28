@@ -1,0 +1,100 @@
+// SECTION document libraries modal :: START
+
+-
+  var dataFormObj = {
+    inputName1: {
+      classMod: "",
+      uniqueName: "first_name",
+      labelVal: "Interview title",
+      inputType: "",
+      inputClassMod: "",
+      placeholderVal: "",
+      val: ""
+    },
+    selectFieldCustomDay: {
+      classMod: "",
+      uniqueName: "select_date",
+      labelVal: "Date",
+      selectClassMod: "",
+      selectOption: [
+      'Some option 1',
+      'Some option 2',
+      'Some option 3'
+      ],
+      placeholderVal: ""
+    },
+    selectFieldCustomTimeFrom: {
+      classMod: "",
+      uniqueName: "select_time_from",
+      labelVal: "From",
+      selectClassMod: "",
+      selectOption: [
+      'Some option 1',
+      'Some option 2',
+      'Some option 3'
+      ],
+      placeholderVal: ""
+    },
+    selectFieldCustomTimeTo: {
+      classMod: "",
+      uniqueName: "select_time_to",
+      labelVal: "To",
+      selectClassMod: "",
+      selectOption: [
+      'Some option 1',
+      'Some option 2',
+      'Some option 3'
+      ],
+      placeholderVal: ""
+    },
+  }
+
+#c-modal.c-modal.c-modal--mswai
+  .c-modal__wrapper
+    .c-modal__content
+      .c-modal__header
+        p!= "Add Interview"
+
+        a(href="#" class="" title="")
+          i.icon-font.icon-close
+
+      .c-modal__body
+
+        .c-form
+          .c-modal__input
+            div
+              i.icon-font.icon-message
+            div
+              +formInput(dataFormObj.inputName1)
+
+          .c-modal__input-group
+            div
+              .c-modal__input
+                div
+                  i.icon-font.icon-calendar
+                div
+                  +formSelectCustom(dataFormObj.selectFieldCustomDay)
+
+            div
+              .c-modal__input
+                div
+                  i.icon-font.icon-clock
+                div
+                  +formSelectCustom(dataFormObj.selectFieldCustomTimeFrom)
+
+              .c-modal__input
+                div
+                div
+                  +formSelectCustom(dataFormObj.selectFieldCustomTimeTo)
+
+
+      .c-modal__footer
+        a.c-modal__btn.c-modal__btn--more(href="#" class="" title="")
+          span
+            i.icon-font.icon-cog
+          p!= "More details"
+
+        a.c-modal__btn.c-modal__btn--save.c-btn.c-btn--bg(href="#" class="" title="")!= "Save"
+
+
+// SECTION document libraries modal :: END

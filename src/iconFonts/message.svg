@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>message</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="UI-/-Add-interview" transform="translate(-13.000000, -75.000000)" fill="#9B9B9B" fill-rule="nonzero">
+            <g id="Icons-/-Time-/-Normal-Copy-2" transform="translate(13.000000, 75.000000)">
+                <path d="M13.18,8.18 L13.18,6.5 L11.5,6.5 L11.5,8.18 L13.18,8.18 Z M9.82,8.18 L9.82,6.5 L8.18,6.5 L8.18,8.18 L9.82,8.18 Z M6.5,8.18 L6.5,6.5 L4.82,6.5 L4.82,8.18 L6.5,8.18 Z M15.68,0.68 C16.1333356,0.68 16.5199984,0.8399984 16.84,1.16 C17.1600016,1.4800016 17.32,1.8666644 17.32,2.32 L17.32,12.32 C17.32,12.7733356 17.1600016,13.166665 16.84,13.5 C16.5199984,13.833335 16.1333356,14 15.68,14 L4,14 L0.68,17.32 L0.68,2.32 C0.68,1.8666644 0.8399984,1.4800016 1.16,1.16 C1.4800016,0.8399984 1.8666644,0.68 2.32,0.68 L15.68,0.68 Z" id="message"></path>
+            </g>
+        </g>
+    </g>
+</svg>
