@@ -46,19 +46,22 @@
                 span(class!= (idx === 7) ? 'is-active':'')!= val
 
   div
-    a.m-schedule__btn.m-schedule__btn--view(href="#" class="" title="")
+    .m-schedule__btn.m-schedule__btn--view
       span
         i.icon-font.icon-calendar
       div
-        p!= "Month"
+        p!= (pageClassNameNum === 'p-agency-m-schedule-1' || pageClassNameNum === 'p-agency-m-schedule-2') ? "Week" : "Month"
         span
           i.icon-font.icon-triangle-down
         div
-          p(class="" title="")!= "Week"
+          a(href=(pageClassNameNum === 'p-agency-m-schedule-1' || pageClassNameNum === 'p-agency-m-schedule-2') ? 'agency-meeting-schedule-3.html':'agency-meeting-schedule-1.html' class="" title="")!= (pageClassNameNum === 'p-agency-m-schedule-1' || pageClassNameNum === 'p-agency-m-schedule-2') ? "Month":"Week"
 
     a.m-schedule__btn.m-schedule__btn--search(href="#" class="" title="")
       i.icon-font.icon-search
-    a.m-schedule__btn.m-schedule__btn--add(href="#" class="" title="")
+    a.m-schedule__btn.m-schedule__btn--add(
+      href= 'agency-meeting-schedule-2.html'
+      class="" title=""
+    )
       i.icon-font.icon-add
 
 

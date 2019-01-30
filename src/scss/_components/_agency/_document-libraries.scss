@@ -131,7 +131,7 @@
         }
       }
 
-      a {
+      .doc-lib__section-delete {
         display: flex;
         align-items: center;
         color: $c-nobel;
@@ -149,6 +149,7 @@
 
       .c-btn {
         max-width: 160px;
+        margin-left: auto;
       }
     }
   }

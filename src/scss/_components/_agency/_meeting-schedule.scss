@@ -271,6 +271,8 @@
 
   // btn
   &__btn {
+    z-index: 2;
+    position: relative;
     display: flex;
     align-items: center;
 
@@ -506,6 +508,7 @@
       padding-left: 33px;
       padding-right: 25px;
       border-left: 1px solid $c-whisper;
+      background-color: #fff;
       color: $c-nobel;
 
       > div {
@@ -548,7 +551,7 @@
           border-bottom-right-radius: 4px;
           @include transition(opacity, visibility);
 
-          p {
+          a {
             min-height: 24px;
             margin: 0;
           }
@@ -556,11 +559,13 @@
       }
 
       span,
-      p {
+      p,
+      a {
         z-index: 2;
         position: relative;
         margin-left: 5px;
         margin-right: 5px;
+        color: $c-nobel;
       }
 
       span {
@@ -571,7 +576,8 @@
         height: 28px;
       }
 
-      p {
+      p,
+      a {
         font-size: 16px;
         font-weight: 600;
       }

@@ -22,13 +22,13 @@ block content
             .navigation__wrapper
 
               ul.navigation__list
-                +navigationItemAgency('0 is-active', 'interviews', 'Interviews')
-                +navigationItemAgency('1', 'staff', 'Staff')
-                +navigationItemAgency('2', 'pushCloud', 'Push-to-cloud')
-                +navigationItemAgency('3', 'meetingSchedule', 'Meeting Schedule')
-                +navigationItemAgency('4', 'documentLibraries', 'Document libraries')
-                +navigationItemAgency('5', 'qa', 'Q&A')
-                +navigationItemAgency('6', 'videoTutorials', 'Video tutorials')
+                +navigationItemAgency('0 is-active', 'interviews', 'Interviews', 'agency-interviews-1.html')
+                +navigationItemAgency('1', 'staff', 'Staff', 'agency-staff-1.html')
+                +navigationItemAgency('2', 'pushCloud', 'Push-to-cloud', 'agency-push-cloud-1.html')
+                +navigationItemAgency('3', 'meetingSchedule', 'Meeting Schedule', 'agency-meeting-schedule-1.html')
+                +navigationItemAgency('4', 'documentLibraries', 'Document libraries', 'agency-document-libraries-1.html')
+                +navigationItemAgency('5', 'qa', 'Q&A', 'agency-qa.html')
+                +navigationItemAgency('6', 'videoTutorials', 'Video tutorials', 'agency-video-1.html')
 
         .section__wrapper-right
 
@@ -54,16 +54,28 @@ block content
                     .menu
                       -
                         var listItemNavArr = [
-                          'Regional averages',
-                          'Dynamics',
-                          'Support history',
-                          'Suggestions'
+                        {
+                        href: 'agency-quick-report-1.html',
+                        name: 'Regional averages',
+                        },
+                        {
+                        href: 'agency-quick-report-2.html',
+                        name: 'Dynamics',
+                        },
+                        {
+                        href: 'agency-quick-report-3.html',
+                        name: 'Support history',
+                        },
+                        {
+                        href: 'agency-quick-report-4.html',
+                        name: 'Suggestions'
+                        }
                         ];
                       ul.menu__list
                         each val, idx in listItemNavArr
                           li.menu__item
-                            a.menu__btn(href="#" class=(idx === 2) ? 'is-active':'' title="")
-                              span!= val
+                            a.menu__btn(href= listItemNavArr[idx].href class=(idx === 2) ? 'is-active': '' title="")
+                              span!= listItemNavArr[idx].name
 
                   .q-report__content-right.section-top__content-right
 

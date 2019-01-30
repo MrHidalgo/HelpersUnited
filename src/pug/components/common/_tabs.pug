@@ -1,30 +1,168 @@
 // SECTION tabs :: START
 
 -
-  var tabsAgencyInterviewArr = ['Current interviews', 'Past interviews'];
-  var tabsAgencyPushCloudArr = ['Active Requests', 'Requests History'];
-  var tabsAgencyDocLibArr = ['Section 1', 'Section 2'];
-  var tabsAgencyVideoTutorialArr = ['Section 1', 'Section 2'];
-  var tabsAgencyQaArr = ['Section 1', 'Section 2', 'Section 3'];
-  var tabsAgencyServicesRenderedArr = ['Quick Report', 'Interview', 'Services Rendered', 'Overall Report'];
-  var tabsAgencySRSubmenudArr = ['Support Requested', 'Support Received'];
-  var tabsAgencyOverallReportArr = ['Quick Report', 'Interview', 'Services Rendered', 'Overall Report'];
-  var tabsAgencyIIArr = ['Quick Report', 'Interview', 'Services Rendered', 'Overall Report'];
-  var tabsAgencyQuickReportArr = ['Quick Report', 'Interview', 'Services Rendered', 'Overall Report'];
-  var tabsAgencyQRTableArr = ['Support Requested', 'Support Received'];
+  var tabsAgencyInterviewArr = [
+    {
+      href: "agency-interviews-1.html",
+      name: 'Current interviews'
+    },
+    {
+      href: 'agency-interviews-2.html',
+      name: 'Past interviews'
+    }
+  ];
+  var tabsAgencyPushCloudArr = [
+    {
+      href: 'agency-push-cloud-1.html',
+      name: 'Active Requests'
+    },
+    {
+      href: 'agency-push-cloud-3.html',
+      name: 'Requests History'
+    }
+  ];
+  var tabsAgencyDocLibArr = [
+    {
+      href: '#',
+      name: 'Section 1'
+    },
+    {
+      href: '#',
+      name: 'Section 2'
+    }
+  ];
+  var tabsAgencyVideoTutorialArr = [
+    {
+      href: '#',
+      name: 'Section 1'
+    },
+    {
+      href: '#',
+      name: 'Section 2'
+    }
+  ];
+  var tabsAgencyQaArr = [
+    {
+      href: '#',
+      name: 'Section 1'
+    },
+    {
+      href: '#',
+      name: 'Section 2'
+    },
+    {
+      href: '#',
+      name: 'Section 3'
+    }
+  ];
+  var tabsAgencyServicesRenderedArr = [
+    {
+    href: 'agency-quick-report-1.html',
+    name: 'Quick Report'
+    },
+    {
+    href: 'agency-i-interview-1.html',
+    name: 'Interview'
+    },
+    {
+    href: 'agency-services-rendered-1.html',
+    name: 'Services Rendered'
+    },
+    {
+    href: 'agency-overall-report-1.html',
+    name: 'Overall Report'
+    }
+  ];
+  var tabsAgencySRSubmenudArr = [
+    {
+    href: 'agency-services-rendered-1.html',
+    name: 'Support Requested'
+    },
+    {
+    href: 'agency-services-rendered-2.html',
+    name: 'Support Received',
+    },
+  ];
+  var tabsAgencyOverallReportArr = [
+    {
+    href: 'agency-quick-report-1.html',
+    name: 'Quick Report',
+    },
+    {
+    href: 'agency-i-interview-1.html',
+    name: 'Interview',
+    },
+    {
+    href: 'agency-services-rendered-1.html',
+    name: 'Services Rendered',
+    },
+    {
+    href: 'agency-overall-report-1.html',
+    name:'Overall Report'
+    }
+  ];
+  var tabsAgencyIIArr = [
+    {
+    href: 'agency-quick-report-1.html',
+    name: 'Quick Report',
+    },
+    {
+    href: 'agency-i-interview-1.html',
+    name: 'Interview',
+    },
+    {
+    href: 'agency-services-rendered-1.html',
+    name: 'Services Rendered',
+    },
+    {
+    href: 'agency-overall-report-1.html',
+    name:'Overall Report'
+    }
+  ];
+  var tabsAgencyQuickReportArr = [
+    {
+    href: 'agency-quick-report-1.html',
+    name: 'Quick Report',
+    },
+    {
+    href: 'agency-i-interview-1.html',
+    name: 'Interview',
+    },
+    {
+    href: 'agency-services-rendered-1.html',
+    name: 'Services Rendered',
+    },
+    {
+    href: 'agency-overall-report-1.html',
+    name:'Overall Report'
+    }
+  ];
+  var tabsAgencyQRTableArr = [
+    {
+    href: '#',
+    name: 'Support Requested'
+    },
+    {
+    href: '#',
+    name: 'Support Received'
+    }
+  ];
 
 
 mixin tabsBtn(num, arr)
   each val, idx in arr
     li.tabs__list-item
-      a.tabs__list-btn(href="#" class= (num === idx) ? 'is-active':'' title="")!= val
+      a.tabs__list-btn(href= arr[idx].href class= (num === idx) ? 'is-active':'' title="")!= arr[idx].name
 
 mixin tabsSearchBtn()
   a.tabs__search(href="#" class="" title="")
     i.icon-font.icon-search
 
-mixin tabsUploadBtn()
-  a.tabs__upload(href="#" class="" title="")
+mixin tabsUploadBtn(hrefVal)
+  a.tabs__upload(
+    href= (hrefVal) ? hrefVal:'#'
+    class="" title=""
+  )
     i.icon-font.icon-upload
 
 
@@ -111,7 +249,7 @@ section#tabs.tabs(
 
       else if (pageClassNameNum === 'p-agency-doc-lib-1' || pageClassNameNum === 'p-agency-doc-lib-5')
         +tabsSearchBtn()
-        +tabsUploadBtn()
+        +tabsUploadBtn('agency-document-libraries-2.html')
 
       else if (pageClassName === 'p-agency-vid-t')
         +tabsSearchBtn()

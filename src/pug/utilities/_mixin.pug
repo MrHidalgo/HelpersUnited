@@ -34,9 +34,9 @@ mixin navigationItem(classMod, navNum, navName)
 
 //- navigation item for agency part
 //- ================================
-mixin navigationItemAgency(classMod, iconName, navName)
+mixin navigationItemAgency(classMod, iconName, navName, hrefVal)
   li.navigation__list-item(class!= "navigation__list-item--" + classMod)
-    a.navigation__btn(href="#" class="" title="")
+    a.navigation__btn(href= hrefVal class="" title="")
       div.navigation__btn-left
         i.icon-font(class!= 'icon-nav-' + iconName)
       div.navigation__btn-right
@@ -86,9 +86,12 @@ mixin clientInterviewCheckboxInputBtn(id, groupName, radioVal, placeholderVal)
           input.c-form__input(type="text" placeholder= placeholderVal)
 
 
-mixin sectionBox(classMod, title, subtitle, badgeVal, moreBtn)
+mixin sectionBox(classMod, title, subtitle, badgeVal, moreBtn, hrefVal)
   div
-    a.box(href='#' class!= "box--" + classMod)
+    a.box(
+      href!= (hrefVal) ? hrefVal:'#'
+      class!= "box--" + classMod
+      )
       .box__wrapper
         .box__wrapper-top
           if(badgeVal)
