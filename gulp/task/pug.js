@@ -64,6 +64,7 @@ gulp.task('pug:watch', function() {
 		configPath.src.templates + '/**',
 		configPath.src.templates + '/**/**',
 		configPath.src.templates + '/**/**/**',
+		configPath.src.templates + '/**/**/**/**',
 	], ['pug']).on('all', (event, filepath) => {
 		global.emittyChangedPugFile = filepath;
 	});

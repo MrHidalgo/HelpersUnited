@@ -65,6 +65,36 @@ $(document).ready((ev) => {
     });
   };
 
+	const initInputSearch = () => {
+    $('.c-form__input-search').on('keyup', (ev) => {
+      const _elem = $(ev.currentTarget),
+        _parentNode = _elem.closest('.c-form__input-wrapper'),
+        _elemVal = _elem.val(),
+        _elemIcon = _elem.siblings('a'),
+        _elemDropdown = _parentNode.find('.c-form__dropdown');
+
+      if(_elemVal.length > 0) {
+        _elem.addClass('is-search');
+        _elemIcon.addClass('is-close');
+        _elemDropdown.slideDown(350);
+      } else {
+        _elem.removeClass('is-search');
+        _elemIcon.removeClass('is-close');
+        _elemDropdown.slideUp(350);
+      }
+    });
+
+    $('.c-form__input-btn').on('click', (ev) => {
+      const _elem = $(ev.currentTarget);
+
+      if(_elem.hasClass('is-close')) {
+        $('.c-form__input-search').removeClass('is-search').val('');
+        _elem.removeClass('is-close');
+        _elem.closest('.c-form__field').removeClass('is-focus');
+        $('.c-form__dropdown').slideUp(350);
+      }
+    });
+  };
 	/*
 	* CALLBACK :: end
 	* ============================================= */
@@ -93,6 +123,7 @@ $(document).ready((ev) => {
     initDropdown();
     initQaCollapse();
     initWeekPopup();
+    initInputSearch();
   };
   initJquery();
 });

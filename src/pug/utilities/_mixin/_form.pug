@@ -97,11 +97,25 @@ mixin formInput(objValue, notifyArr=null)
       class!= objValue.inputClassMod
       input-js
       )
-      if(objValue.classMod === 'c-form__field--wlink')
+
+      if((objValue.classMod).indexOf('c-form__field--wlink') !== -1)
         a(href="#" class="" title="")!= "Show"
-      if(objValue.classMod === 'c-form__field--wicon')
-        a(href="#" class="" title="")
+
+      if((objValue.classMod).indexOf('c-form__field--wsearch') !== -1)
+        a.c-form__input-btn(href="#" class="" title="")
           i.icon-font.icon-search
+        .c-form__dropdown
+          ul
+            li
+              span!= "Search result 1"
+            li
+              span!= "Search result 2"
+            li
+              span!= "Search result 3"
+            li
+              span!= "Search result ..."
+            li
+              span!= "Search result N"
 
     +formNotify(notifyArr)
 
