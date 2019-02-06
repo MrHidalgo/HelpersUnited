@@ -56,7 +56,7 @@ mixin formNotify(arr)
       ul
         each val, idx in arr
           li
-            span!= val
+            span(title!= val)!= val
 
 
 //- FORM INPUT

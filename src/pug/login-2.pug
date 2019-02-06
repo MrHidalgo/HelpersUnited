@@ -30,13 +30,13 @@ block content
               a(href="#" class="" title="")!= "create an account"
 
             form.c-form(action='' method='' autocomplete='off')
-              +formInput(dataFormObj.inputName)
+              +formInput(dataFormObj.inputName, dataFormObj.notifyNameMessage)
               +formInput(dataFormObj.inputMiddleName)
               +formInput(dataFormObj.inputLastName)
 
               .c-form__group.c-form__group--dob.c-form__group--three
                 .c-form__group-col.c-form__group-col-0
-                  +formSelectCustom(dataFormObj.selectFieldCustomDBDay)
+                  +formSelectCustom(dataFormObj.selectFieldCustomDBDay, dataFormObj.notifyNameMessage)
 
                 .c-form__group-col.c-form__group-col-1
                   +formSelectCustom(dataFormObj.selectFieldCustomDBMonth)
