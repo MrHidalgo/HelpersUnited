@@ -1,0 +1,24 @@
+// SECTION client interview agency :: START
+
+#ci.ci.ci--agency
+  form.c-form(action='' method='' autocomplete='off')
+
+    p.ci__title!= "Select the agency where you want to send an application."
+
+    .ci__row
+      .ci__col-1
+        +clientInterviewRadioBtn('ci-agency-0', 'ci-agency', 'Agency 1')(checked="checked")
+      .ci__col-1
+        +clientInterviewRadioBtn('ci-agency-1', 'ci-agency', 'Agency 2')
+      .ci__col-1
+        +clientInterviewRadioBtn('ci-agency-2', 'ci-agency', 'Agency 3')
+      .ci__col-1
+        +clientInterviewRadioBtn('ci-agency-3', 'ci-agency', 'Agency 4')
+      .ci__col-1
+        +clientInterviewRadioBtn('ci-agency-4', 'ci-agency', 'Agency 5')
+
+    hr.ci__divider
+    .ci__btn-wrapper
+      a.ci__btn(href="client-interview-2.html" class="" title="")!= "Next"
+
+// SECTION client interview agency :: END

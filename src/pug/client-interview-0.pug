@@ -1,8 +1,8 @@
 ---
-title: HelpersUnited - Client interview - Medical Insurance
+title: HelpersUnited - Client interview - Agency
 
 pageClassName: p-clien-interview
-pageClassNameNum: p-clien-interview-2
+pageClassNameNum: p-clien-interview-0
 ---
 extends shared/_layout
 
@@ -22,10 +22,10 @@ block content
             .navigation__wrapper
 
               ul.navigation__list
-                +navigationItem('title is-done', '1', 'Agency')
-                +navigationItem('title is-done', '2', 'Biography')
-                +navigationItem('title is-active', '3', 'Personal data')
-                +navigationItem('subtitle is-active', '', 'Medical Insurance')
+                +navigationItem('title is-active', '1', 'Agency')
+                +navigationItem('title', '2', 'Biography')
+                +navigationItem('title', '3', 'Personal data')
+                +navigationItem('subtitle', '', 'Medical Insurance')
                 +navigationItem('subtitle', '', 'Driver’s license')
                 +navigationItem('subtitle', '', 'Place of residence')
                 +navigationItem('subtitle', '', 'Contacts')
@@ -42,4 +42,4 @@ block content
 
           .section__wrapper-box
 
-            include ./components/client/_ci-medical-insurance
+            include ./components/client/_ci-agency

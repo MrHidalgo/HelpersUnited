@@ -40,6 +40,9 @@ PageList:
 
 - file:
   titleName: CLIENT INTERVIEW
+- file: client-interview-0.html
+  titleName: CI - Agency
+  ready: 55
 - file: client-interview-1.html
   titleName: CI - Biography
   ready: 55
