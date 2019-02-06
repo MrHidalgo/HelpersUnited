@@ -97,6 +97,11 @@ mixin formInput(objValue, notifyArr=null)
       class!= objValue.inputClassMod
       input-js
       )
+      if(objValue.classMod === 'c-form__field--wlink')
+        a(href="#" class="" title="")!= "Show"
+      if(objValue.classMod === 'c-form__field--wicon')
+        a(href="#" class="" title="")
+          i.icon-font.icon-search
 
     +formNotify(notifyArr)
 

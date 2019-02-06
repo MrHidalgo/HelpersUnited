@@ -34,18 +34,16 @@ block content
               +formInput(dataFormObj.inputPrimaryUsername)
               +formInput(dataFormObj.inputWebsiteURL)
               +formInput(dataFormObj.inputStreetAddress)
+              +formSelectCustom(dataFormObj.selectCustomCity)
 
               .c-form__group.c-form__group--cs.c-form__group--two
                 .c-form__group-col.c-form__group-col-0
-                  +formSelectCustom(dataFormObj.selectCustomCity)
-                .c-form__group-col.c-form__group-col-1
                   +formSelectCustom(dataFormObj.selectCustomState)
-
-              .c-form__group.c-form__group--zc.c-form__group--two
-                .c-form__group-col.c-form__group-col-0
-                  +formInput(dataFormObj.inputZip)
                 .c-form__group-col.c-form__group-col-1
-                  +formSelectCustom(dataFormObj.selectCustomCountry)
+                  +formInput(dataFormObj.inputZip)
+
+              //+formSelectCustom(dataFormObj.selectCustomCountry)
+              +formInput(dataFormObj.inputCountry)
 
               +formInput(dataFormObj.inputWorkPhone)
               +formInput(dataFormObj.inputMobilePhone)

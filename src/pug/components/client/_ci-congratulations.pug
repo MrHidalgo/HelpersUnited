@@ -3,7 +3,37 @@
 #ci.ci.ci--congratulations
 
   h1.ci__header!= "Congratulations!"
-  p.ci__desc!= "You have successfully completed the questionnaire"
+  p.ci__desc
+    != "You have successfully completed the questionnaire"
+    span
+      i.icon-font.icon-check
+
+  .ci__time
+    p!= "Interview time"
+    div
+      span!= "01/01/19  10:00 AM"
+
+  .ci__doc
+    p.ci__doc-title!= "List of the documents to bring to interview"
+
+    .ci__doc-wrapper
+
+      .box__cover
+        each val, idx in [1,2,3,4]
+          div
+            a.box(
+            href!= '#'
+            class!= "box--" + idx
+            )
+              .box__wrapper
+                .box__wrapper-top
+                  .box__download(href="#" class="" title="")
+                    i.icon-font.icon-download
+
+                .box__wrapper-bottom
+                  p.box__title!= 'Document name'
+                  p.box__subtitle!= 'PDF'
+
 
   .ci__btn-wrapper
     a.ci__btn(href="/" class="" title="")!= "Back to Main Page"

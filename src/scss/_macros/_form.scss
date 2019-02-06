@@ -170,7 +170,6 @@ $form-notify-font-weight: normal;
     margin-bottom: $form-field-margin;
     background-color: #fff;
 
-
     &.is-focus,
     &.is-choose {
       .c-form {
@@ -380,6 +379,48 @@ $form-notify-font-weight: normal;
       .c-form__notify {
         li {
           color: $c-info;
+        }
+      }
+    }
+
+    &--wlink {
+      .c-form {
+        &__input-wrapper {
+          input {
+            padding-right: 72px;
+          }
+          a {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 72px;
+            height: 100%;
+            font-size: 12px;
+            font-weight: 600;
+            color: #295DD9;
+          }
+        }
+      }
+    }
+
+    &--wicon {
+      .c-form {
+        &__input-wrapper {
+          a {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 100%;
+            font-size: 20px;
+            color: $c-nobel;
+          }
         }
       }
     }

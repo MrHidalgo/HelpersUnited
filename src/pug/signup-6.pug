@@ -38,7 +38,8 @@ block content
 
               p.sign__form-subtitle!= "Set up a Security Question"
 
-              +formInput(dataFormObj.inputQuestion)
+              //+formInput(dataFormObj.inputQuestion)
+              +formSelectCustom(dataFormObj.selectCustomQuestion)
               +formInput(dataFormObj.inputAnswer)
               +formBtn('', 'c-btn c-btn--bg c-btn__form', "Next")
 

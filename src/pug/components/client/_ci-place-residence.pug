@@ -47,6 +47,39 @@
       placeholderVal: "",
       val: ""
     },
+    inputCountry: {
+      classMod: "c-form__field--wicon",
+      uniqueName: "country",
+      labelVal: "Country",
+      inputType: "",
+      inputClassMod: "",
+      placeholderVal: "",
+      val: ""
+    },
+    selectCustomCity: {
+      classMod: "",
+      uniqueName: "select_city",
+      labelVal: "City",
+      selectClassMod: "",
+      selectOption: [
+      'Some option 1',
+      'Some option 2',
+      'Some option 3'
+      ],
+      placeholderVal: ""
+    },
+    selectCustomState: {
+      classMod: "",
+      uniqueName: "select_state",
+      labelVal: "State",
+      selectClassMod: "",
+      selectOption: [
+      'Some option 1',
+      'Some option 2',
+      'Some option 3'
+      ],
+      placeholderVal: ""
+    },
   };
 
 #ci.ci.ci--placeResidence
@@ -65,13 +98,18 @@
     p.ci__title!= "What is your residence address ?"
 
     +formInput(dataFormObj.inputName1)
-    +formInput(dataFormObj.inputName2)
+    //+formInput(dataFormObj.inputName2)
+    +formSelectCustom(dataFormObj.selectCustomCity)
+
     .ci__row
       .ci__col-1-70
-        +formInput(dataFormObj.inputName3)
+        //+formInput(dataFormObj.inputName3)
+        +formSelectCustom(dataFormObj.selectCustomState)
       .ci__col-1-30
         +formInput(dataFormObj.inputName4)
-    +formInput(dataFormObj.inputName5)
+
+    //+formInput(dataFormObj.inputName5)
+    +formInput(dataFormObj.inputCountry)
 
     hr.ci__divider
     .ci__btn-wrapper

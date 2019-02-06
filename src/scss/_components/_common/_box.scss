@@ -57,6 +57,22 @@
     font-weight: 600;
   }
 
+  &__download {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+
+    .icon-font {
+      color: $c-nobel;
+      font-size: 15px;
+    }
+  }
+
   &__more {
     position: absolute;
     top: 0;

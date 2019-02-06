@@ -118,6 +118,10 @@
   +formInput(dataFormObj.inputName1)
   +formInput(dataFormObj.inputName2)
   +formInput(dataFormObj.inputName3)
+  +formInput(dataFormObj.inputName4)
+
+  hr.ci__divider
+  p.ci__title!= "Date of Birth"
 
   .ci__row
     .ci__col-1-3
@@ -126,8 +130,6 @@
       +formSelectCustom(dataFormObj.selectFieldCustomDBMonth)
     .ci__col-1-3
       +formSelectCustom(dataFormObj.selectFieldCustomDBYear)
-
-  +formInput(dataFormObj.inputName4)
 
   hr.ci__divider
   p.ci__title!= "What is the child gender?"
@@ -158,13 +160,13 @@
 
   .ci__row
     .ci__col-1-2
-      +clientInterviewRadioBtn('ci-Relationship-0', 'ci-Relationship', 'Brother')(checked="checked")
+      +clientInterviewRadioBtn('ci-Relationship-0', 'ci-Relationship', 'Nephew')(checked="checked")
     .ci__col-1-2
-      +clientInterviewRadioBtn('ci-Relationship-1', 'ci-Relationship', 'Sister')
+      +clientInterviewRadioBtn('ci-Relationship-1', 'ci-Relationship', 'Nephew')
     .ci__col-1-2
-      +clientInterviewRadioBtn('ci-Relationship-2', 'ci-Relationship', 'Roommate')
+      +clientInterviewRadioBtn('ci-Relationship-2', 'ci-Relationship', 'Son / Daughter')
     .ci__col-1-2
-      +clientInterviewRadioBtn('ci-Relationship-3', 'ci-Relationship', 'Friend')
+      +clientInterviewRadioBtn('ci-Relationship-3', 'ci-Relationship', 'No relation')
 
   .ci__row.ci__row--padding-top
     .ci__col-1

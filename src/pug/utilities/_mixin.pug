@@ -89,7 +89,7 @@ mixin clientInterviewCheckboxInputBtn(id, groupName, radioVal, placeholderVal)
 mixin sectionBox(classMod, title, subtitle, badgeVal, moreBtn, hrefVal)
   div
     a.box(
-      href!= (hrefVal) ? hrefVal:'#'
+      href!= (hrefVal) ? '#':'#'
       class!= "box--" + classMod
       )
       .box__wrapper

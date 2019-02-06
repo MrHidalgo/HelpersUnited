@@ -19,7 +19,19 @@
       inputClassMod: "",
       placeholderVal: "",
       val: ""
-    }
+    },
+    selectCustomAnswer: {
+      classMod: "",
+      uniqueName: "select_answer",
+      labelVal: "Type your answer",
+      selectClassMod: "",
+      selectOption: [
+      'Some option 1',
+      'Some option 2',
+      'Some option 3'
+      ],
+      placeholderVal: ""
+    },
   };
 
 #ci.ci.ci--driversLicence
@@ -37,7 +49,8 @@
     hr.ci__divider
     p.ci__title!= "What state is issued the license?"
 
-    +formInput(dataFormObj.inputName1)
+    //+formInput(dataFormObj.inputName1)
+    +formSelectCustom(dataFormObj.selectCustomAnswer)
 
     hr.ci__divider
     p.ci__title!= "What is your license number?"

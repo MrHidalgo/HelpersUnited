@@ -34,6 +34,9 @@ block content
               +formInput(dataFormObj.inputName)
               +formInput(dataFormObj.inputMiddleName)
               +formInput(dataFormObj.inputLastName)
+              +formInput(dataFormObj.inputSsn)
+
+              p.sign__form-label!= 'Day of birth'
 
               .c-form__group.c-form__group--dob.c-form__group--three
                 .c-form__group-col.c-form__group-col-0
@@ -45,7 +48,6 @@ block content
                 .c-form__group-col.c-form__group-col-2
                   +formSelectCustom(dataFormObj.selectFieldCustomDBYear)
 
-              +formInput(dataFormObj.inputSsn)
               +formBtn('', 'c-btn c-btn--bg c-btn__form', 'Next')
             
 block footer
