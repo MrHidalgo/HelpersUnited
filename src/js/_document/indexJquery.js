@@ -116,6 +116,7 @@ $(document).ready((ev) => {
     initSwiper();
     initCustomSelect();
     initInputFocus();
+    initHamburger();
 
     // callback
 		// ==========================================

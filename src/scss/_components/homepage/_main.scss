@@ -12,11 +12,18 @@
     align-items: center;
     justify-content: center;
     min-height: 670px;
+    @include adaptive(1366) {
+      min-height: calc(100vh - 70px);
+    }
   }
 
   &__box {
     color: #fff;
     text-align: center;
+    @include adaptive(1366) {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
 
     &-title {
       padding-bottom: 15px;

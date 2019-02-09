@@ -4,6 +4,13 @@
   position: relative;
   background-color: #fff;
 
+  .hamburger {
+    display: none;
+    @include adaptive(575) {
+      display: flex;
+    }
+  }
+
   &__wrapper {
     display: flex;
     align-items: center;
@@ -25,6 +32,10 @@
       border-left: 1px solid #EBEBEB;
       border-right: 1px solid #EBEBEB;
       @include transition(border-color);
+      @include adaptive(575) {
+        height: 36px;
+        border: none
+      }
 
       &:hover {
         border-color: #295DD9;
@@ -36,12 +47,34 @@
       max-width: 100px;
       margin-left: 30px;
       font-size: 14px;
+      @include adaptive(575) {
+        margin-left: 0;
+        margin-top: 30px;
+      }
     }
 
     &-wrapper {
       display: flex;
       align-items: center;
       height: 70px;
+      @include adaptive(575) {
+        z-index: 1000;
+        overflow-y: auto;
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 70px);
+        background-color: rgba($c-white, 0.95);
+
+        &.is-open {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+      }
     }
   }
 }

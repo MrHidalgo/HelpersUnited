@@ -8,7 +8,9 @@ header#header.header
 
     .header__wrapper-right
 
-      .header__btn-wrapper
+      +hamburger()
+
+      .header__btn-wrapper(mobile-block-js)
         a.header__btn.header__btn--login(href="#" class="" title="")!= "Log in"
         +btn('bg header__btn header__btn--signup', '', 'Sign up')
 
