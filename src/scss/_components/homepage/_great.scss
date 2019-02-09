@@ -5,6 +5,10 @@
   padding-bottom: 120px;
   background: #FCFCFC;
   background-image: linear-gradient(-141deg, rgba(252,252,252,0.50) 7%, #FCFCFC 100%);
+  @include adaptive(767) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 
   &__wrapper {
     text-align: center;
@@ -33,13 +37,28 @@
     height: 130px;
     margin-left: 15px;
     margin-right: 15px;
+    padding: 5px 10px;
     border-radius: 6px;
     background-color: #FFF;
+    @include adaptive(991) {
+      max-width: calc((100% - (30px * 3)) / 3);
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    @include adaptive(767) {
+      max-width: calc((100% - (30px * 2)) / 2);
+    }
 
     &-wrapper {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      @include adaptive(991) {
+        flex-wrap: wrap;
+      }
+      @include adaptive(767) {
+        justify-content: center;
+      }
     }
 
     > p {
@@ -48,6 +67,9 @@
       line-height: 1;
       font-size: 46px;
       font-weight: 600;
+      @include adaptive(767) {
+        font-size: 38px;
+      }
     }
 
     > span {
