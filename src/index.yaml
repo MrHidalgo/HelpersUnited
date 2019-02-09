@@ -12,7 +12,7 @@ PageList:
   ready: 95
 - file: login-2.html
   titleName: Logi In as Agecny
-  ready: 55
+  ready: 95
 - file: login-3.html
   titleName: Logi In as Client
   ready: 55

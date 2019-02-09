@@ -131,15 +131,28 @@ $form-notify-font-weight: normal;
     }
 
     &--dob {
+      @include adaptive(575) {
+        flex-wrap: wrap;
+      }
+
       .c-form__group-col {
         &-0 {
           width: 87px;
+          @include adaptive(575) {
+            width: 100%;
+          }
         }
         &-1 {
           width: 134px;
+          @include adaptive(575) {
+            width: 100%;
+          }
         }
         &-2 {
           width: 89px;
+          @include adaptive(575) {
+            width: 100%;
+          }
         }
       }
     }
