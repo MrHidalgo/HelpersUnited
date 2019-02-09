@@ -9,6 +9,9 @@
         color: #555555;
         line-height: line-height-convert(32, 14);
         @include transition(opacity);
+        @include adaptive(575) {
+          justify-content: center;
+        }
 
         &:hover {
           opacity: 0.75;

@@ -253,6 +253,9 @@
 .address {
   display: flex;
   flex-direction: column;
+  @include adaptive(575) {
+    align-items: center;
+  }
 
   &__email,
   &__info,

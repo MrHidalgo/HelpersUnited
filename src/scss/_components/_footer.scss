@@ -7,7 +7,9 @@
 
   &__wrapper {
     display: flex;
-
+    @include adaptive(991) {
+      flex-wrap: wrap;
+    }
 
     &-0 {
       align-items: flex-start;
@@ -24,7 +26,16 @@
 
       &-0 {
         max-width: 325px;
+        @include adaptive(991) {
+          max-width: 100%;
+          padding-bottom: 40px;
+        }
+        @include adaptive(575) {
+          display: flex;
+          justify-content: center;
+        }
       }
+
       &-1 {
         max-width: 190px;
       }
@@ -37,6 +48,22 @@
       &-4 {
         max-width: 245px;
       }
+
+      &-1,
+      &-2,
+      &-3,
+      &-4 {
+        @include adaptive(991) {
+          max-width: calc(100% / 4);
+        }
+        @include adaptive(767) {
+          max-width: calc(100% / 2);
+          margin-bottom: 15px;
+        }
+        @include adaptive(575) {
+          max-width: 100%;
+        }
+      }
     }
   }
 
@@ -46,6 +73,9 @@
     line-height: line-height-convert(30.8, 18);
     font-size: 18px;
     font-weight: 600;
+    @include adaptive(575) {
+      text-align: center;
+    }
   }
 }
 
