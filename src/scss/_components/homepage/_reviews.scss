@@ -3,17 +3,27 @@
 .reviews {
   &__wrapper {
     display: flex;
+    @include adaptive(767) {
+      flex-wrap: wrap;
+    }
 
     &-left,
     &-right {
       position: relative;
       width: 50%;
       min-height: 680px;
+      @include adaptive(767) {
+        width: 100%;
+        min-height: 600px;
+      }
     }
 
     &-left {
-      padding-top: 152px;
-      padding-bottom: 122px;
+      padding: 152px 15px 122px;
+      @include adaptive(767) {
+        padding-top: 75px;
+        padding-bottom: 60px;
+      }
     }
 
     &-right {
