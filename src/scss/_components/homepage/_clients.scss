@@ -7,12 +7,25 @@
     align-items: center;
     justify-content: space-between;
     min-height: 150px;
+    @include adaptive(767) {
+      justify-content: center;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
 
     a {
       width: 100%;
       max-width: calc(100% / 6);
       padding-left: 5px;
       padding-right: 5px;
+      @include adaptive(767) {
+        min-width: 195px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+      @include adaptive(575) {
+        min-width: 145px;
+      }
 
       img {
         @extend %imageResMaxWidth;
