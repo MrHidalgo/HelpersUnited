@@ -21,6 +21,12 @@
     &-left {
       width: 272px;
       border-right: 1px solid #EBEBEB;
+      @include adaptive(575) {
+        width: auto;
+        flex: 1;
+        padding-left: 15px;
+        border-right: none;
+      }
 
       .logo {
         position: relative;
