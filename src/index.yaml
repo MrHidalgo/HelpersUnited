@@ -42,43 +42,43 @@ PageList:
   titleName: CLIENT INTERVIEW
 - file: client-interview-0.html
   titleName: CI - Agency
-  ready: 55
+  ready: 95
 - file: client-interview-1.html
   titleName: CI - Biography
-  ready: 55
+  ready: 95
 - file: client-interview-2.html
   titleName: CI - Medical Insurance
-  ready: 55
+  ready: 95
 - file: client-interview-3.html
   titleName: CI - Driver’s license
-  ready: 55
+  ready: 95
 - file: client-interview-4.html
   titleName: CI - Place of residence
-  ready: 55
+  ready: 95
 - file: client-interview-5.html
   titleName: CI - Contacts
-  ready: 55
+  ready: 95
 - file: client-interview-6.html
   titleName: CI - Type of work
-  ready: 55
+  ready: 95
 - file: client-interview-7.html
   titleName: CI - Income
-  ready: 55
+  ready: 95
 - file: client-interview-8.html
   titleName: CI - Adults
-  ready: 55
+  ready: 95
 - file: client-interview-9.html
   titleName: CI - Children
-  ready: 55
+  ready: 95
 - file: client-interview-10.html
   titleName: CI - Other sources of income
-  ready: 55
+  ready: 95
 - file: client-interview-11.html
   titleName: CI - Monthly expenses
-  ready: 55
+  ready: 95
 - file: client-interview-12.html
   titleName: CI - Congratulations
-  ready: 55
+  ready: 95
 
 - file:
   titleName: AGENCY INTERVIEWS

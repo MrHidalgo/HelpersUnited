@@ -18,23 +18,23 @@ block content
       .section__wrapper
         .section__wrapper-left
 
-          section#navigation.navigation--client
+          section#navigation.navigation.navigation--client
             .navigation__wrapper
 
               ul.navigation__list
                 +navigationItem('title is-done', '1', 'Agency')
                 +navigationItem('title is-active', '2', 'Biography')
                 +navigationItem('title', '3', 'Personal data')
-                +navigationItem('subtitle', '', 'Medical Insurance')
-                +navigationItem('subtitle', '', 'Driver’s license')
-                +navigationItem('subtitle', '', 'Place of residence')
-                +navigationItem('subtitle', '', 'Contacts')
+                +navigationItem('subtitle', '3.1', 'Medical Insurance')
+                +navigationItem('subtitle', '3.2', 'Driver’s license')
+                +navigationItem('subtitle', '3.3', 'Place of residence')
+                +navigationItem('subtitle', '3.4', 'Contacts')
                 +navigationItem('title', '4', 'Employment information')
-                +navigationItem('subtitle', '', 'Type of work')
-                +navigationItem('subtitle', '', 'Income')
+                +navigationItem('subtitle', '4.1', 'Type of work')
+                +navigationItem('subtitle', '4.2', 'Income')
                 +navigationItem('title', '5', 'Household member')
-                +navigationItem('subtitle', '', 'Adults')
-                +navigationItem('subtitle', '', 'Children')
+                +navigationItem('subtitle', '5.1', 'Adults')
+                +navigationItem('subtitle', '5.2', 'Children')
                 +navigationItem('title', '6', 'Other sources of income')
                 +navigationItem('title', '7', 'Monthly expenses')
 

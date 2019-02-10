@@ -95,6 +95,21 @@ $(document).ready((ev) => {
       }
     });
   };
+
+	const initMobileNavigation = () => {
+	  $('.navigation--client').hover(
+	    (ev) => {
+	      if($(window).width() < 768) {
+          $(ev.currentTarget).addClass('is-open');
+        }
+      },
+      (ev) => {
+        if($(window).width() < 768) {
+          $(ev.currentTarget).removeClass('is-open');
+        }
+      }
+    );
+  };
 	/*
 	* CALLBACK :: end
 	* ============================================= */
@@ -125,6 +140,7 @@ $(document).ready((ev) => {
     initQaCollapse();
     initWeekPopup();
     initInputSearch();
+    initMobileNavigation();
   };
   initJquery();
 });

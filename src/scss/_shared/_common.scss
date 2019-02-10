@@ -5,12 +5,25 @@
   &--client {
     .section__wrapper-left {
       width: 423px;
-      box-shadow: 0.5px 0 0 0 #EBEBEB;
+      //box-shadow: 0.5px 0 0 0 #EBEBEB;
+      border-right: 1px solid $c-whisper;
+      @include adaptive(1199) {
+        width: 320px;
+      }
+      @include adaptive(767) {
+        width: 70px;
+      }
     }
 
     .section__wrapper-right {
       width: 100%;
       max-width: calc(100% - 423px);
+      @include adaptive(1199) {
+        max-width: calc(100% - 320px);
+      }
+      @include adaptive(767) {
+        max-width: calc(100% - 70px);
+      }
     }
   }
 
@@ -105,13 +118,13 @@
     min-height: calc(100vh - 70px);
 
     &-left {
-      z-index: 1;
+      //z-index: 1;
       position: relative;
       background: #FFFFFF;
     }
 
     &-right {
-      z-index: 2;
+      //z-index: 2;
       position: relative;
       background-color: #FCFCFC;
 
@@ -244,6 +257,9 @@
       font-weight: 600;
       text-align: center;
       @include transition(border-color, background-color, color);
+      @include adaptive(767) {
+        font-size: 14px;
+      }
     }
   }
 }

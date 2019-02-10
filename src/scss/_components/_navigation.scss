@@ -1,22 +1,48 @@
 // SECTION client navigation :: START
 
 .navigation {
+  position: relative;
+
   // client
   &--client {
-    border-right: 1px solid $c-whisper;
+    &.is-open {
+      .navigation {
+        &__btn-right {
+          transform: translateX(calc(0% + 70px));
+          @include transition(transform);
+        }
+      }
+    }
 
     .navigation {
+      @include adaptive(767) {
+        width: 75px;
+      }
+
       &__list {
         &-item {
           &--title {
             .navigation__btn-name {
               font-size: 18px;
+              @include adaptive(767) {
+                font-size: 16px;
+              }
             }
           }
 
           &--subtitle {
+            .navigation__btn-num {
+              display: none;
+              @include adaptive(767) {
+                display: block;
+                font-size: 14px;
+              }
+            }
             .navigation__btn-name {
               font-size: 16px;
+              @include adaptive(767) {
+                font-size: 14px;
+              }
             }
           }
 
@@ -47,7 +73,7 @@
 
               &:before {
                 content: '';
-                transform: translate(1px, -1px) rotate(45deg);
+                transform: translate(0.5px, -1px) rotate(45deg);
                 width: 5px;
                 height: 10px;
                 border: solid $c-white;
@@ -67,16 +93,27 @@
       }
 
       &__btn {
+        position: relative;
         display: flex;
         min-height: 70px;
         border-bottom: 1px solid #EBEBEB;
 
         &-left {
+          position: relative;
           display: flex;
           align-items: center;
           justify-content: center;
           width: 70px;
           border-right: 1px solid #EBEBEB;
+          @include adaptive(1199) {
+            width: 50px;
+          }
+          @include adaptive(767) {
+            z-index: 11;
+            width: 70px;
+            background-color: $c-white;
+            border-right: 0;
+          }
         }
 
         &-right {
@@ -86,6 +123,24 @@
           max-width: calc(100% - 70px);
           padding-left: 34px;
           padding-right: 15px;
+          @include adaptive(1199) {
+            max-width: calc(100% - 50px);
+            padding-left: 15px;
+          }
+          @include adaptive(767) {
+            z-index: 10;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: calc(200px + 2px);
+            max-width: calc(200px + 2px);
+            height: calc(100% + 1px);
+            border-right: 1px solid #EBEBEB;
+            border-bottom: 1px solid #EBEBEB;
+            background-color: $c-white;
+            transform: translateX(-100%);
+            @include transition(transform);
+          }
         }
 
         &-num,
@@ -96,10 +151,16 @@
 
         &-num {
           font-size: 18px;
+          @include adaptive(767) {
+            font-size: 16px;
+          }
         }
 
         &-name {
           font-size: 16px;
+          @include adaptive(767) {
+            font-size: 14px;
+          }
         }
       }
     }
