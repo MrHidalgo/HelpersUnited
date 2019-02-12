@@ -55,6 +55,19 @@
             }
           }
         }
+
+        .p-agency-staff & {
+          @include adaptive(991) {
+            overflow: hidden;
+            overflow-x: auto;
+
+            .section__wrapper-hscroll {
+              display: inline-block;
+              max-width: 922px;
+              width: 922px;
+            }
+          }
+        }
       }
     }
   }
@@ -134,7 +147,6 @@
   &__wrapper {
     display: flex;
     min-height: calc(100vh - 70px);
-
 
     &-left {
       position: relative;

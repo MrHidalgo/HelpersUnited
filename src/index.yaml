@@ -93,10 +93,10 @@ PageList:
   titleName: AGENCY STAFF
 - file: agency-staff-1.html
   titleName: Staff
-  ready: 55
+  ready: 95
 - file: agency-staff-2.html
   titleName: Staff add new
-  ready: 55
+  ready: 95
 
 - file:
   titleName: AGENCY PUSH TO CLOUD
