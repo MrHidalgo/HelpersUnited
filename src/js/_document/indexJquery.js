@@ -97,18 +97,23 @@ $(document).ready((ev) => {
   };
 
 	const initMobileNavigation = () => {
-	  $('.navigation--client').hover(
-	    (ev) => {
-	      if($(window).width() < 768) {
-          $(ev.currentTarget).addClass('is-open');
+	  const hoverLogic = (className, widthVal) => {
+      $(className).hover(
+        (ev) => {
+          if($(window).width() < widthVal) {
+            $(ev.currentTarget).addClass('is-open');
+          }
+        },
+        (ev) => {
+          if($(window).width() < widthVal) {
+            $(ev.currentTarget).removeClass('is-open');
+          }
         }
-      },
-      (ev) => {
-        if($(window).width() < 768) {
-          $(ev.currentTarget).removeClass('is-open');
-        }
-      }
-    );
+      );
+    };
+
+    hoverLogic('.navigation--client', 768);
+    hoverLogic('.navigation--agency', 1366);
   };
 	/*
 	* CALLBACK :: end

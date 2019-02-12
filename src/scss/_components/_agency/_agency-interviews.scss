@@ -2,6 +2,9 @@
 
 .agency-interviews {
   padding: 30px;
+  @include adaptive(1365) {
+    padding-right: 15px;
+  }
 }
 
 // SECTION agency interviews :: END

@@ -18,7 +18,7 @@ block content
       .section__wrapper
         .section__wrapper-left
 
-          section#navigation.navigation--agency
+          section#navigation.navigation.navigation--agency
             .navigation__wrapper
 
               ul.navigation__list
@@ -31,11 +31,12 @@ block content
                 +navigationItemAgency('6', 'videoTutorials', 'Video tutorials', 'agency-video-1.html')
 
         .section__wrapper-right
+          .section__wrapper-hscroll
 
-          include components/common/_tabs
+            include components/common/_tabs
 
-          section#agency-interviews.agency-interviews
+            section#agency-interviews.agency-interviews
 
-            .box__cover
-              each val, idx in [1,2,3,4,5]
-                +sectionBox('ai', 'Interviewer name', '16.08.19', '', '')
+              .box__cover
+                each val, idx in [1,2,3,4,5]
+                  +sectionBox('ai', 'Interviewer name', '16.08.19', '', '')
