@@ -2,6 +2,9 @@
 
 .vid-t {
   padding: 30px;
+  @include adaptive(1365) {
+    padding-right: 15px;
+  }
 }
 
 // SECTION video tutorial :: END
