@@ -62,6 +62,7 @@
       @include horScroll('.p-agency-interviews', 767, 698px);
       @include horScroll('.p-agency-staff', 991, 922px);
       @include horScroll('.p-agency-push-cloud', 767, 698px);
+      @include horScroll('.p-agency-m-schedule', 1199, 1129px);
     }
   }
 
@@ -140,6 +141,10 @@
   &__wrapper {
     display: flex;
     min-height: calc(100vh - 70px);
+
+    &-hscroll {
+      height: 100%;
+    }
 
     &-left {
       position: relative;

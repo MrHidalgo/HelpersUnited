@@ -173,6 +173,9 @@
           border-radius: 100%;
           background-color: $c-whisper;
           @include transition(background-color);
+          @include adaptive(575) {
+            margin-bottom: 10px;
+          }
 
           &.is-active {
             background-color: $c-royalBlue;
@@ -194,6 +197,9 @@
 
         &-group {
           display: flex;
+          @include adaptive(575) {
+            flex-wrap: wrap;
+          }
 
           .c-form__select-wrapper {
             border: none;
@@ -202,6 +208,9 @@
           > div {
             &:nth-of-type(1) {
               width: 180px;
+              @include adaptive(575) {
+                width: 100%;
+              }
             }
 
             &:nth-of-type(2) {
@@ -209,12 +218,19 @@
               width: 100%;
               max-width: calc(100% - 180px);
               padding-left: 20px;
+              @include adaptive(575) {
+                max-width: 100%;
+                padding-left: 0;
+              }
 
               .c-modal__input {
                 width: 50%;
 
                 &--full {
                   width: 75%;
+                  @include adaptive(575) {
+                    width: 100%;
+                  }
                 }
               }
             }
@@ -229,6 +245,9 @@
           &:nth-of-type(2) {
             width: 100%;
             max-width: calc(100% - 31px);
+            @include adaptive(575) {
+              flex-wrap: wrap;
+            }
           }
         }
 
@@ -237,8 +256,6 @@
             color: $c-nobel;
             font-size: 17px;
           }
-          &-message {}
-          &-calendar {}
         }
       }
 
@@ -297,10 +314,16 @@
 
       &__col {
         display: flex;
+        @include adaptive(767) {
+          flex-wrap: wrap;
+        }
 
         &-left {
           width: 100%;
           max-width: calc(100% - 403px);
+          @include adaptive(991) {
+            max-width: 100%;
+          }
         }
 
         &-right {
@@ -308,6 +331,10 @@
           flex-direction: column;
           width: 404px;
           padding-left: 40px;
+          @include adaptive(991) {
+            width: 100%;
+            padding-left: 0;
+          }
         }
 
         &-top {
@@ -431,10 +458,16 @@
 
         &-group {
           display: flex;
+          @include adaptive(991) {
+            flex-wrap: wrap;
+          }
 
           > div {
             &:nth-of-type(1) {
               width: 180px;
+              @include adaptive(991) {
+                width: 100%;
+              }
             }
 
             &:nth-of-type(2) {
@@ -442,6 +475,10 @@
               width: 100%;
               max-width: calc(100% - 180px);
               padding-left: 20px;
+              @include adaptive(991) {
+                max-width: 100%;
+                padding-left: 0;
+              }
 
               .c-modal__input {
                 width: 50%;
@@ -466,8 +503,6 @@
             color: $c-nobel;
             font-size: 17px;
           }
-          &-message {}
-          &-calendar {}
         }
       }
 
@@ -556,10 +591,16 @@
 
         &-group {
           display: flex;
+          @include adaptive(575) {
+            flex-wrap: wrap;
+          }
 
           > div {
             &:nth-of-type(1) {
               width: 180px;
+              @include adaptive(575) {
+                width: 100%;
+              }
             }
 
             &:nth-of-type(2) {
@@ -567,6 +608,10 @@
               width: 100%;
               max-width: calc(100% - 180px);
               padding-left: 20px;
+              @include adaptive(575) {
+                max-width: 100%;
+                padding-left: 0;
+              }
 
               .c-modal__input {
                 width: 50%;
@@ -1134,6 +1179,9 @@
       max-width: 522px;
       padding: 14px;
       margin-left: 271px;
+      @include adaptive(1199) {
+        margin-left: 0;
+      }
     }
 
     .c-modal--msaim & {
@@ -1160,8 +1208,6 @@
     padding-right: 48px;
     margin-bottom: 25px;
   }
-
-  &__body {}
 
   &__footer {
     display: flex;

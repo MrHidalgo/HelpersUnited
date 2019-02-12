@@ -22,7 +22,7 @@ block content
       .section__wrapper
         .section__wrapper-left
 
-          section#navigation.navigation--agency
+          section#navigation.navigation.navigation--agency
             .navigation__wrapper
 
               ul.navigation__list
@@ -35,11 +35,12 @@ block content
                 +navigationItemAgency('6', 'videoTutorials', 'Video tutorials', 'agency-video-1.html')
 
         .section__wrapper-right
+          .section__wrapper-hscroll
 
-          section#m-schedule.m-schedule
+            section#m-schedule.m-schedule
 
-            include components/agency/_meeting-schedule-header
+              include components/agency/_meeting-schedule-header
 
-            .m-schedule__body
+              .m-schedule__body
 
-              include components/agency/_meeting-schedule-calendar
+                include components/agency/_meeting-schedule-calendar

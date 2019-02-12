@@ -117,28 +117,28 @@ PageList:
   titleName: AGENCY MEETING SCHEDULE
 - file: agency-meeting-schedule-1.html
   titleName: Week - Preview
-  ready: 55
+  ready: 95
 - file: agency-meeting-schedule-2.html
   titleName: Week - Add interview
-  ready: 55
+  ready: 95
 - file: agency-meeting-schedule-3.html
   titleName: Month - Preview
-  ready: 55
+  ready: 95
 - file: agency-meeting-schedule-4.html
   titleName: Month - Add interview
-  ready: 55
+  ready: 95
 - file: agency-meeting-schedule-5.html
   titleName: MS - Add interview more
-  ready: 55
+  ready: 95
 - file: agency-meeting-schedule-6.html
   titleName: MS - Edit interview
-  ready: 55
+  ready: 95
 - file: agency-meeting-schedule-7.html
   titleName: MS - Add interview repeat
-  ready: 55
+  ready: 95
 - file: agency-meeting-schedule-8.html
   titleName: MS - Edit interview repeat
-  ready: 55
+  ready: 95
 
 - file:
   titleName: AGENCY DOCUMENT LIBRARIES
