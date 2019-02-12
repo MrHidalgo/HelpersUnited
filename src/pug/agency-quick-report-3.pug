@@ -18,7 +18,7 @@ block content
       .section__wrapper
         .section__wrapper-left
 
-          section#navigation.navigation--agency
+          section#navigation.navigation.navigation--agency
             .navigation__wrapper
 
               ul.navigation__list
@@ -31,113 +31,113 @@ block content
                 +navigationItemAgency('6', 'videoTutorials', 'Video tutorials', 'agency-video-1.html')
 
         .section__wrapper-right
+          .section__wrapper-hscroll
 
-          section#q-report.q-report.section-top
+            section#q-report.q-report.section-top
 
-            .q-report__wrapper
+              .q-report__wrapper
 
-              .section-top__heading
-                .section-top__heading-left
-                  p!= "Alvin Brewer"
-                .section-top__heading-right
-                  a(href="#" class="" title="")
-                    span
-                     i.icon-font.icon-close
+                .section-top__heading
+                  .section-top__heading-left
+                    p!= "Alvin Brewer"
+                  .section-top__heading-right
+                    a(href="#" class="" title="")
+                      span
+                       i.icon-font.icon-close
 
-              .q-report__body
+                .q-report__body
 
-                include components/common/_tabs
+                  include components/common/_tabs
 
-                .q-report__content.section-top__content
-                  .q-report__content-left.section-top__content-left
+                  .q-report__content.section-top__content
+                    .q-report__content-left.section-top__content-left
 
-                    .menu
-                      -
-                        var listItemNavArr = [
-                        {
-                        href: 'agency-quick-report-1.html',
-                        name: 'Regional averages',
-                        },
-                        {
-                        href: 'agency-quick-report-2.html',
-                        name: 'Dynamics',
-                        },
-                        {
-                        href: 'agency-quick-report-3.html',
-                        name: 'Support history',
-                        },
-                        {
-                        href: 'agency-quick-report-4.html',
-                        name: 'Suggestions'
-                        }
-                        ];
-                      ul.menu__list
-                        each val, idx in listItemNavArr
-                          li.menu__item
-                            a.menu__btn(href= listItemNavArr[idx].href class=(idx === 2) ? 'is-active': '' title="")
-                              span!= listItemNavArr[idx].name
-
-                  .q-report__content-right.section-top__content-right
-
-                    .q-report__table
-                      .q-report__table-title
-                        p!= "Alvin Brewer"
-
-                      .q-report__table-head
+                      .menu
                         -
-                          var quickReportTableBtnEmpty = true,
-                            quickReportTable1 = true;
-                        include components/common/_tabs
+                          var listItemNavArr = [
+                          {
+                          href: 'agency-quick-report-1.html',
+                          name: 'Regional averages',
+                          },
+                          {
+                          href: 'agency-quick-report-2.html',
+                          name: 'Dynamics',
+                          },
+                          {
+                          href: 'agency-quick-report-3.html',
+                          name: 'Support history',
+                          },
+                          {
+                          href: 'agency-quick-report-4.html',
+                          name: 'Suggestions'
+                          }
+                          ];
+                        ul.menu__list
+                          each val, idx in listItemNavArr
+                            li.menu__item
+                              a.menu__btn(href= listItemNavArr[idx].href class=(idx === 2) ? 'is-active': '' title="")
+                                span!= listItemNavArr[idx].name
 
-                      .q-report__table-body
-                        .q-report__table-tr
-                          .q-report__table-th
-                            span!= "Support name"
-                          .q-report__table-th
-                            span!= "Requested Date"
-                          .q-report__table-th
-                            span!= "Amount"
-                          .q-report__table-th
-                            span!= "Agency Name"
+                    .q-report__content-right.section-top__content-right
 
-                        .q-report__table-tr
-                          .q-report__table-td
-                            span!= "Water"
-                          .q-report__table-td
-                            span!= "12.01.18"
-                          .q-report__table-td
-                            span!= "$200"
-                          .q-report__table-td
-                            span!= "Helpers"
+                      .q-report__table
+                        .q-report__table-title
+                          p!= "Alvin Brewer"
 
-                    .q-report__table
-                      .q-report__table-title
-                        p!= "Bruce Wagner · Household member"
+                        .q-report__table-head
+                          -
+                            var quickReportTableBtnEmpty = true,
+                              quickReportTable1 = true;
+                          include components/common/_tabs
 
-                      .q-report__table-head
-                        -
-                          var quickReportTable1 = false,
-                            quickReportTable2 = true;
-                        include components/common/_tabs
+                        .q-report__table-body
+                          .q-report__table-tr
+                            .q-report__table-th
+                              span!= "Support name"
+                            .q-report__table-th
+                              span!= "Requested Date"
+                            .q-report__table-th
+                              span!= "Amount"
+                            .q-report__table-th
+                              span!= "Agency Name"
 
-                      .q-report__table-body
-                        .q-report__table-tr
-                          .q-report__table-th
-                            span!= "Support name"
-                          .q-report__table-th
-                            span!= "Requested Date"
-                          .q-report__table-th
-                            span!= "Amount"
-                          .q-report__table-th
-                            span!= "Agency Name"
+                          .q-report__table-tr
+                            .q-report__table-td
+                              span!= "Water"
+                            .q-report__table-td
+                              span!= "12.01.18"
+                            .q-report__table-td
+                              span!= "$200"
+                            .q-report__table-td
+                              span!= "Helpers"
 
-                        .q-report__table-tr
-                          .q-report__table-td
-                            span!= "Water"
-                          .q-report__table-td
-                            span!= "12.01.18"
-                          .q-report__table-td
-                            span!= "$200"
-                          .q-report__table-td
-                            span!= "Helpers"
+                      .q-report__table
+                        .q-report__table-title
+                          p!= "Bruce Wagner · Household member"
 
+                        .q-report__table-head
+                          -
+                            var quickReportTable1 = false,
+                              quickReportTable2 = true;
+                          include components/common/_tabs
+
+                        .q-report__table-body
+                          .q-report__table-tr
+                            .q-report__table-th
+                              span!= "Support name"
+                            .q-report__table-th
+                              span!= "Requested Date"
+                            .q-report__table-th
+                              span!= "Amount"
+                            .q-report__table-th
+                              span!= "Agency Name"
+
+                          .q-report__table-tr
+                            .q-report__table-td
+                              span!= "Water"
+                            .q-report__table-td
+                              span!= "12.01.18"
+                            .q-report__table-td
+                              span!= "$200"
+                            .q-report__table-td
+                              span!= "Helpers"

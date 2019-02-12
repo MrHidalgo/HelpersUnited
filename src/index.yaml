@@ -177,16 +177,16 @@ PageList:
   titleName: AGENCY I-QUICK REPORT
 - file: agency-quick-report-1.html
   titleName: QR - Regional averages
-  ready: 55
+  ready: 95
 - file: agency-quick-report-2.html
   titleName: QR - Dynamics
-  ready: 55
+  ready: 95
 - file: agency-quick-report-3.html
   titleName: QR - Support history
-  ready: 55
+  ready: 95
 - file: agency-quick-report-4.html
   titleName: QR - Suggestions
-  ready: 55
+  ready: 95
 
 - file:
   titleName: AGENCY I-SERVICES RENDERED

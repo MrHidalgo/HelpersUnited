@@ -18,7 +18,7 @@ block content
       .section__wrapper
         .section__wrapper-left
 
-          section#navigation.navigation--agency
+          section#navigation.navigation.navigation--agency
             .navigation__wrapper
 
               ul.navigation__list
@@ -31,78 +31,79 @@ block content
                 +navigationItemAgency('6', 'videoTutorials', 'Video tutorials', 'agency-video-1.html')
 
         .section__wrapper-right
+          .section__wrapper-hscroll
 
-          section#q-report.q-report.section-top
+            section#q-report.q-report.section-top
 
-            .q-report__wrapper
+              .q-report__wrapper
 
-              .section-top__heading
-                .section-top__heading-left
-                  p!= "Alvin Brewer"
-                .section-top__heading-right
-                  a(href="#" class="" title="")
-                    span
-                     i.icon-font.icon-close
+                .section-top__heading
+                  .section-top__heading-left
+                    p!= "Alvin Brewer"
+                  .section-top__heading-right
+                    a(href="#" class="" title="")
+                      span
+                       i.icon-font.icon-close
 
-              .q-report__body
+                .q-report__body
 
-                include components/common/_tabs
+                  include components/common/_tabs
 
-                .q-report__content.section-top__content
-                  .q-report__content-left.section-top__content-left
+                  .q-report__content.section-top__content
+                    .q-report__content-left.section-top__content-left
 
-                    .menu
-                      -
-                        var listItemNavArr = [
-                        {
-                        href: 'agency-quick-report-1.html',
-                        name: 'Regional averages',
-                        },
-                        {
-                        href: 'agency-quick-report-2.html',
-                        name: 'Dynamics',
-                        },
-                        {
-                        href: 'agency-quick-report-3.html',
-                        name: 'Support history',
-                        },
-                        {
-                        href: 'agency-quick-report-4.html',
-                        name: 'Suggestions'
-                        }
-                        ];
-                      ul.menu__list
-                        each val, idx in listItemNavArr
-                          li.menu__item
-                            a.menu__btn(href= listItemNavArr[idx].href class=(idx === 1) ? 'is-active': '' title="")
-                              span!= listItemNavArr[idx].name
+                      .menu
+                        -
+                          var listItemNavArr = [
+                          {
+                          href: 'agency-quick-report-1.html',
+                          name: 'Regional averages',
+                          },
+                          {
+                          href: 'agency-quick-report-2.html',
+                          name: 'Dynamics',
+                          },
+                          {
+                          href: 'agency-quick-report-3.html',
+                          name: 'Support history',
+                          },
+                          {
+                          href: 'agency-quick-report-4.html',
+                          name: 'Suggestions'
+                          }
+                          ];
+                        ul.menu__list
+                          each val, idx in listItemNavArr
+                            li.menu__item
+                              a.menu__btn(href= listItemNavArr[idx].href class=(idx === 1) ? 'is-active': '' title="")
+                                span!= listItemNavArr[idx].name
 
-                  .q-report__content-right.section-top__content-right
+                    .q-report__content-right.section-top__content-right
 
-                    .q-report__graph
-                      .q-report__graph-head
-                        div
-                          a.q-report__graph-btn.q-report__graph-btn--dynamics(href="#" class="" title="")
-                            p!= "Overall dynamics"
-                            span
-                              i.icon-font.icon-triangle-down
-                        div
-                          div.q-report__graph-btn-group
-                            a.q-report__graph-btn.q-report__graph-btn--date(href="#" class="" title="")
-                              p!= "01.01.2019"
+                      .q-report__graph
+                        .q-report__graph-head
+                          div
+                            a.q-report__graph-btn.q-report__graph-btn--dynamics(href="#" class="" title="")
+                              p!= "Overall dynamics"
+                              span
+                                i.icon-font.icon-triangle-down
+                          div
+                            div.q-report__graph-btn-group
+                              a.q-report__graph-btn.q-report__graph-btn--date(href="#" class="" title="")
+                                p!= "01.01.2019"
+                                span
+                                  i.icon-font.icon-triangle-down
+
+                              span.q-report__graph-btn-divider!= "-"
+
+                              a.q-report__graph-btn.q-report__graph-btn--date(href="#" class="" title="")
+                                p!= "02.01.2019"
+                                span
+                                  i.icon-font.icon-triangle-down
+
+                            a.q-report__graph-btn.q-report__graph-btn--months(href="#" class="" title="")
+                              p!= "By months"
                               span
                                 i.icon-font.icon-triangle-down
 
-                            span.q-report__graph-btn-divider!= "-"
-
-                            a.q-report__graph-btn.q-report__graph-btn--date(href="#" class="" title="")
-                              p!= "02.01.2019"
-                              span
-                                i.icon-font.icon-triangle-down
-
-                          a.q-report__graph-btn.q-report__graph-btn--months(href="#" class="" title="")
-                            p!= "By months"
-                            span
-                              i.icon-font.icon-triangle-down
-
-                      .q-report__graph-body
+                        .q-report__graph-body

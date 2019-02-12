@@ -18,7 +18,7 @@ block content
       .section__wrapper
         .section__wrapper-left
 
-          section#navigation.navigation--agency
+          section#navigation.navigation.navigation--agency
             .navigation__wrapper
 
               ul.navigation__list
@@ -31,74 +31,75 @@ block content
                 +navigationItemAgency('6', 'videoTutorials', 'Video tutorials', 'agency-video-1.html')
 
         .section__wrapper-right
+          .section__wrapper-hscroll
 
-          section#q-report.q-report.section-top
+            section#q-report.q-report.section-top
 
-            .q-report__wrapper
+              .q-report__wrapper
 
-              .section-top__heading
-                .section-top__heading-left
-                  p!= "Alvin Brewer"
-                .section-top__heading-right
-                  a(href="#" class="" title="")
-                    span
-                     i.icon-font.icon-close
+                .section-top__heading
+                  .section-top__heading-left
+                    p!= "Alvin Brewer"
+                  .section-top__heading-right
+                    a(href="#" class="" title="")
+                      span
+                       i.icon-font.icon-close
 
-              .q-report__body
+                .q-report__body
 
-                include components/common/_tabs
+                  include components/common/_tabs
 
-                .q-report__content.section-top__content
-                  .q-report__content-left.section-top__content-left
+                  .q-report__content.section-top__content
+                    .q-report__content-left.section-top__content-left
 
-                    .menu
-                      -
-                        var listItemNavArr = [
-                        {
-                        href: 'agency-quick-report-1.html',
-                        name: 'Regional averages',
-                        },
-                        {
-                        href: 'agency-quick-report-2.html',
-                        name: 'Dynamics',
-                        },
-                        {
-                        href: 'agency-quick-report-3.html',
-                        name: 'Support history',
-                        },
-                        {
-                        href: 'agency-quick-report-4.html',
-                        name: 'Suggestions'
-                        }
-                        ];
-                      ul.menu__list
-                        each val, idx in listItemNavArr
-                          li.menu__item
-                            a.menu__btn(href= listItemNavArr[idx].href class=(idx === 3) ? 'is-active': '' title="")
-                              span!= listItemNavArr[idx].name
+                      .menu
+                        -
+                          var listItemNavArr = [
+                          {
+                          href: 'agency-quick-report-1.html',
+                          name: 'Regional averages',
+                          },
+                          {
+                          href: 'agency-quick-report-2.html',
+                          name: 'Dynamics',
+                          },
+                          {
+                          href: 'agency-quick-report-3.html',
+                          name: 'Support history',
+                          },
+                          {
+                          href: 'agency-quick-report-4.html',
+                          name: 'Suggestions'
+                          }
+                          ];
+                        ul.menu__list
+                          each val, idx in listItemNavArr
+                            li.menu__item
+                              a.menu__btn(href= listItemNavArr[idx].href class=(idx === 3) ? 'is-active': '' title="")
+                                span!= listItemNavArr[idx].name
 
-                  .q-report__content-right.section-top__content-right
+                    .q-report__content-right.section-top__content-right
 
-                    .q-report__suggestion
-                      -
-                        var suggestionBool = true,
-                          suggestionTitleNum = 1;
+                      .q-report__suggestion
+                        -
+                          var suggestionBool = true,
+                            suggestionTitleNum = 1;
 
-                      .q-report__suggestion-wrapper
-                        .q-report__suggestion-head
-                          include components/common/_tabs
+                        .q-report__suggestion-wrapper
+                          .q-report__suggestion-head
+                            include components/common/_tabs
 
-                        .q-report__suggestion-body
-                          p!= "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-                          p!= "Why do we use it?<br>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+                          .q-report__suggestion-body
+                            p!= "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                            p!= "Why do we use it?<br>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
 
-                      -
-                        var suggestionTitleNum = 2;
+                        -
+                          var suggestionTitleNum = 2;
 
-                      .q-report__suggestion-wrapper
-                        .q-report__suggestion-head
-                          include components/common/_tabs
+                        .q-report__suggestion-wrapper
+                          .q-report__suggestion-head
+                            include components/common/_tabs
 
-                        .q-report__suggestion-body
-                          p!= "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-                          p!= "Why do we use it?<br>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+                          .q-report__suggestion-body
+                            p!= "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                            p!= "Why do we use it?<br>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."

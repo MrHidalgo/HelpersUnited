@@ -18,7 +18,7 @@ block content
       .section__wrapper
         .section__wrapper-left
 
-          section#navigation.navigation--agency
+          section#navigation.navigation.navigation--agency
             .navigation__wrapper
 
               ul.navigation__list
@@ -31,117 +31,118 @@ block content
                 +navigationItemAgency('6', 'videoTutorials', 'Video tutorials', 'agency-video-1.html')
 
         .section__wrapper-right
+          .section__wrapper-hscroll
 
-          section#q-report.q-report.section-top
+            section#q-report.q-report.section-top
 
-            .q-report__wrapper
+              .q-report__wrapper
 
-              .section-top__heading
-                .section-top__heading-left
-                  p!= "Alvin Brewer"
-                .section-top__heading-right
-                  a(href="#" class="" title="")
-                    span
-                     i.icon-font.icon-close
+                .section-top__heading
+                  .section-top__heading-left
+                    p!= "Alvin Brewer"
+                  .section-top__heading-right
+                    a(href="#" class="" title="")
+                      span
+                       i.icon-font.icon-close
 
-              .q-report__body
+                .q-report__body
 
-                include components/common/_tabs
+                  include components/common/_tabs
 
-                .q-report__content.section-top__content
-                  .q-report__content-left.section-top__content-left
+                  .q-report__content.section-top__content
+                    .q-report__content-left.section-top__content-left
 
-                    .menu
-                      -
-                        var listItemNavArr = [
-                          {
-                            href: 'agency-quick-report-1.html',
-                            name: 'Regional averages',
-                          },
-                          {
-                            href: 'agency-quick-report-2.html',
-                            name: 'Dynamics',
-                          },
-                          {
-                            href: 'agency-quick-report-3.html',
-                            name: 'Support history',
-                          },
-                          {
-                            href: 'agency-quick-report-4.html',
-                            name: 'Suggestions'
-                          }
-                        ];
-                      ul.menu__list
-                        each val, idx in listItemNavArr
-                          li.menu__item
-                            a.menu__btn(href= listItemNavArr[idx].href class=(idx === 0) ? 'is-active':'' title="")
-                              span!= listItemNavArr[idx].name
+                      .menu
+                        -
+                          var listItemNavArr = [
+                            {
+                              href: 'agency-quick-report-1.html',
+                              name: 'Regional averages',
+                            },
+                            {
+                              href: 'agency-quick-report-2.html',
+                              name: 'Dynamics',
+                            },
+                            {
+                              href: 'agency-quick-report-3.html',
+                              name: 'Support history',
+                            },
+                            {
+                              href: 'agency-quick-report-4.html',
+                              name: 'Suggestions'
+                            }
+                          ];
+                        ul.menu__list
+                          each val, idx in listItemNavArr
+                            li.menu__item
+                              a.menu__btn(href= listItemNavArr[idx].href class=(idx === 0) ? 'is-active':'' title="")
+                                span!= listItemNavArr[idx].name
 
-                  .q-report__content-right.section-top__content-right
+                    .q-report__content-right.section-top__content-right
 
-                    .q-report__block-wrapper
-                      .q-report__block.q-report__block-0
-                        .q-report__block-head
-                          p!= "Type of expense"
+                      .q-report__block-wrapper
+                        .q-report__block.q-report__block-0
+                          .q-report__block-head
+                            p!= "Type of expense"
 
-                        .q-report__block-body
-                          -
-                            var blockRowName = [
-                              'Rent',
-                              'Food',
-                              'Cleaning, etc',
-                              'Cable',
-                              'Electric',
-                              'Water / Sewer',
-                              'Home phone',
-                              'Cell phone',
-                              'Natural gas',
-                              'Furniture loan',
-                              'Electronics loan',
-                              'Applicane loan',
-                              'Car',
-                              'Car Insurance',
-                              'Gasoline',
-                              'Child care',
-                              'Child support',
-                              'Med insurance',
-                              'Med loans',
-                              'Meds, docs, etc',
-                              'Credit cards',
-                              'Other loans',
-                              'Clothing',
-                              'Misc'
-                            ];
-                          each val, idx in blockRowName
-                            .q-report__block-row
-                              p!= val
+                          .q-report__block-body
+                            -
+                              var blockRowName = [
+                                'Rent',
+                                'Food',
+                                'Cleaning, etc',
+                                'Cable',
+                                'Electric',
+                                'Water / Sewer',
+                                'Home phone',
+                                'Cell phone',
+                                'Natural gas',
+                                'Furniture loan',
+                                'Electronics loan',
+                                'Applicane loan',
+                                'Car',
+                                'Car Insurance',
+                                'Gasoline',
+                                'Child care',
+                                'Child support',
+                                'Med insurance',
+                                'Med loans',
+                                'Meds, docs, etc',
+                                'Credit cards',
+                                'Other loans',
+                                'Clothing',
+                                'Misc'
+                              ];
+                            each val, idx in blockRowName
+                              .q-report__block-row
+                                p!= val
 
-                      .q-report__block.q-report__block-1
-                        .q-report__block-head
-                          p!= "Client expenses"
+                        .q-report__block.q-report__block-1
+                          .q-report__block-head
+                            p!= "Client expenses"
 
-                        .q-report__block-body
-                          each val, idx in blockRowName
-                            .q-report__block-row.q-report__block-row--up
-                              .q-report__block-col
-                                p!= "$120"
-                              .q-report__block-col
-                                span!= "+ $20"
-                                span
-                                  i.icon-font.icon-triangle-up
-                                span!= "+5%"
+                          .q-report__block-body
+                            each val, idx in blockRowName
+                              .q-report__block-row.q-report__block-row--up
+                                .q-report__block-col
+                                  p!= "$120"
+                                .q-report__block-col
+                                  span!= "+ $20"
+                                  span
+                                    i.icon-font.icon-triangle-up
+                                  span!= "+5%"
 
-                      .q-report__block.q-report__block-2
-                        .q-report__block-head
-                          p!= "Regional average expenses"
+                        .q-report__block.q-report__block-2
+                          .q-report__block-head
+                            p!= "Regional average expenses"
 
-                        .q-report__block-body
-                          each val, idx in blockRowName
-                            .q-report__block-row.q-report__block-row--down
-                              .q-report__block-col
-                                p!= "$120"
-                              .q-report__block-col
-                                span!= "- $20"
-                                span
-                                  i.icon-font.icon-triangle-down
-                                span!= "-2%"
+                          .q-report__block-body
+                            each val, idx in blockRowName
+                              .q-report__block-row.q-report__block-row--down
+                                .q-report__block-col
+                                  p!= "$120"
+                                .q-report__block-col
+                                  span!= "- $20"
+                                  span
+                                    i.icon-font.icon-triangle-down
+                                  span!= "-2%"
