@@ -18,7 +18,7 @@ block content
       .section__wrapper
         .section__wrapper-left
 
-          section#navigation.navigation--agency
+          section#navigation.navigation.navigation--agency
             .navigation__wrapper
 
               ul.navigation__list
@@ -31,12 +31,13 @@ block content
                 +navigationItemAgency('6', 'videoTutorials', 'Video tutorials', 'agency-video-1.html')
 
         .section__wrapper-right
+          .section__wrapper-hscroll
 
-          include components/common/_tabs
+            include components/common/_tabs
 
-          section#push-cloud.push-cloud
+            section#push-cloud.push-cloud
 
-            .box__cover
-              each val, idx in [1,2,3]
-                +sectionBox('pc', 'Request name', 'Aplplicant name', 'Rejected', '', 'agency-push-cloud-4.html')
-                +sectionBox('pc', 'Request name', 'Aplplicant name', 'Approved', '', 'agency-push-cloud-4.html')
+              .box__cover
+                each val, idx in [1,2,3]
+                  +sectionBox('pc', 'Request name', 'Aplplicant name', 'Rejected', '', 'agency-push-cloud-4.html')
+                  +sectionBox('pc', 'Request name', 'Aplplicant name', 'Approved', '', 'agency-push-cloud-4.html')

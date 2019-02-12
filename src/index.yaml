@@ -102,16 +102,16 @@ PageList:
   titleName: AGENCY PUSH TO CLOUD
 - file: agency-push-cloud-1.html
   titleName: Active Requests
-  ready: 55
+  ready: 95
 - file: agency-push-cloud-2.html
   titleName: Active Requests - Details
-  ready: 55
+  ready: 95
 - file: agency-push-cloud-3.html
   titleName: Request History
-  ready: 55
+  ready: 95
 - file: agency-push-cloud-4.html
   titleName: Request History - Details
-  ready: 55
+  ready: 95
 
 - file:
   titleName: AGENCY MEETING SCHEDULE

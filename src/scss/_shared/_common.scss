@@ -42,33 +42,26 @@
       border-left: 1px solid $c-whisper;
       @include adaptive(1365) {
         max-width: calc(100% - 70px);
+      }
 
-        .p-agency-interviews & {
-          @include adaptive(767) {
+      @mixin horScroll($classMod, $mVal, $wVal) {
+        #{$classMod} & {
+          @include adaptive($mVal) {
             overflow: hidden;
             overflow-x: auto;
 
             .section__wrapper-hscroll {
               display: inline-block;
-              max-width: 698px;
-              width: 698px;
-            }
-          }
-        }
-
-        .p-agency-staff & {
-          @include adaptive(991) {
-            overflow: hidden;
-            overflow-x: auto;
-
-            .section__wrapper-hscroll {
-              display: inline-block;
-              max-width: 922px;
-              width: 922px;
+              max-width: $wVal;
+              width: $wVal;
             }
           }
         }
       }
+
+      @include horScroll('.p-agency-interviews', 767, 698px);
+      @include horScroll('.p-agency-staff', 991, 922px);
+      @include horScroll('.p-agency-push-cloud', 767, 698px);
     }
   }
 
