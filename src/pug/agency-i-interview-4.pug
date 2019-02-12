@@ -18,7 +18,7 @@ block content
       .section__wrapper
         .section__wrapper-left
 
-          section#navigation.navigation--agency
+          section#navigation.navigation.navigation--agency
             .navigation__wrapper
 
               ul.navigation__list
@@ -31,133 +31,133 @@ block content
                 +navigationItemAgency('6', 'videoTutorials', 'Video tutorials', 'agency-video-1.html')
 
         .section__wrapper-right
+          .section__wrapper-hscroll
 
-          section#i-interview.i-interview.section-top
+            section#i-interview.i-interview.section-top
 
-            .i-interview__wrapper
+              .i-interview__wrapper
 
-              .section-top__heading
-                .section-top__heading-left
-                  p!= "Alvin Brewer"
-                .section-top__heading-right
-                  a(href="#" class="" title="")
-                    span
-                     i.icon-font.icon-close
+                .section-top__heading
+                  .section-top__heading-left
+                    p!= "Alvin Brewer"
+                  .section-top__heading-right
+                    a(href="#" class="" title="")
+                      span
+                       i.icon-font.icon-close
 
-              .i-interview__body
+                .i-interview__body
 
-                include components/common/_tabs
+                  include components/common/_tabs
 
-                .i-interview__content.section-top__content
-                  .i-interview__content-left.section-top__content-left
+                  .i-interview__content.section-top__content
+                    .i-interview__content-left.section-top__content-left
 
-                    .menu
-                      -
-                        var listItemNavArr = [
-                        {
-                        href: 'agency-i-interview-1.html',
-                        name: 'Biography'
-                        },
-                        {
-                        href: 'agency-i-interview-2.html',
-                        name: 'Personal data',
-                        },
-                        {
-                        href: 'agency-i-interview-3.html',
-                        name: 'Employment information',
-                        },
-                        {
-                        href: 'agency-i-interview-4.html',
-                        name: 'Household member',
-                        },
-                        {
-                        href: 'agency-i-interview-5.html',
-                        name: 'Other sources of income',
-                        },
-                        {
-                        href: 'agency-i-interview-6.html',
-                        name: 'Monthly expenses'
-                        }
-                        ];
-                      ul.menu__list
-                        each val, idx in listItemNavArr
-                          li.menu__item
-                            a.menu__btn(href= listItemNavArr[idx].href class=(idx === 3) ? 'is-active': '' title="")
-                              span!= listItemNavArr[idx].name
+                      .menu
+                        -
+                          var listItemNavArr = [
+                          {
+                          href: 'agency-i-interview-1.html',
+                          name: 'Biography'
+                          },
+                          {
+                          href: 'agency-i-interview-2.html',
+                          name: 'Personal data',
+                          },
+                          {
+                          href: 'agency-i-interview-3.html',
+                          name: 'Employment information',
+                          },
+                          {
+                          href: 'agency-i-interview-4.html',
+                          name: 'Household member',
+                          },
+                          {
+                          href: 'agency-i-interview-5.html',
+                          name: 'Other sources of income',
+                          },
+                          {
+                          href: 'agency-i-interview-6.html',
+                          name: 'Monthly expenses'
+                          }
+                          ];
+                        ul.menu__list
+                          each val, idx in listItemNavArr
+                            li.menu__item
+                              a.menu__btn(href= listItemNavArr[idx].href class=(idx === 3) ? 'is-active': '' title="")
+                                span!= listItemNavArr[idx].name
 
-                  .i-interview__content-right.section-top__content-right
+                    .i-interview__content-right.section-top__content-right
 
-                    .i-interview__field-wrapper
-                      .i-interview__field-left
-                        .i-interview__field
-                          h6.i-interview__field-title!= "Adults"
-                        .i-interview__field
-                          span.i-interview__field-label!= "How many adults, aged 17 over, live in the home with you?"
-                          p.i-interview__field-value!= "1"
-                        .i-interview__field
-                          h6.i-interview__field-title!= "1st adult"
-                        .i-interview__field
-                          span.i-interview__field-label!= "First Name"
-                          p.i-interview__field-value!= "Lorem"
-                        .i-interview__field
-                          span.i-interview__field-label!= "Middle Name"
-                          p.i-interview__field-value!= "Lorem"
-                        .i-interview__field
-                          span.i-interview__field-label!= "Last Name"
-                          p.i-interview__field-value!= "Lorem"
-                        .i-interview__field
-                          span.i-interview__field-label!= "DOB"
-                          p.i-interview__field-value!= "13.02.86"
-                        .i-interview__field
-                          span.i-interview__field-label!= "SSN"
-                          p.i-interview__field-value!= "232542345"
-                        .i-interview__field
-                          span.i-interview__field-label!= "What is the $name$ gender?"
-                          p.i-interview__field-value!= "Male"
-                        .i-interview__field
-                          span.i-interview__field-label!= "What is $his$ race?"
-                          p.i-interview__field-value!= "Asian"
-                        .i-interview__field
-                          span.i-interview__field-label!= "Relationship"
-                          p.i-interview__field-value!= "Brother"
-                        .i-interview__field
-                          span.i-interview__field-label!= "Does this member contribute to the home's finance"
-                          p.i-interview__field-value!= "No"
+                      .i-interview__field-wrapper
+                        .i-interview__field-left
+                          .i-interview__field
+                            h6.i-interview__field-title!= "Adults"
+                          .i-interview__field
+                            span.i-interview__field-label!= "How many adults, aged 17 over, live in the home with you?"
+                            p.i-interview__field-value!= "1"
+                          .i-interview__field
+                            h6.i-interview__field-title!= "1st adult"
+                          .i-interview__field
+                            span.i-interview__field-label!= "First Name"
+                            p.i-interview__field-value!= "Lorem"
+                          .i-interview__field
+                            span.i-interview__field-label!= "Middle Name"
+                            p.i-interview__field-value!= "Lorem"
+                          .i-interview__field
+                            span.i-interview__field-label!= "Last Name"
+                            p.i-interview__field-value!= "Lorem"
+                          .i-interview__field
+                            span.i-interview__field-label!= "DOB"
+                            p.i-interview__field-value!= "13.02.86"
+                          .i-interview__field
+                            span.i-interview__field-label!= "SSN"
+                            p.i-interview__field-value!= "232542345"
+                          .i-interview__field
+                            span.i-interview__field-label!= "What is the $name$ gender?"
+                            p.i-interview__field-value!= "Male"
+                          .i-interview__field
+                            span.i-interview__field-label!= "What is $his$ race?"
+                            p.i-interview__field-value!= "Asian"
+                          .i-interview__field
+                            span.i-interview__field-label!= "Relationship"
+                            p.i-interview__field-value!= "Brother"
+                          .i-interview__field
+                            span.i-interview__field-label!= "Does this member contribute to the home's finance"
+                            p.i-interview__field-value!= "No"
 
 
-                      .i-interview__field-right
-                        .i-interview__field
-                          h6.i-interview__field-title!= "Children"
-                        .i-interview__field
-                          span.i-interview__field-label!= "How many adults, aged 17 over, live in the home with you?"
-                          p.i-interview__field-value!= "1"
-                        .i-interview__field
-                          h6.i-interview__field-title!= "1st child"
-                        .i-interview__field
-                          span.i-interview__field-label!= "First Name"
-                          p.i-interview__field-value!= "Lorem"
-                        .i-interview__field
-                          span.i-interview__field-label!= "Middle Name"
-                          p.i-interview__field-value!= "Lorem"
-                        .i-interview__field
-                          span.i-interview__field-label!= "Last Name"
-                          p.i-interview__field-value!= "Lorem"
-                        .i-interview__field
-                          span.i-interview__field-label!= "DOB"
-                          p.i-interview__field-value!= "13.02.86"
-                        .i-interview__field
-                          span.i-interview__field-label!= "SSN"
-                          p.i-interview__field-value!= "232542345"
-                        .i-interview__field
-                          span.i-interview__field-label!= "What is the $name$ gender?"
-                          p.i-interview__field-value!= "Male"
-                        .i-interview__field
-                          span.i-interview__field-label!= "What is $his$ race?"
-                          p.i-interview__field-value!= "Asian"
-                        .i-interview__field
-                          span.i-interview__field-label!= "Relationship"
-                          p.i-interview__field-value!= "Brother"
-                        .i-interview__field
-                          span.i-interview__field-label!= "Does this member contribute to the home's finance"
-                          p.i-interview__field-value!= "No"
-
+                        .i-interview__field-right
+                          .i-interview__field
+                            h6.i-interview__field-title!= "Children"
+                          .i-interview__field
+                            span.i-interview__field-label!= "How many adults, aged 17 over, live in the home with you?"
+                            p.i-interview__field-value!= "1"
+                          .i-interview__field
+                            h6.i-interview__field-title!= "1st child"
+                          .i-interview__field
+                            span.i-interview__field-label!= "First Name"
+                            p.i-interview__field-value!= "Lorem"
+                          .i-interview__field
+                            span.i-interview__field-label!= "Middle Name"
+                            p.i-interview__field-value!= "Lorem"
+                          .i-interview__field
+                            span.i-interview__field-label!= "Last Name"
+                            p.i-interview__field-value!= "Lorem"
+                          .i-interview__field
+                            span.i-interview__field-label!= "DOB"
+                            p.i-interview__field-value!= "13.02.86"
+                          .i-interview__field
+                            span.i-interview__field-label!= "SSN"
+                            p.i-interview__field-value!= "232542345"
+                          .i-interview__field
+                            span.i-interview__field-label!= "What is the $name$ gender?"
+                            p.i-interview__field-value!= "Male"
+                          .i-interview__field
+                            span.i-interview__field-label!= "What is $his$ race?"
+                            p.i-interview__field-value!= "Asian"
+                          .i-interview__field
+                            span.i-interview__field-label!= "Relationship"
+                            p.i-interview__field-value!= "Brother"
+                          .i-interview__field
+                            span.i-interview__field-label!= "Does this member contribute to the home's finance"
+                            p.i-interview__field-value!= "No"

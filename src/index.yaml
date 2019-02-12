@@ -219,19 +219,19 @@ PageList:
   titleName: AGENCY I-INTERVIEW
 - file: agency-i-interview-1.html
   titleName: II - Biography
-  ready: 55
+  ready: 95
 - file: agency-i-interview-2.html
   titleName: II - Personal data
-  ready: 55
+  ready: 95
 - file: agency-i-interview-3.html
   titleName: II - Employment information
-  ready: 55
+  ready: 95
 - file: agency-i-interview-4.html
   titleName: II - Household member
-  ready: 55
+  ready: 95
 - file: agency-i-interview-5.html
   titleName: II - Other sources of income
-  ready: 55
+  ready: 95
 - file: agency-i-interview-6.html
   titleName: II - Monthly expenses
-  ready: 55
+  ready: 95

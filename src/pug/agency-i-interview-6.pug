@@ -18,7 +18,7 @@ block content
       .section__wrapper
         .section__wrapper-left
 
-          section#navigation.navigation--agency
+          section#navigation.navigation.navigation--agency
             .navigation__wrapper
 
               ul.navigation__list
@@ -31,109 +31,110 @@ block content
                 +navigationItemAgency('6', 'videoTutorials', 'Video tutorials', 'agency-video-1.html')
 
         .section__wrapper-right
+          .section__wrapper-hscroll
 
-          section#i-interview.i-interview.section-top
+            section#i-interview.i-interview.section-top
 
-            .i-interview__wrapper
+              .i-interview__wrapper
 
-              .section-top__heading
-                .section-top__heading-left
-                  p!= "Alvin Brewer"
-                .section-top__heading-right
-                  a(href="#" class="" title="")
-                    span
-                     i.icon-font.icon-close
+                .section-top__heading
+                  .section-top__heading-left
+                    p!= "Alvin Brewer"
+                  .section-top__heading-right
+                    a(href="#" class="" title="")
+                      span
+                       i.icon-font.icon-close
 
-              .i-interview__body
+                .i-interview__body
 
-                include components/common/_tabs
+                  include components/common/_tabs
 
-                .i-interview__content.section-top__content
-                  .i-interview__content-left.section-top__content-left
+                  .i-interview__content.section-top__content
+                    .i-interview__content-left.section-top__content-left
 
-                    .menu
-                      -
-                        var listItemNavArr = [
-                        {
-                        href: 'agency-i-interview-1.html',
-                        name: 'Biography'
-                        },
-                        {
-                        href: 'agency-i-interview-2.html',
-                        name: 'Personal data',
-                        },
-                        {
-                        href: 'agency-i-interview-3.html',
-                        name: 'Employment information',
-                        },
-                        {
-                        href: 'agency-i-interview-4.html',
-                        name: 'Household member',
-                        },
-                        {
-                        href: 'agency-i-interview-5.html',
-                        name: 'Other sources of income',
-                        },
-                        {
-                        href: 'agency-i-interview-6.html',
-                        name: 'Monthly expenses'
-                        }
-                        ];
-                      ul.menu__list
-                        each val, idx in listItemNavArr
-                          li.menu__item
-                            a.menu__btn(href= listItemNavArr[idx].href class=(idx === 5) ? 'is-active': '' title="")
-                              span!= listItemNavArr[idx].name
+                      .menu
+                        -
+                          var listItemNavArr = [
+                          {
+                          href: 'agency-i-interview-1.html',
+                          name: 'Biography'
+                          },
+                          {
+                          href: 'agency-i-interview-2.html',
+                          name: 'Personal data',
+                          },
+                          {
+                          href: 'agency-i-interview-3.html',
+                          name: 'Employment information',
+                          },
+                          {
+                          href: 'agency-i-interview-4.html',
+                          name: 'Household member',
+                          },
+                          {
+                          href: 'agency-i-interview-5.html',
+                          name: 'Other sources of income',
+                          },
+                          {
+                          href: 'agency-i-interview-6.html',
+                          name: 'Monthly expenses'
+                          }
+                          ];
+                        ul.menu__list
+                          each val, idx in listItemNavArr
+                            li.menu__item
+                              a.menu__btn(href= listItemNavArr[idx].href class=(idx === 5) ? 'is-active': '' title="")
+                                span!= listItemNavArr[idx].name
 
-                  .i-interview__content-right.section-top__content-right
+                    .i-interview__content-right.section-top__content-right
 
-                    .i-interview__field-wrapper
-                      .i-interview__field-left
-                        .i-interview__field.i-interview__field--between
-                          span.i-interview__field-label!= "Food stamps"
-                          p.i-interview__field-value!= "$200"
+                      .i-interview__field-wrapper
+                        .i-interview__field-left
+                          .i-interview__field.i-interview__field--between
+                            span.i-interview__field-label!= "Food stamps"
+                            p.i-interview__field-value!= "$200"
 
-                        .i-interview__field-group
-                          .i-interview__field
-                            span.i-interview__field-label!= "Additional query"
-                            p.i-interview__field-value!= "Yes"
-                          .i-interview__field
-                            span.i-interview__field-label!= "Verbage"
-                            p.i-interview__field-value!= "Lorem"
+                          .i-interview__field-group
+                            .i-interview__field
+                              span.i-interview__field-label!= "Additional query"
+                              p.i-interview__field-value!= "Yes"
+                            .i-interview__field
+                              span.i-interview__field-label!= "Verbage"
+                              p.i-interview__field-value!= "Lorem"
 
-                        .i-interview__field.i-interview__field--between
-                          span.i-interview__field-label!= "Natural Gas"
-                          p.i-interview__field-value!= "$200"
+                          .i-interview__field.i-interview__field--between
+                            span.i-interview__field-label!= "Natural Gas"
+                            p.i-interview__field-value!= "$200"
 
-                        .i-interview__field-group
-                          .i-interview__field
-                            span.i-interview__field-label!= "Additional query"
-                            p.i-interview__field-value!= "Yes"
-                          .i-interview__field
-                            span.i-interview__field-label!= "Verbage"
-                            p.i-interview__field-value!= "Lorem"
+                          .i-interview__field-group
+                            .i-interview__field
+                              span.i-interview__field-label!= "Additional query"
+                              p.i-interview__field-value!= "Yes"
+                            .i-interview__field
+                              span.i-interview__field-label!= "Verbage"
+                              p.i-interview__field-value!= "Lorem"
 
-                      .i-interview__field-right
-                        .i-interview__field.i-interview__field--between
-                          span.i-interview__field-label!= "Home phone"
-                          p.i-interview__field-value!= "$200"
+                        .i-interview__field-right
+                          .i-interview__field.i-interview__field--between
+                            span.i-interview__field-label!= "Home phone"
+                            p.i-interview__field-value!= "$200"
 
-                        .i-interview__field-group
-                          .i-interview__field
-                            span.i-interview__field-label!= "Additional query"
-                            p.i-interview__field-value!= "Yes"
-                          .i-interview__field
-                            span.i-interview__field-label!= "Verbage"
-                            p.i-interview__field-value!= "Lorem"
+                          .i-interview__field-group
+                            .i-interview__field
+                              span.i-interview__field-label!= "Additional query"
+                              p.i-interview__field-value!= "Yes"
+                            .i-interview__field
+                              span.i-interview__field-label!= "Verbage"
+                              p.i-interview__field-value!= "Lorem"
 
-                        .i-interview__field.i-interview__field--between
-                          span.i-interview__field-label!= "Cell phone"
-                          p.i-interview__field-value!= "$200"
+                          .i-interview__field.i-interview__field--between
+                            span.i-interview__field-label!= "Cell phone"
+                            p.i-interview__field-value!= "$200"
 
-                        .i-interview__field-group
-                          .i-interview__field
-                            span.i-interview__field-label!= "Additional query"
-                            p.i-interview__field-value!= "Yes"
-                          .i-interview__field
-                            span.i-interview__field-label!= "Verbage"
-                            p.i-interview__field-value!= "Lorem"
+                          .i-interview__field-group
+                            .i-interview__field
+                              span.i-interview__field-label!= "Additional query"
+                              p.i-interview__field-value!= "Yes"
+                            .i-interview__field
+                              span.i-interview__field-label!= "Verbage"
+                              p.i-interview__field-value!= "Lorem"

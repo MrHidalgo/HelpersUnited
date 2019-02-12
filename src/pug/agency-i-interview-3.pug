@@ -18,7 +18,7 @@ block content
       .section__wrapper
         .section__wrapper-left
 
-          section#navigation.navigation--agency
+          section#navigation.navigation.navigation--agency
             .navigation__wrapper
 
               ul.navigation__list
@@ -31,105 +31,106 @@ block content
                 +navigationItemAgency('6', 'videoTutorials', 'Video tutorials', 'agency-video-1.html')
 
         .section__wrapper-right
+          .section__wrapper-hscroll
 
-          section#i-interview.i-interview.section-top
+            section#i-interview.i-interview.section-top
 
-            .i-interview__wrapper
+              .i-interview__wrapper
 
-              .section-top__heading
-                .section-top__heading-left
-                  p!= "Alvin Brewer"
-                .section-top__heading-right
-                  a(href="#" class="" title="")
-                    span
-                     i.icon-font.icon-close
+                .section-top__heading
+                  .section-top__heading-left
+                    p!= "Alvin Brewer"
+                  .section-top__heading-right
+                    a(href="#" class="" title="")
+                      span
+                       i.icon-font.icon-close
 
-              .i-interview__body
+                .i-interview__body
 
-                include components/common/_tabs
+                  include components/common/_tabs
 
-                .i-interview__content.section-top__content
-                  .i-interview__content-left.section-top__content-left
+                  .i-interview__content.section-top__content
+                    .i-interview__content-left.section-top__content-left
 
-                    .menu
-                      -
-                        var listItemNavArr = [
-                        {
-                        href: 'agency-i-interview-1.html',
-                        name: 'Biography'
-                        },
-                        {
-                        href: 'agency-i-interview-2.html',
-                        name: 'Personal data',
-                        },
-                        {
-                        href: 'agency-i-interview-3.html',
-                        name: 'Employment information',
-                        },
-                        {
-                        href: 'agency-i-interview-4.html',
-                        name: 'Household member',
-                        },
-                        {
-                        href: 'agency-i-interview-5.html',
-                        name: 'Other sources of income',
-                        },
-                        {
-                        href: 'agency-i-interview-6.html',
-                        name: 'Monthly expenses'
-                        }
-                        ];
-                      ul.menu__list
-                        each val, idx in listItemNavArr
-                          li.menu__item
-                            a.menu__btn(href= listItemNavArr[idx].href class=(idx === 2) ? 'is-active': '' title="")
-                              span!= listItemNavArr[idx].name
+                      .menu
+                        -
+                          var listItemNavArr = [
+                          {
+                          href: 'agency-i-interview-1.html',
+                          name: 'Biography'
+                          },
+                          {
+                          href: 'agency-i-interview-2.html',
+                          name: 'Personal data',
+                          },
+                          {
+                          href: 'agency-i-interview-3.html',
+                          name: 'Employment information',
+                          },
+                          {
+                          href: 'agency-i-interview-4.html',
+                          name: 'Household member',
+                          },
+                          {
+                          href: 'agency-i-interview-5.html',
+                          name: 'Other sources of income',
+                          },
+                          {
+                          href: 'agency-i-interview-6.html',
+                          name: 'Monthly expenses'
+                          }
+                          ];
+                        ul.menu__list
+                          each val, idx in listItemNavArr
+                            li.menu__item
+                              a.menu__btn(href= listItemNavArr[idx].href class=(idx === 2) ? 'is-active': '' title="")
+                                span!= listItemNavArr[idx].name
 
-                  .i-interview__content-right.section-top__content-right
+                    .i-interview__content-right.section-top__content-right
 
-                    .i-interview__field-wrapper
-                      .i-interview__field-left
-                        .i-interview__field
-                          h6.i-interview__field-title!= "Type of work"
-                        .i-interview__field
-                          span.i-interview__field-label!= "Are you employed?"
-                          p.i-interview__field-value!= "Yes"
-                        .i-interview__field
-                          span.i-interview__field-label!= "Are your self-employed?"
-                          p.i-interview__field-value!= "Yes"
-                        .i-interview__field
-                          span.i-interview__field-label!= "Describe what you do"
-                          p.i-interview__field-value!= "Lorem Ipsum"
-                        .i-interview__field
-                          span.i-interview__field-label!= "How long have you been self employed ?"
-                          p.i-interview__field-value!= "Lorem ipsum"
-                        .i-interview__field
-                          span.i-interview__field-label!= "Has your income lessened in the past 3 months?"
-                          p.i-interview__field-value!= "Yes"
-                        .i-interview__field
-                          span.i-interview__field-label!= "Why is your income lessened?"
-                          p.i-interview__field-value!= "Lorem ipsum"
-                      .i-interview__field-right
-                        .i-interview__field
-                          h6.i-interview__field-title!= "Income"
-                        .i-interview__field
-                          span.i-interview__field-label!= "How are you paid?"
-                          p.i-interview__field-value!= "Hourly"
-                        .i-interview__field
-                          span.i-interview__field-label!= "What is your hourly rate?"
-                          p.i-interview__field-value!= "$5"
-                        .i-interview__field
-                          span.i-interview__field-label!= "How many hours per week do you work ?"
-                          p.i-interview__field-value!= "20"
-                        .i-interview__field
-                          span.i-interview__field-label!= "How long have you been employed?"
-                          p.i-interview__field-value!= "Lorem ipsum"
-                        .i-interview__field
-                          span.i-interview__field-label!= "Have your hours been cut in the past 3 months?"
-                          p.i-interview__field-value!= "Yes"
-                        .i-interview__field
-                          span.i-interview__field-label!= "How much?"
-                          p.i-interview__field-value!= "Lorem ipsum"
-                        .i-interview__field
-                          span.i-interview__field-label!= "Do you have the equivalent of 1 month paystubs?"
-                          p.i-interview__field-value!= "Yes"
+                      .i-interview__field-wrapper
+                        .i-interview__field-left
+                          .i-interview__field
+                            h6.i-interview__field-title!= "Type of work"
+                          .i-interview__field
+                            span.i-interview__field-label!= "Are you employed?"
+                            p.i-interview__field-value!= "Yes"
+                          .i-interview__field
+                            span.i-interview__field-label!= "Are your self-employed?"
+                            p.i-interview__field-value!= "Yes"
+                          .i-interview__field
+                            span.i-interview__field-label!= "Describe what you do"
+                            p.i-interview__field-value!= "Lorem Ipsum"
+                          .i-interview__field
+                            span.i-interview__field-label!= "How long have you been self employed ?"
+                            p.i-interview__field-value!= "Lorem ipsum"
+                          .i-interview__field
+                            span.i-interview__field-label!= "Has your income lessened in the past 3 months?"
+                            p.i-interview__field-value!= "Yes"
+                          .i-interview__field
+                            span.i-interview__field-label!= "Why is your income lessened?"
+                            p.i-interview__field-value!= "Lorem ipsum"
+                        .i-interview__field-right
+                          .i-interview__field
+                            h6.i-interview__field-title!= "Income"
+                          .i-interview__field
+                            span.i-interview__field-label!= "How are you paid?"
+                            p.i-interview__field-value!= "Hourly"
+                          .i-interview__field
+                            span.i-interview__field-label!= "What is your hourly rate?"
+                            p.i-interview__field-value!= "$5"
+                          .i-interview__field
+                            span.i-interview__field-label!= "How many hours per week do you work ?"
+                            p.i-interview__field-value!= "20"
+                          .i-interview__field
+                            span.i-interview__field-label!= "How long have you been employed?"
+                            p.i-interview__field-value!= "Lorem ipsum"
+                          .i-interview__field
+                            span.i-interview__field-label!= "Have your hours been cut in the past 3 months?"
+                            p.i-interview__field-value!= "Yes"
+                          .i-interview__field
+                            span.i-interview__field-label!= "How much?"
+                            p.i-interview__field-value!= "Lorem ipsum"
+                          .i-interview__field
+                            span.i-interview__field-label!= "Do you have the equivalent of 1 month paystubs?"
+                            p.i-interview__field-value!= "Yes"
