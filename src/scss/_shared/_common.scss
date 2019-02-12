@@ -1,5 +1,20 @@
 // COMMON :: START
 
+@mixin horScroll($classMod, $mVal, $wVal) {
+  #{$classMod} & {
+    @include adaptive($mVal) {
+      overflow: hidden;
+      overflow-x: auto;
+
+      .section__wrapper-hscroll {
+        display: inline-block;
+        max-width: $wVal;
+        width: $wVal;
+      }
+    }
+  }
+}
+
 // section
 .section {
   &--client {
@@ -44,25 +59,11 @@
         max-width: calc(100% - 70px);
       }
 
-      @mixin horScroll($classMod, $mVal, $wVal) {
-        #{$classMod} & {
-          @include adaptive($mVal) {
-            overflow: hidden;
-            overflow-x: auto;
-
-            .section__wrapper-hscroll {
-              display: inline-block;
-              max-width: $wVal;
-              width: $wVal;
-            }
-          }
-        }
-      }
-
       @include horScroll('.p-agency-interviews', 767, 698px);
       @include horScroll('.p-agency-staff', 991, 922px);
       @include horScroll('.p-agency-push-cloud', 767, 698px);
       @include horScroll('.p-agency-m-schedule', 1199, 1129px);
+      @include horScroll('.p-agency-doc-lib', 767, 698px);
     }
   }
 
@@ -162,6 +163,12 @@
       &--left {
         width: 100%;
         max-width: calc(100% - 456px);
+
+        @include horScroll('.p-agency-doc-lib', 991, 922px);
+
+        .p-agency-doc-lib & {
+          overflow: hidden !important;
+        }
       }
 
       &--right {

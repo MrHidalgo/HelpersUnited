@@ -144,19 +144,19 @@ PageList:
   titleName: AGENCY DOCUMENT LIBRARIES
 - file: agency-document-libraries-1.html
   titleName: DL - Section 1
-  ready: 55
+  ready: 95
 - file: agency-document-libraries-2.html
   titleName: DL - Upload file
-  ready: 55
+  ready: 95
 - file: agency-document-libraries-3.html
   titleName: DL - Upload file progress
-  ready: 55
+  ready: 95
 - file: agency-document-libraries-4.html
   titleName: DL - Upload file complete
-  ready: 55
+  ready: 95
 - file: agency-document-libraries-5.html
   titleName: DL - Preview document
-  ready: 55
+  ready: 95
 
 - file:
   titleName: AGENCY Q&A

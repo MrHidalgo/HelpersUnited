@@ -2,6 +2,10 @@
 
 .doc-lib {
   padding: 30px;
+  @include adaptive(1365) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 
   &__section {
     display: flex;
@@ -66,6 +70,9 @@
     &-content {
       width: 100%;
       padding: 30px;
+      @include adaptive(575) {
+        padding: 15px;
+      }
     }
 
     &-progress {

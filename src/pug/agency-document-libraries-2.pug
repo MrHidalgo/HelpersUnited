@@ -18,7 +18,7 @@ block content
       .section__wrapper
         .section__wrapper-left
 
-          section#navigation.navigation--agency
+          section#navigation.navigation.navigation--agency
             .navigation__wrapper
 
               ul.navigation__list
@@ -32,14 +32,15 @@ block content
 
         .section__wrapper-right.section__wrapper-right--two
           .section__wrapper-right--left
+            .section__wrapper-hscroll
 
-            include components/common/_tabs
+              include components/common/_tabs
 
-            section#doc-lib.doc-lib
+              section#doc-lib.doc-lib
 
-              .box__cover
-                each val, idx in [1,2,3,4,5]
-                  +sectionBox('dl', 'Document name', 'PDF', '', true, 'agency-document-libraries-5.html')
+                .box__cover
+                  each val, idx in [1,2,3,4,5]
+                    +sectionBox('dl', 'Document name', 'PDF', '', true, 'agency-document-libraries-5.html')
 
           .section__wrapper-right--right
 
