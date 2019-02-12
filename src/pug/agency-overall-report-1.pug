@@ -18,7 +18,7 @@ block content
       .section__wrapper
         .section__wrapper-left
 
-          section#navigation.navigation--agency
+          section#navigation.navigation.navigation--agency
             .navigation__wrapper
 
               ul.navigation__list
@@ -31,28 +31,29 @@ block content
                 +navigationItemAgency('6', 'videoTutorials', 'Video tutorials', 'agency-video-1.html')
 
         .section__wrapper-right
+          .section__wrapper-hscroll
 
-          section#overall-r.overall-r.section-top
+            section#overall-r.overall-r.section-top
 
-            .overall-r__wrapper
+              .overall-r__wrapper
 
-              .section-top__heading
-                .section-top__heading-left
-                  p!= "Alvin Brewer"
-                .section-top__heading-right
-                  a(href="#" class="" title="")
-                    span
-                     i.icon-font.icon-close
+                .section-top__heading
+                  .section-top__heading-left
+                    p!= "Alvin Brewer"
+                  .section-top__heading-right
+                    a(href="#" class="" title="")
+                      span
+                       i.icon-font.icon-close
 
-              .overall-r__body
+                .overall-r__body
 
-                include components/common/_tabs
+                  include components/common/_tabs
 
-                -
-                  var overallReportTabs = true;
-                include components/common/_tabs
+                  -
+                    var overallReportTabs = true;
+                  include components/common/_tabs
 
-                .overall-r__content
-                  .box__cover
-                    each val, idx in [1,2,3,4,5,6,7,8,9]
-                      +sectionBox('or', 'Document name', 'PDF', '', true, 'agency-overall-report-5.html')
+                  .overall-r__content
+                    .box__cover
+                      each val, idx in [1,2,3,4,5,6,7,8,9]
+                        +sectionBox('or', 'Document name', 'PDF', '', true, 'agency-overall-report-5.html')

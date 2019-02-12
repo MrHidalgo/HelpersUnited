@@ -11,6 +11,9 @@
 
   &__content {
     padding: 30px;
+    @include adaptive(1365) {
+      padding-right: 15px;
+    }
   }
 
   .section__wrapper-right--two {

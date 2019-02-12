@@ -18,7 +18,7 @@ block content
       .section__wrapper
         .section__wrapper-left
 
-          section#navigation.navigation--agency
+          section#navigation.navigation.navigation--agency
             .navigation__wrapper
 
               ul.navigation__list
@@ -31,75 +31,76 @@ block content
                 +navigationItemAgency('6', 'videoTutorials', 'Video tutorials', 'agency-video-1.html')
 
         .section__wrapper-right
+          .section__wrapper-hscroll
 
-          section#overall-r.overall-r.section-top
+            section#overall-r.overall-r.section-top
 
-            .overall-r__wrapper
+              .overall-r__wrapper
 
-              .section-top__heading
-                .section-top__heading-left
-                  p!= "Alvin Brewer"
-                .section-top__heading-right
-                  a(href="#" class="" title="")
-                    span
-                     i.icon-font.icon-close
+                .section-top__heading
+                  .section-top__heading-left
+                    p!= "Alvin Brewer"
+                  .section-top__heading-right
+                    a(href="#" class="" title="")
+                      span
+                       i.icon-font.icon-close
 
-              .overall-r__body
+                .overall-r__body
 
-                include components/common/_tabs
+                  include components/common/_tabs
 
-                .section__wrapper-right--two
-                  .section__wrapper-right--left
+                  .section__wrapper-right--two
+                    .section__wrapper-right--left
+                      .section__wrapper-hscroll
 
-                    -
-                      var overallReportTabsEmpty = true;
-                    include components/common/_tabs
+                        -
+                          var overallReportTabsEmpty = true;
+                        include components/common/_tabs
 
-                    .overall-r__content
+                        .overall-r__content
 
-                      .box__cover
-                        each val, idx in [1,2,3,4,5,6,7,8,9]
-                          +sectionBox('or', 'Document name', 'PDF', '', true, 'agency-document-libraries-5.html')
+                          .box__cover
+                            each val, idx in [1,2,3,4,5,6,7,8,9]
+                              +sectionBox('or', 'Document name', 'PDF', '', true, 'agency-document-libraries-5.html')
 
-                  .section__wrapper-right--right
-                    .doc__lib
-                      .doc-lib__section
-                        .doc-lib__section-header
-                          div
-                            p!= "Upload PDF document"
+                    .section__wrapper-right--right
+                      .doc__lib
+                        .doc-lib__section
+                          .doc-lib__section-header
+                            div
+                              p!= "Upload PDF document"
 
-                          div
-                            a(href="#" class="" title="")
-                              i.icon-font.icon-close
+                            div
+                              a(href="#" class="" title="")
+                                i.icon-font.icon-close
 
-                        .doc-lib__section-body.doc-lib__section-body--start
+                          .doc-lib__section-body.doc-lib__section-body--start
 
-                          .doc-lib__section-content
+                            .doc-lib__section-content
 
-                            .doc-lib__section-progress
-                              span
-                              p!= "Uploading 36%"
+                              .doc-lib__section-progress
+                                span
+                                p!= "Uploading 36%"
 
-                            .doc-lib__section-preview
-                              .spinner
-                                .spinner__dot.spinner__dot-1
-                                .spinner__dot.spinner__dot-2
+                              .doc-lib__section-preview
+                                .spinner
+                                  .spinner__dot.spinner__dot-1
+                                  .spinner__dot.spinner__dot-2
 
-                            -
-                              var dataFormObj = {
-                              inputName: {
-                              classMod: "",
-                              uniqueName: "document_name",
-                              labelVal: "Document name",
-                              inputType: "",
-                              inputClassMod: "",
-                              placeholderVal: "",
-                              val: ""
-                              }
-                              };
+                              -
+                                var dataFormObj = {
+                                inputName: {
+                                classMod: "",
+                                uniqueName: "document_name",
+                                labelVal: "Document name",
+                                inputType: "",
+                                inputClassMod: "",
+                                placeholderVal: "",
+                                val: ""
+                                }
+                                };
 
-                            .doc-lib__section-form.doc-lib__section-form--one
-                              .c-form
-                                +formInput(dataFormObj.inputName)
-                                +formBtn('', 'c-btn c-btn--bg', 'Add')(disabled="disabled")
-
+                              .doc-lib__section-form.doc-lib__section-form--one
+                                .c-form
+                                  +formInput(dataFormObj.inputName)
+                                  +formBtn('', 'c-btn c-btn--bg', 'Add')(disabled="disabled")
