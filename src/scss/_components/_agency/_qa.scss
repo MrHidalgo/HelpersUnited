@@ -18,6 +18,15 @@
         width: 100%;
         max-width: 384px;
         padding-left: 20px;
+        @include adaptive(1599) {
+          max-width: calc(100% / 3);
+        }
+        @include adaptive(1199) {
+          max-width: calc(100% / 2);
+        }
+        @include adaptive(767) {
+          max-width: calc(100%);
+        }
       }
     }
 
