@@ -127,7 +127,7 @@ mixin sectionBox(classMod, title, subtitle, badgeVal, moreBtn, hrefVal)
                         span!= "Delete"
 
         .box__wrapper-bottom
-          p.box__title!= title
+          p.box__title(title!= title)!= title
           p.box__subtitle!= subtitle
 
 //- MIXIN :: END
