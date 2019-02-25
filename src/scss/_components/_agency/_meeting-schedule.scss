@@ -29,6 +29,7 @@
       display: flex;
       height: 123px;
       border-bottom: 1px solid $c-whisper;
+      overflow-y: scroll;
 
       > div {
         padding: 5px;
