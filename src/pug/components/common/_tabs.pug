@@ -156,7 +156,12 @@ mixin tabsBtn(num, arr)
 
 mixin tabsSearchBtn()
   a.tabs__search(href="#" class="" title="")
-    i.icon-font.icon-search
+    span
+      i.icon-font.icon-search
+
+    form(action="" method="")
+      input(type="text" name="" placeholder="Search...")
+
 
 mixin tabsUploadBtn(hrefVal)
   a.tabs__upload(

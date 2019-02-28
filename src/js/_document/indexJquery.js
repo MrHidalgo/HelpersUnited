@@ -115,6 +115,14 @@ $(document).ready((ev) => {
     hoverLogic('.navigation--client', 768);
     hoverLogic('.navigation--agency', 1366);
   };
+
+
+	const initSearch = () => {
+	  $('.tabs__search').on('click', (ev) => {
+	    $(ev.currentTarget).toggleClass('is-open');
+    });
+  };
+
 	/*
 	* CALLBACK :: end
 	* ============================================= */
@@ -146,6 +154,7 @@ $(document).ready((ev) => {
     initWeekPopup();
     initInputSearch();
     initMobileNavigation();
+    initSearch();
   };
   initJquery();
 });

@@ -1,6 +1,7 @@
 // SECTION tabs :: START
 
 .tabs {
+  overflow: hidden;
   background-color: $c-white;
 
   &--info {
@@ -127,8 +128,62 @@
 
   // search
   &__search {
+    position: relative;
+
+
+    span {
+      z-index: 2;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff;
+    }
+
     .icon-search {
       font-size: 19px;
+    }
+
+    &.is-open {
+      form {
+        transform: translateX(0);
+        @include transition(transform);
+      }
+    }
+
+    form {
+      display: flex;
+      align-items: center;
+      z-index: 0;
+      position: absolute;
+      transform: translateX(200%);
+      left: -321px;
+      width: 320px;
+      height: 69px;
+      padding: 15px;
+      background-color: #fff;
+      border-left: 1px solid $c-whisper;
+      @include transition(transform);
+
+      input {
+        outline: none;
+        width: 100%;
+        height: 45px;
+        padding: 5px 15px;
+        box-shadow: none;
+        border-radius: 0;
+        background-color: $c-white;
+        border: 1px solid $c-whisper;
+        font-size: 14px;
+        font-weight: 600;
+        @include inputPlaceholder {
+          opacity: 0.5;
+          font-size: 14px;
+          font-weight: 600;
+        }
+      }
     }
   }
   // search :: end
