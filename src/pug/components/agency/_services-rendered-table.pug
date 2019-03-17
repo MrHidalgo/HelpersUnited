@@ -15,6 +15,7 @@
       p!= "Requested Date"
     .services-r__table-col
       p!= "Amount"
+    .services-r__table-col
 
   .services-r__table-body
     .services-r__table-col
@@ -23,5 +24,21 @@
       p!= "12.01.18"
     .services-r__table-col
       p!= "$200"
+    .services-r__table-col
+      .c-dropdown
+        a.c-dropdown__btn(href="#" class="" title="" dropdown-js)
+          i.icon-font.icon-more
+        div.c-dropdown__content
+          ul
+            li
+              a.c-dropdown__link(href="#" class="" title="")
+                p
+                  i.icon-font.icon-edit
+                span!= "Edit"
+            li
+              a.c-dropdown__link(href="#" class="" title="")
+                p
+                  i.icon-font.icon-delete
+                span!= "Delete"
 
 // SECTION services rendered table :: END
