@@ -118,8 +118,8 @@ $(document).ready((ev) => {
 
 
 	const initSearch = () => {
-	  $('.tabs__search').on('click', (ev) => {
-	    $(ev.currentTarget).toggleClass('is-open');
+	  $('.tabs__search > span').on('click', (ev) => {
+	    $(ev.currentTarget).closest('.tabs__search').toggleClass('is-open');
     });
   };
 
