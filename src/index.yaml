@@ -187,6 +187,12 @@ PageList:
 - file: agency-quick-report-4.html
   titleName: QR - Suggestions
   ready: 95
+- file: agency-quick-report-5.html
+  titleName: QR - Add Suggestions
+  ready: 95
+- file: agency-quick-report-6.html
+  titleName: QR - Edit Suggestions
+  ready: 95
 
 - file:
   titleName: AGENCY I-SERVICES RENDERED
