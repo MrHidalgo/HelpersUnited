@@ -17,28 +17,82 @@
       p!= "Amount"
     .services-r__table-col
 
-  .services-r__table-body
-    .services-r__table-col
-      p!= "Water"
-    .services-r__table-col
-      p!= "12.01.18"
-    .services-r__table-col
-      p!= "$200"
-    .services-r__table-col
-      .c-dropdown
-        a.c-dropdown__btn(href="#" class="" title="" dropdown-js)
-          i.icon-font.icon-more
-        div.c-dropdown__content
-          ul
-            li
-              a.c-dropdown__link(href="#" class="" title="")
-                p
-                  i.icon-font.icon-edit
-                span!= "Edit"
-            li
-              a.c-dropdown__link(href="#" class="" title="")
-                p
-                  i.icon-font.icon-delete
-                span!= "Delete"
+  if(pageClassNameNum !== 'p-agency-services-rendered-2')
+    .services-r__table-body
+      .services-r__table-col
+        p!= "Water"
+      .services-r__table-col
+        p!= "12.01.18"
+      .services-r__table-col
+        p!= "$200"
+      .services-r__table-col
+        .c-dropdown
+          a.c-dropdown__btn(href="#" class="" title="" dropdown-js)
+            i.icon-font.icon-more
+          div.c-dropdown__content
+            ul
+              li
+                a.c-dropdown__link(href="#" class="" title="")
+                  p
+                    i.icon-font.icon-edit
+                  span!= "Edit"
+              li
+                a.c-dropdown__link(href="#" class="" title="")
+                  p
+                    i.icon-font.icon-delete
+                  span!= "Delete"
+  else
+    -
+      var dataFormObj = {
+        selectFieldCustom1: {
+          classMod: "staff__table-select",
+          uniqueName: "select_status",
+          labelVal: "",
+          selectClassMod: "",
+          selectOption: [
+          'Some option 1',
+          'Some option 2',
+          'Some option 3'
+          ],
+          placeholderVal: "Support name"
+        },
+        selectFieldCustom2: {
+          classMod: "staff__table-select",
+          uniqueName: "select_status",
+          labelVal: "",
+          selectClassMod: "",
+          selectOption: [
+          'Some option 1',
+          'Some option 2',
+          'Some option 3'
+          ],
+          placeholderVal: "Approve date"
+        }
+      };
+
+    .services-r__table-body
+      .services-r__table-col
+        input(type="text" placeholder="Water")
+      .services-r__table-col
+        input(type="text" placeholder="12.01.18")
+      .services-r__table-col
+        input(type="text" placeholder="$200")
+      .services-r__table-col
+        a.services-r__table-btn(href="#" class="" title="")
+          i.icon-font.icon-check
+
+    .services-r__table-body
+      .services-r__table-col
+        .c-form
+          +formSelectCustom(dataFormObj.selectFieldCustom1)
+      .services-r__table-col
+        .c-form
+          +formSelectCustom(dataFormObj.selectFieldCustom2)
+      .services-r__table-col
+        input(type="text" placeholder="Amount")
+      .services-r__table-col
+        a.services-r__table-btn(href="#" class="" title="")
+          i.icon-font.icon-close
+
 
 // SECTION services rendered table :: END

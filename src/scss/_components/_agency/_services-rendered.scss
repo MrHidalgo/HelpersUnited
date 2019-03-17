@@ -74,7 +74,8 @@
     &-col {
       display: flex;
       align-items: center;
-      min-width: 226px;
+      //min-width: 226px;
+      flex: 1;
       min-height: 69px;
       padding: 5px 30px;
       border-right: 1px solid $c-whisper;
@@ -99,6 +100,51 @@
           justify-content: center;
           width: 100%;
           min-height: 100%;
+        }
+      }
+
+      .services-r__table-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 87px;
+        height: 100%;
+        margin-left: auto;
+        border-left: 1px solid $c-whisper;
+
+        .icon-check {
+          color: #04ca67;
+          font-size: 16px;
+        }
+
+        .icon-close {
+          color: $c-nobel;
+        }
+      }
+
+      input {
+        outline: none;
+        width: 100%;
+        padding: 5px 0;
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+        border-bottom: 2px solid transparent;
+        background-color: transparent;
+        color: $c-matterhorn;
+        font-size: 14px;
+        font-weight: 600;
+        @include transition(border);
+
+        &:focus {
+          border-color: $c-whisper;
+          @include transition(border);
+        }
+      }
+
+      .c-form__select-icon  {
+        i {
+          border-color: $c-nobel transparent transparent transparent;
         }
       }
     }
