@@ -170,6 +170,28 @@ mixin tabsUploadBtn(hrefVal)
   )
     i.icon-font.icon-upload
 
+mixin tabsDropdownBtn()
+  .c-dropdown
+    a.c-dropdown__btn(href="#" class="" title="" dropdown-js)
+      i.icon-font.icon-more
+    div.c-dropdown__content
+      ul
+        li
+          a.c-dropdown__link(href="#" class="" title="")
+            p
+              i.icon-font.icon-download
+            span!= "Download"
+        li
+          a.c-dropdown__link(href="#" class="" title="")
+            p
+              i.icon-font.icon-edit
+            span!= "Edit"
+        li
+          a.c-dropdown__link(href="#" class="" title="")
+            p
+              i.icon-font.icon-delete
+            span!= "Delete"
+
 
 section#tabs.tabs(
   class!=
@@ -280,7 +302,7 @@ section#tabs.tabs(
         p.tabs__info!= "Overall score of Alvin Brewer: <span>1.16</span>"
 
       else if (suggestionBool === true)
-        +tabsUploadBtn()
+        +tabsDropdownBtn()
 
       else if (quickReportTableBtnEmpty === true)
 
