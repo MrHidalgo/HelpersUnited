@@ -105,6 +105,75 @@
     margin-bottom: 30px;
     background-color: $c-white;
 
+    &--edit {
+
+      .q-report__table-td {
+        &--double {
+          padding: 0 0 0 60px;
+
+          > div {
+            height: 69px;
+
+            &:nth-of-type(1) {
+              display: flex;
+              align-items: center;
+              flex: 1;
+              min-width: 1px;
+              max-width: 100%;
+              padding: 5px 30px;
+            }
+            &:nth-of-type(2) {
+              width: 86px;
+              border-left: 1px solid $c-whisper;
+
+              a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+
+                .icon-check {
+                  color: #04ca67;
+                  font-size: 16px;
+                }
+
+                .icon-close {
+                  color: $c-nobel;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      input {
+        outline: none;
+        width: 100%;
+        padding: 5px 0;
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+        border-bottom: 2px solid transparent;
+        background-color: transparent;
+        color: $c-matterhorn;
+        font-size: 14px;
+        font-weight: 600;
+        @include transition(border);
+
+        &:focus {
+          border-color: $c-whisper;
+          @include transition(border);
+        }
+      }
+
+      .c-form__select-icon  {
+        i {
+          border-color: $c-nobel transparent transparent transparent;
+        }
+      }
+    }
+
     &:nth-of-type(n + 2) {
       .q-report__table-title {
         border-top: 1px solid $c-whisper;
@@ -115,11 +184,40 @@
       display: flex;
       align-items: center;
       min-height: 70px;
-      padding: 5px 30px;
       border-bottom: 1px solid $c-whisper;
+
+      > div {
+        height: 69px;
+
+        &:nth-of-type(1) {
+          display: flex;
+          align-items: center;
+          flex: 1;
+          min-width: 1px;
+          max-width: 100%;
+          padding: 5px 30px;
+        }
+        &:nth-of-type(2) {
+          width: 86px;
+          border-left: 1px solid $c-whisper;
+        }
+      }
 
       p {
         font-weight: 600;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+
+        .icon-add {
+          color: $c-nobel;
+          font-size: 17px;
+        }
       }
     }
 
@@ -152,6 +250,42 @@
 
     &-td {
       font-weight: 600;
+
+      &--more {
+        padding: 0 0 0 60px;
+
+        > div {
+          &:nth-of-type(1) {
+            flex: 1;
+            min-width: 1px;
+            max-width: 100%;
+            padding-right: 30px;
+
+            span {
+              margin-left: -30px;
+            }
+          }
+          &:nth-of-type(2) {
+            width: 86px;
+            height: 69px;
+            border-left: 1px solid $c-whisper;
+
+            .c-dropdown {
+              display: flex;
+              width: 100%;
+              height: 100%;
+
+              &__btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+        }
+      }
     }
   }
 

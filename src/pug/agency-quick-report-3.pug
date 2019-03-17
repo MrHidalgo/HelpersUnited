@@ -82,7 +82,11 @@ block content
 
                       .q-report__table
                         .q-report__table-title
-                          p!= "Alvin Brewer"
+                          div
+                            p!= "Alvin Brewer"
+                          div
+                            a(href="#" class="" title="")
+                              i.icon-font.icon-add
 
                         .q-report__table-head
                           -
@@ -108,12 +112,33 @@ block content
                               span!= "12.01.18"
                             .q-report__table-td
                               span!= "$200"
-                            .q-report__table-td
-                              span!= "Helpers"
+                            .q-report__table-td.q-report__table-td--more
+                              div
+                                span!= "Helpers"
+                              div
+                                .c-dropdown
+                                  a.c-dropdown__btn(href="#" class="" title="" dropdown-js)
+                                    i.icon-font.icon-more
+                                  div.c-dropdown__content
+                                    ul
+                                      li
+                                        a.c-dropdown__link(href="#" class="" title="")
+                                          p
+                                            i.icon-font.icon-edit
+                                          span!= "Edit"
+                                      li
+                                        a.c-dropdown__link(href="#" class="" title="")
+                                          p
+                                            i.icon-font.icon-delete
+                                          span!= "Delete"
 
-                      .q-report__table
+                      .q-report__table.q-report__table--edit
                         .q-report__table-title
-                          p!= "Bruce Wagner · Household member"
+                          div
+                            p!= "Bruce Wagner · Household member"
+                          div
+                            a(href="#" class="" title="")
+                              i.icon-font.icon-add
 
                         .q-report__table-head
                           -
@@ -132,12 +157,59 @@ block content
                             .q-report__table-th
                               span!= "Agency Name"
 
-                          .q-report__table-tr
+                          .q-report__table-tr.q-report__table-tr--check
                             .q-report__table-td
-                              span!= "Water"
+                              input(type="text" placeholder="Water")
                             .q-report__table-td
-                              span!= "12.01.18"
+                              input(type="text" placeholder="12.01.18")
                             .q-report__table-td
-                              span!= "$200"
+                              input(type="text" placeholder="$200")
+                            .q-report__table-td.q-report__table-td--double
+                              div
+                                span!= "Helpers"
+                              div
+                                a(href="#" class="" title="")
+                                  i.icon-font.icon-check
+
+                          .q-report__table-tr.q-report__table-tr--del
                             .q-report__table-td
-                              span!= "Helpers"
+                              -
+                                var dataFormObj = {
+                                  selectFieldCustom1: {
+                                    classMod: "staff__table-select",
+                                    uniqueName: "select_status",
+                                    labelVal: "",
+                                    selectClassMod: "",
+                                    selectOption: [
+                                    'Some option 1',
+                                    'Some option 2',
+                                    'Some option 3'
+                                    ],
+                                    placeholderVal: "Support name"
+                                  },
+                                  selectFieldCustom2: {
+                                    classMod: "staff__table-select",
+                                    uniqueName: "select_status",
+                                    labelVal: "",
+                                    selectClassMod: "",
+                                    selectOption: [
+                                    'Some option 1',
+                                    'Some option 2',
+                                    'Some option 3'
+                                    ],
+                                    placeholderVal: "Approve date"
+                                  }
+                                };
+
+                              .c-form
+                                +formSelectCustom(dataFormObj.selectFieldCustom1)
+                            .q-report__table-td
+                              .c-form
+                                +formSelectCustom(dataFormObj.selectFieldCustom2)
+                            .q-report__table-td
+                              input(type="text" placeholder="Amount")
+                            .q-report__table-td.q-report__table-td--double
+                              div
+                              div
+                                a(href="#" class="" title="")
+                                  i.icon-font.icon-close
