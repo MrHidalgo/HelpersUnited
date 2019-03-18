@@ -92,6 +92,20 @@
         max-width: 100%;
         padding: 5px 30px;
 
+        > div {
+          display: flex;
+          align-items: center;
+
+          span {
+            position: relative;
+            top: 1px;
+            padding-left: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #9B9B9B;
+          }
+        }
+
         p {
           color: #111;
           font-size: 16px;

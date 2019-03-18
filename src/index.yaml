@@ -241,3 +241,30 @@ PageList:
 - file: agency-i-interview-6.html
   titleName: II - Monthly expenses
   ready: 95
+
+- file:
+  titleName: CLIENT INTERVIEWS
+
+- file:
+  titleName: CLIENT PUSH TO CLOUD
+
+- file:
+  titleName: CLIENT VIEW INTERVIEW
+- file: client-i-interview-1.html
+  titleName: CVI - Biography
+  ready: 95
+- file: client-i-interview-2.html
+  titleName: CVI - Personal data
+  ready: 95
+- file: client-i-interview-3.html
+  titleName: CVI - Employment information
+  ready: 95
+- file: client-i-interview-4.html
+  titleName: CVI - Household member
+  ready: 95
+- file: client-i-interview-5.html
+  titleName: CVI - Other sources of income
+  ready: 95
+- file: client-i-interview-6.html
+  titleName: CVI - Monthly expenses
+  ready: 95

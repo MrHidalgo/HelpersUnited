@@ -1,0 +1,132 @@
+---
+title: HelpersUnited - Client - Interview interview
+
+pageClassName: p-agency-i-interview
+pageClassNameNum: p-agency-i-interview-2
+mode: client
+---
+extends shared/_layout
+
+block header
+  include ./components/_header-internal
+
+block footer
+
+block content
+  div.body.body--start(class!= pageClassName)
+
+    section#section.section.section--agency
+      .section__wrapper
+        .section__wrapper-left
+
+          section#navigation.navigation.navigation--agency
+            .navigation__wrapper
+
+              ul.navigation__list
+                +navigationItemAgency('0 is-active', 'interviews', 'Interviews', 'agency-interviews-1.html')
+                +navigationItemAgency('2', 'pushCloud', 'Push-to-cloud', 'agency-push-cloud-1.html')
+
+        .section__wrapper-right
+          .section__wrapper-hscroll
+
+            section#i-interview.i-interview.section-top
+
+              .i-interview__wrapper
+
+                .section-top__heading
+                  .section-top__heading-left
+                    if(mode === 'client')
+                      div
+                        p!= "Agency name"
+                        span!= "01.01.19"
+                    else
+                      p!= "Alvin Brewer"
+                  .section-top__heading-right
+                    a(href="#" class="" title="")
+                      span
+                       i.icon-font.icon-close
+
+                .i-interview__body
+
+                  .i-interview__content.section-top__content
+                    .i-interview__content-left.section-top__content-left
+
+                      .menu
+                        -
+                          var listItemNavArr = [
+                          {
+                          href: 'agency-i-interview-1.html',
+                          name: 'Biography'
+                          },
+                          {
+                          href: 'agency-i-interview-2.html',
+                          name: 'Personal data',
+                          },
+                          {
+                          href: 'agency-i-interview-3.html',
+                          name: 'Employment information',
+                          },
+                          {
+                          href: 'agency-i-interview-4.html',
+                          name: 'Household member',
+                          },
+                          {
+                          href: 'agency-i-interview-5.html',
+                          name: 'Other sources of income',
+                          },
+                          {
+                          href: 'agency-i-interview-6.html',
+                          name: 'Monthly expenses'
+                          }
+                          ];
+                        ul.menu__list
+                          each val, idx in listItemNavArr
+                            li.menu__item
+                              a.menu__btn(href= listItemNavArr[idx].href class=(idx === 1) ? 'is-active': '' title="")
+                                span!= listItemNavArr[idx].name
+
+
+                    .i-interview__content-right.section-top__content-right
+
+                      .i-interview__field-wrapper
+                        .i-interview__field-left
+                          .i-interview__field
+                            h6.i-interview__field-title!= "Medical Insurance"
+                          .i-interview__field
+                            span.i-interview__field-label!= "Do you have medical insurance?"
+                            p.i-interview__field-value!= "Yes"
+                          .i-interview__field
+                            span.i-interview__field-label!= "What kinds of insurance do you have?"
+                            p.i-interview__field-value!= "Vision, Dental"
+                          .i-interview__field
+                            h6.i-interview__field-title!= "Driver’s license"
+                          .i-interview__field
+                            span.i-interview__field-label!= "Do you have a driver's license?"
+                            p.i-interview__field-value!= "No"
+                          .i-interview__field
+                            span.i-interview__field-label!= "What state is issued the license?"
+                            p.i-interview__field-value!= "Oregon"
+                          .i-interview__field
+                            span.i-interview__field-label!= "What state is issued the license?"
+                            p.i-interview__field-value!= "2636753155"
+
+                        .i-interview__field-right
+                          .i-interview__field
+                            h6.i-interview__field-title!= "Place of residence"
+                          .i-interview__field
+                            span.i-interview__field-label!= "Are you homeless?"
+                            p.i-interview__field-value!= "No"
+                          .i-interview__field.i-interview__field--big
+                            span.i-interview__field-label!= "What is your residence address ?"
+                            p.i-interview__field-value!= "168 Ardella Drive, West Lindaburgh ,<br>Illinois, 17869-7290, USA"
+                          .i-interview__field
+                            h6.i-interview__field-title!= "Contacts"
+                          .i-interview__field
+                            span.i-interview__field-label!= "What is your home phone number?"
+                            p.i-interview__field-value!= "001-378-0030"
+                          .i-interview__field
+                            span.i-interview__field-label!= "What is your cell phone number?"
+                            p.i-interview__field-value!= "429-332-6537"
+                          .i-interview__field
+                            span.i-interview__field-label!= "What is your email?"
+                            p.i-interview__field-value!= "royal.ratke@gmail.com"
