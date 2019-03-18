@@ -28,6 +28,30 @@
         border-right: none;
       }
 
+      &--client {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: calc(100% - 87px);
+        padding-right: 32px;
+        border-right: none;
+
+        .logo {
+          display: flex;
+          align-items: center;
+          width: 272px;
+          min-height: 70px;
+          transform: translateX(0) !important;
+          padding-left: 17px;
+          border-right: 1px solid #EBEBEB;
+        }
+
+        .c-btn {
+          max-width: 124px;
+        }
+      }
+
       .logo {
         position: relative;
         transform: translateX(-17px);

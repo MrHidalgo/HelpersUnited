@@ -247,6 +247,21 @@ PageList:
 
 - file:
   titleName: CLIENT PUSH TO CLOUD
+- file: client-push-cloud-1.html
+  titleName: Active Requests
+  ready: 95
+- file: client-push-cloud-2.html
+  titleName: Active Requests - Details
+  ready: 95
+- file: client-push-cloud-3.html
+  titleName: Request History
+  ready: 95
+- file: client-push-cloud-4.html
+  titleName: Request History - Details
+  ready: 95
+- file: client-push-cloud-5.html
+  titleName: Request History - Create
+  ready: 95
 
 - file:
   titleName: CLIENT VIEW INTERVIEW

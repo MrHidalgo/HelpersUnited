@@ -64,6 +64,17 @@ $btn-color--border: rgba(#000, 1);
         @include transition(background-color, border-color);
       }
     }
+
+    &-green {
+      border-color: #04CA67;
+      background-color: #04CA67;
+
+      &:hover {
+        border-color: #4A4A4A;
+        background-color: #4A4A4A;
+        @include transition(background-color, border-color);
+      }
+    }
   }
 
   &__text {

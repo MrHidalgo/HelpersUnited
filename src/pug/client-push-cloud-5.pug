@@ -1,0 +1,43 @@
+---
+title: HelpersUnited - Agency interview - Requests History Details
+
+pageClassName: p-agency-push-cloud
+pageClassNameNum: p-agency-push-cloud-4
+documentLock: true
+mode: client
+modeStatus: send
+---
+extends shared/_layout
+
+block header
+  include ./components/_header-internal
+
+block footer
+
+block modal
+  include components/modal/_modal-push-cloud-create
+
+block content
+  div.body.body--start(class!= pageClassName)
+
+    section#section.section.section--agency
+      .section__wrapper
+        .section__wrapper-left
+
+          section#navigation.navigation.navigation--agency
+            .navigation__wrapper
+
+              ul.navigation__list
+                +navigationItemAgency('0', 'interviews', 'Interviews', 'agency-interviews-1.html')
+                +navigationItemAgency('2 is-active', 'pushCloud', 'Push-to-cloud', 'agency-push-cloud-1.html')
+
+        .section__wrapper-right
+          .section__wrapper-hscroll
+
+            include components/common/_tabs
+
+            section#push-cloud.push-cloud
+
+              .box__cover
+                each val, idx in [1,2,3,4,5]
+                  +sectionBox('pc', 'Request name', 'Aplplicant name', 'new', '', '#')

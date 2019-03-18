@@ -3,9 +3,12 @@
 section#header-i.header-i
 
   .header-i__wrapper
-    .header-i__wrapper-left
+    .header-i__wrapper-left(class!= (mode === 'client') ? "header-i__wrapper-left--client": '')
 
       +logotypeText('header', '', 'Helpers United')
+
+      if(mode === 'client')
+        +btn('bg', '', "Push to cloud")
 
     .header-i__wrapper-right
 

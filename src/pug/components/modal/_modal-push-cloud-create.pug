@@ -1,0 +1,84 @@
+// SECTION push to cloud modal :: START
+
+-
+  var dataFormObj = {
+    inputName: {
+      classMod: "",
+      uniqueName: "request_name",
+      labelVal: "Request name",
+      inputType: "",
+      inputClassMod: "",
+      placeholderVal: "",
+      val: ""
+    },
+    inputAmount: {
+      classMod: "",
+      uniqueName: "request_name",
+      labelVal: "Request amount",
+      inputType: "",
+      inputClassMod: "",
+      placeholderVal: "",
+      val: ""
+    },
+    textareaName: {
+      classMod: "",
+      uniqueName: "request_desc",
+      labelVal: "",
+      textareaClassMod: "",
+      placeholderVal: "Description",
+      val: ""
+    },
+    selectFieldCustom: {
+      classMod: "",
+      uniqueName: "request_choose",
+      labelVal: "Agency",
+      selectClassMod: "",
+      selectOption: [
+      'Some option 1',
+      'Some option 2',
+      'Some option 3'
+      ],
+      placeholderVal: ""
+    }
+  };
+
+#c-modal.c-modal.c-modal--pc.c-modal--pcc
+  .c-modal__wrapper
+    .c-modal__content
+      .c-modal__header
+        div
+          p.c-modal__title!= 'Push to Cloud'
+
+        a.c-modal__close(href="#" class="" title="")
+          i.icon-font.icon-close
+
+      .c-modal__body
+
+        .c-form
+
+          +formSelectCustom(dataFormObj.selectFieldCustom)
+          +formInput(dataFormObj.inputName)
+          +formTextarea(dataFormObj.textareaName)
+          +formInput(dataFormObj.inputAmount)
+
+        p.c-modal__name!= "Attached documents"
+
+        ul.c-modal__attached
+          li.c-modal__attached-item.c-modal__attached-item--view
+            div
+              span!= "Document name"
+            div
+              a.c-modal__link.c-modal__link--delete(href="#" class="" title="")
+                i.icon-font.icon-delete
+                span!= "Delete"
+          li.c-modal__attached-item.c-modal__attached-item--att
+            a(href="#" class="" title="")
+              i.icon-font.icon-attach
+              span!= 'Attach documents'
+
+
+
+      .c-modal__footer(class!= (mode === 'client') ? 'c-modal__footer--client':'')
+          a.c-modal__btn.c-btn.c-btn--bg(href="agency-push-cloud-3.html" class="" title="")!= "Send"
+
+// SECTION push to cloud modal :: END

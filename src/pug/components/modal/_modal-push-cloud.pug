@@ -15,7 +15,21 @@
         p.c-modal__name!= "Request name"
         p.c-modal__desc!= "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
 
-        ul.c-modal__list
+        if(mode === 'client')
+          p.c-modal__name!= "Attached documents"
+          ul.c-modal__view
+            li.c-modal__view-item
+              div
+                span!= "Document name"
+              div
+                a(href="#" class="" title="")!= "View"
+            li.c-modal__view-item
+              div
+                span!= "Document name"
+              div
+                a(href="#" class="" title="")!= "View"
+
+        ul.c-modal__list(class!= (mode === 'client') ? 'c-modal__list--client':'')
           li.c-modal__list-item
             div
               span!= "Limit"
@@ -29,8 +43,17 @@
             div
               span!= "$600"
 
-      .c-modal__footer
-        a.c-modal__btn.c-btn.c-btn--bg.c-btn--bg-dark(href="agency-push-cloud-3.html" class="" title="")!= "Reject"
-        a.c-modal__btn.c-btn.c-btn--bg(href="agency-push-cloud-3.html" class="" title="")!= "Accept"
+      .c-modal__footer(class!= (mode === 'client') ? 'c-modal__footer--client':'')
+        if(mode === 'client')
+          a.c-modal__link.c-modal__link--delete(href="#" class="" title="")
+            i.icon-font.icon-delete
+            span!= "Delete"
+          if(modeStatus === 'approved')
+            a.c-modal__btn.c-btn.c-btn--bg.c-btn--bg-green(href="#" class="" title="")!= "Approved"
+          else
+            a.c-modal__btn.c-btn.c-btn--bg(href="#" class="" title="")!= "Edit"
+        else
+          a.c-modal__btn.c-btn.c-btn--bg.c-btn--bg-dark(href="agency-push-cloud-3.html" class="" title="")!= "Reject"
+          a.c-modal__btn.c-btn.c-btn--bg(href="agency-push-cloud-3.html" class="" title="")!= "Accept"
 
 // SECTION push to cloud modal :: END
