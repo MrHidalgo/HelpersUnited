@@ -47,6 +47,18 @@
       ],
       placeholderVal: ""
     },
+    selectFieldCustomClient: {
+      classMod: "",
+      uniqueName: "select_time_to",
+      labelVal: "Client",
+      selectClassMod: "",
+      selectOption: [
+      'Some option 1',
+      'Some option 2',
+      'Some option 3'
+      ],
+      placeholderVal: ""
+    },
   }
 
 #c-modal.c-modal.c-modal--mswai
@@ -69,6 +81,13 @@
               i.icon-font.icon-message
             div
               +formInput(dataFormObj.inputName1)
+
+          .c-modal__input
+            div
+              i.icon-font.icon-client
+            div
+              +formSelectCustom(dataFormObj.selectFieldCustomClient)
+
 
           .c-modal__input-group
             div
