@@ -11,6 +11,16 @@
       name: 'Past interviews'
     }
   ];
+  var tabsClientInterviewArr = [
+    {
+      href: "#",
+      name: 'Scheduled interviews'
+    },
+    {
+      href: '#',
+      name: 'Past interviews'
+    }
+  ];
   var tabsAgencyPushCloudArr = [
     {
       href: 'agency-push-cloud-1.html',
@@ -216,10 +226,16 @@ section#tabs.tabs(
       ul.tabs__list
 
         if(pageClassNameNum === 'p-agency-interviews-1')
-          +tabsBtn(0, tabsAgencyInterviewArr)
+          if(mode === 'client')
+            +tabsBtn(0, tabsClientInterviewArr)
+          else
+            +tabsBtn(0, tabsAgencyInterviewArr)
 
         else if(pageClassNameNum === 'p-agency-interviews-2')
-          +tabsBtn(1, tabsAgencyInterviewArr)
+          if(mode === 'client')
+            +tabsBtn(1, tabsClientInterviewArr)
+          else
+            +tabsBtn(1, tabsAgencyInterviewArr)
 
         else if (pageClassNameNum === 'p-agency-push-cloud-1' || pageClassNameNum === 'p-agency-push-cloud-2')
           +tabsBtn(0, tabsAgencyPushCloudArr)

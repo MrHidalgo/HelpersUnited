@@ -1,0 +1,38 @@
+---
+title: HelpersUnited - Client interview - Scheduled Interviews
+
+pageClassName: p-agency-interviews
+pageClassNameNum: p-agency-interviews-1
+mode: client
+---
+extends shared/_layout
+
+block header
+  include ./components/_header-internal
+
+block footer
+
+block content
+  div.body.body--start(class!= pageClassName)
+
+    section#section.section.section--agency
+      .section__wrapper
+        .section__wrapper-left
+
+          section#navigation.navigation.navigation--agency
+            .navigation__wrapper
+
+              ul.navigation__list
+                +navigationItemAgency('0 is-active', 'interviews', 'Interviews', 'agency-interviews-1.html')
+                +navigationItemAgency('2', 'pushCloud', 'Push-to-cloud', 'agency-push-cloud-1.html')
+
+        .section__wrapper-right
+          .section__wrapper-hscroll
+
+            include components/common/_tabs
+
+            section#agency-interviews.agency-interviews
+
+              .box__cover
+                each val, idx in [1,2,3,4,5]
+                  +sectionBox('ai', 'Agency name', '16.08.19', '', '')

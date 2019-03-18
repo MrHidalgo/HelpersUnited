@@ -49,6 +49,30 @@
   &__table {
     margin-bottom: 30px;
 
+    &--client {
+      background-color: #ffffff;
+      .services-r__table-col {
+        &:last-of-type {
+          padding: 5px 30px;
+
+          a {
+            display: flex;
+            align-items: center;
+            color: $c-royalBlue;
+
+            .icon-font {}
+
+            span {
+              padding-left: 10px;
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 22.4px;
+            }
+          }
+        }
+      }
+    }
+
     &-head,
     &-body {
       display: flex;
@@ -74,7 +98,6 @@
     &-col {
       display: flex;
       align-items: center;
-      //min-width: 226px;
       flex: 1;
       min-height: 69px;
       padding: 5px 30px;
